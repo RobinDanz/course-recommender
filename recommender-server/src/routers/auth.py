@@ -19,7 +19,6 @@ router = APIRouter(
     responses={404: {'description': 'not found'}},
 )
 
-
 @router.post("/token")
 async def login_for_access_token(form_data: Annotated[OAuth2PasswordRequestForm, Depends()], session: Annotated[Session, Depends(config.get_db_session)]) -> Token:
     user = await authenticate_user(form_data.username, form_data.password, session)
