@@ -1,0 +1,50 @@
+version: '3.4'
+
+services:
+  db:
+    image: mariadb
+    container_name: db
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MARIADB_DATABASE: recommender
+      MARIADB_ROOT_PASSWORD: mariadb
+    volumes:
+      - database:/var/lib/mysql
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "healthcheck.sh",
+          "--su-mysql",
+          "--connect",
+          "--innodb_initialized"
+        ]
+      interval: 10s
+      timeout: 10s
+      retries: 3
+      
+  adminer:
+    image: adminer
+    container_name: adminer
+    restart: always
+    ports:
+      - 8080:8080
+    depends_on:
+      - db
+
+  api: 
+    image: api
+    build: .
+    container_name: api
+    ports:
+      - 80:80
+    command: bash -c "python -m alembic upgrade head && uvicorn main:app --host 0.0.0.0 --port 80"
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  database:
+    

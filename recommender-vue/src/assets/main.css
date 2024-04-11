@@ -1,0 +1,5 @@
+.bordered {
+  border: solid gray 1px;
+  border-radius: 5px;
+  padding: 1rem;
+}

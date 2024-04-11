@@ -1,28 +1,11 @@
 <script setup lang="ts">
-import Menubar from 'primevue/menubar'
-import { ref } from 'vue'
-
-const items = ref([
-  {
-    label: 'Home',
-    icon: 'pi pi-home',
-    route_name: 'home'
-  },
-  {
-    label: 'Features',
-    icon: 'pi pi-star',
-    route_name: 'about'
-  }
-])
+import NavBar from '@/components/navigation/NavBar.vue'
 </script>
 
 <template>
   <header>
-    <Menubar :model="items">
-      <template></template>
-    </Menubar>
+    <NavBar></NavBar>
   </header>
-
   <main>
     <RouterView></RouterView>
   </main>

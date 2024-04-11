@@ -1,5 +1,5 @@
 <script setup lang="ts"></script>
 
-<template>Coucou</template>
+<template>Home</template>
 
 <style scoped></style>
