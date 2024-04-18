@@ -7,6 +7,11 @@ from alembic import context
 
 from sqlmodel import SQLModel
 
+from dotenv import load_dotenv
+from os import getenv
+
+load_dotenv()
+
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
 config = context.config
@@ -29,6 +34,8 @@ target_metadata = SQLModel.metadata
 # can be acquired:
 # my_important_option = config.get_main_option("my_important_option")
 # ... etc.
+
+config.set_main_option('sqlalchemy.url', getenv('DB_URL'))
 
 
 def run_migrations_offline() -> None:
@@ -60,7 +67,7 @@ def run_migrations_online() -> None:
 
     In this scenario we need to create an Engine
     and associate a connection with the context.
-
+    
     """
     connectable = engine_from_config(
         config.get_section(config.config_ini_section, {}),

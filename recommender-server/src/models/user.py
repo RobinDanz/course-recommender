@@ -1,6 +1,5 @@
 from sqlmodel import Field, SQLModel
 
-
 class User(SQLModel, table=True):
     """
     Representation of a user in the database

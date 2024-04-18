@@ -2,7 +2,12 @@ from sqlmodel import create_engine, SQLModel, Session
 
 from models.user import User
 
-db_url = 'mysql+pymysql://root:mariadb@db:3306/recommender'
+from dotenv import load_dotenv
+from os import getenv
+
+load_dotenv()
+
+db_url = getenv('DB_URL')
 
 engine = create_engine(db_url, echo=True)
 
