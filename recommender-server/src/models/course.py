@@ -6,3 +6,12 @@ class Course(SQLModel, table=True):
     """
     id: int | None = Field(default=None, primary_key=True)
     title: str = Field(unique=True)
+
+
+class CourseCreate(SQLModel):
+    title: str
+
+
+class CourseRead(SQLModel):
+    id: int
+    title: str
