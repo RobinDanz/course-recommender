@@ -23,6 +23,7 @@ if config.config_file_name is not None:
 
 # Models
 from models.user import User
+from models.course import Course
 
 # add your model's MetaData object here
 # for 'autogenerate' support

@@ -3,3 +3,13 @@
   border-radius: 5px;
   padding: 1rem;
 }
+
+/* PrimeVue Global Overrides */
+
+.p-menubar .p-menuitem:first-child .p-menuitem:last-child {
+  margin-top: 2px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}

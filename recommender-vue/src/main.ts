@@ -4,6 +4,7 @@ import { createPinia } from 'pinia'
 import PrimeVue from 'primevue/config'
 import 'primevue/resources/themes/aura-light-green/theme.css'
 import 'primeflex/primeflex.min.css'
+import 'primeicons/primeicons.css'
 
 import App from '@/App.vue'
 import router from '@/router'
