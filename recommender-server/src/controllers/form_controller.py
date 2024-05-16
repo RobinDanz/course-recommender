@@ -3,10 +3,20 @@ import simpful as sf
 import numpy as np
 
 
-def fuzzy(form: FormRequest):
+def fuzzy_set_variables(form: FormRequest):
     """
     test
     """
+    FS.set_variable('Evaluation', form.Evaluation)
+    FS.set_variable('University', form.University)
+    FS.set_variable('CourseType', form.CourseType)
+    FS.set_variable('Track', 0.95)
+    FS.set_variable('Lectures', 0.1)
+    FS.set_variable('SubjectType', 0.75)
+    FS.set_variable('Interactions', 0.76)
+    FS.set_variable('Blackboard', 0.90)
+    FS.set_variable('Recordings', 0.90)
+    FS.set_variable('TeacherAccessibilty', 0.84)
     if form.a > 10:
         return FormResponse(response='a>10')
     return FormResponse(response='a<=10')
@@ -49,8 +59,8 @@ FS.add_linguistic_variable('Track', track)
 
 # Linguistic variable for the fuzzy variables
 LV = sf.AutoTriangle(5, terms=['none', 'some', 'middle', 'regularly', 'always'], universe_of_discourse=[0., 1.])
-FS.add_linguistic_variable('Lectures', LV)
-FS.add_linguistic_variable('SubjectType', LV)
+FS.add_linguistic_variable('Lectures', LV) # only lectures,	lectures + some exercices,	lectures + exercices,	lectures + project,	no lectures + project
+FS.add_linguistic_variable('SubjectType', LV)  # theoretical to practical
 FS.add_linguistic_variable('Interactions', LV)
 FS.add_linguistic_variable('Blackboard', LV)
 FS.add_linguistic_variable('Recordings', LV)
