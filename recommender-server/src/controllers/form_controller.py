@@ -122,7 +122,7 @@ LO = sf.AutoTriangle(len(Courses), terms=[course for course in Courses], univers
 FS.add_linguistic_variable('Course', LO)
 """
 LO = sf.AutoTriangle(3, terms=['notRecommended', 'okay', 'recommended'], universe_of_discourse=[0., 1.])
-for course in Courses:
+for course in courses:
     FS.add_linguistic_variable(course, LO)
 """
 FS.set_crisp_output_value('SocialComputing', 0.0)
