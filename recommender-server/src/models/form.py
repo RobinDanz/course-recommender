@@ -2,17 +2,17 @@ from sqlmodel import SQLModel
 
 
 class FormResponse(SQLModel):
-    response: list
+    response: dict
 
 
 class FormRequest(SQLModel):
-    Evaluation : int
-    University : int
-    CourseType : int
-    Track : int
-    Lectures : float
-    SubjectType : float
-    Interactions: float
-    Blackboard : float
-    Recordings : float
-    TeacherAccessibilty : float
+    evaluation : list
+    university : list
+    courseType : list
+    track : list
+    lectures : list
+    subjectType : int
+    interactions: int
+    blackboard : int
+    recordings : int
+    teacherAccessibilty : int
