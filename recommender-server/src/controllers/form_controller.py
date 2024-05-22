@@ -1,6 +1,9 @@
 from models.form import *
+from models.course import *
 import simpful as sf
 import numpy as np
+# from controllers.rules import RULES
+from controllers.rules import RULES
 
 
 FS = sf.FuzzySystem()
@@ -72,8 +75,15 @@ def fuzzy_set_variables(form: FormRequest):
     FS.set_variable('Blackboard', form.blackboard)
     FS.set_variable('Recordings', form.recordings)
     FS.set_variable('TeacherAccessibilty', form.teacherAccessibilty)
-    return FS.Mamdani_inference([course for course in courses], verbose=False)
+    return FS.Sugeno_inference([course for course in courses])
 
+
+def add_course(CourseRead):
+    courses.append(CourseRead.title)
+
+def add_rules():
+
+    pass
 
 # Evaluation 
 E_1 = sf.CrispSet(a=0, b=0.5, term='project')
@@ -118,38 +128,35 @@ FS.add_linguistic_variable('TeacherAccessibilty', LV)
 
 # Output
 """
-LO = sf.AutoTriangle(len(Courses), terms=[course for course in Courses], universe_of_discourse=[0., 1.])
+LO = sf.AutoTriangle(len(courses), terms=[course for course in courses], universe_of_discourse=[0, len(courses)])
 FS.add_linguistic_variable('Course', LO)
 """
-LO = sf.AutoTriangle(3, terms=['notRecommended', 'okay', 'recommended'], universe_of_discourse=[0., 1.])
+"""
+# LO = sf.AutoTriangle(3, terms=['notRecommended', 'okay', 'recommended'], universe_of_discourse=[0., 1.])
+O_1 = sf.TrapezoidFuzzySet(a=40, b=60, c=100, d=100, term='notRecommended')
+O_2 = sf.TrapezoidFuzzySet(a=0, b=0, c=40, d=60, term='recommended')
+LO = sf.LinguisticVariable([O_1, O_2], universe_of_discourse=[0, 100])
 for course in courses:
     FS.add_linguistic_variable(course, LO)
+"""
+"""
+for i in range(len(courses)):
+    FS.set_crisp_output_value(courses[i], i)
+"""
 """
 FS.set_crisp_output_value('SocialComputing', 0.0)
 FS.set_crisp_output_value('Concurrency', 1.0)
 """
 
+FS.set_crisp_output_value('notRecommended', 0)
+FS.set_crisp_output_value('recommended', 100)
+
 # IF/THEN rules
-"""
-R_1 = "IF (Evaluation IS project) AND (University IS fribourg) AND (CourseType IS seminar) AND (Track IS T5) AND (Lectures IS always) AND (SubjectType IS always) AND (Interactions IS some) AND (Blackboard IS none) AND (Recordings IS none) AND (TeacherAccessibilty IS middle) THEN (Course IS SocialComputing)"
-R_2 = "IF (Evaluation IS written) AND (University IS neuchatel) AND (CourseType IS course) AND (Track IS T1) AND (Lectures IS some) AND (SubjectType IS regularly) AND (Interactions IS some) AND (Blackboard IS none) AND (Recordings IS always) AND (TeacherAccessibilty IS regularly) THEN (Course IS Concurrency)"
-FS.add_rules([R_1, R_2])
-"""
-FS.add_rules_from_file('/Users/michelefischer/MA1P/SocialComputing/course-recommender/recommender-server/src/controllers/rules.txt')
+# FS.add_rules_from_file('/Users/michelefischer/MA1P/SocialComputing/course-recommender/recommender-server/src/controllers/rules.txt')
+FS.add_rules(RULES)
 
 # Test with a random answer
-"""
-FS.set_variable('Evaluation', 0.7)
-FS.set_variable('University', 0.75)
-FS.set_variable('CourseType', 0.55)
-FS.set_variable('Track', 0.95)
-FS.set_variable('Lectures', 0.1)
-FS.set_variable('SubjectType', 0.75)
-FS.set_variable('Interactions', 0.76)
-FS.set_variable('Blackboard', 0.90)
-FS.set_variable('Recordings', 0.90)
-FS.set_variable('TeacherAccessibilty', 0.84)
-"""
+
 eva = [0, 1, 3, 4]
 rules = FS.get_rules()
 if len(eva) > 1:
@@ -158,19 +165,19 @@ if len(eva) > 1:
     for i in range(len(rules)):
         if str(rules[i]).find('Evaluation') != -1:
             new_rule = ' '.join([rules[i], f'WEIGHT {weight}']) 
-            FS.replace_rule(i, new_rule, verbose=True)
+            FS.replace_rule(i, new_rule)
     FS.set_variable('Evaluation', mean_eval)
 else:
         FS.set_variable('Evaluation', eva[0])
 
 FS.set_variable('University', 1)
-FS.set_variable('CourseType', 1)
+FS.set_variable('CourseType', 0)
 FS.set_variable('Track', 5)
-FS.set_variable('Lectures', 20)
-FS.set_variable('SubjectType', 50)
-FS.set_variable('Interactions', 76)
-FS.set_variable('Blackboard', 90)
-FS.set_variable('Recordings', 90)
+FS.set_variable('Lectures', 90)
+FS.set_variable('SubjectType', 70)
+FS.set_variable('Interactions', 10)
+FS.set_variable('Blackboard', 10)
+FS.set_variable('Recordings', 10)
 FS.set_variable('TeacherAccessibilty', 84)
 
 """
@@ -178,5 +185,8 @@ for variable in VARIABLES:
     FS.set_variable(variable, np.random.random(), verbose=False)
 """
 
-# Output
-print(FS.Mamdani_inference([course for course in courses], verbose=False))
+# Run results
+# print(FS.Mamdani_inference([course for course in courses], verbose=False))
+print(FS.Sugeno_inference([course for course in courses], verbose=False))
+# print(FS.Mamdani_inference(['Course'], verbose=False))
+# print(FS.Sugeno_inference(['Course'], verbose=False))
