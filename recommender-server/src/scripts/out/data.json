@@ -1,0 +1,1611 @@
+[
+    {
+        "url": "https://mcs.unibnf.ch/courses/fabrication-and-prototyping-in-the-learninglab/",
+        "name": "Fabrication and Prototyping in the LearningLab",
+        "codes": [
+            "03117"
+        ],
+        "type": "Course",
+        "site": "Fribourg",
+        "semester": "A2023",
+        "tracks": [
+            "T0"
+        ],
+        "teachers": [
+            "Julien Nembrini"
+        ],
+        "period": "Weekly",
+        "schedule": "Thursday, 13:15 - 16:00",
+        "day": 4,
+        "start": "13:15",
+        "end": "16:00"
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/multimodal-user-interfaces/",
+        "name": "Multimodal User Interfaces",
+        "codes": [
+            "03035",
+            "33035"
+        ],
+        "type": "Course",
+        "site": "Fribourg",
+        "semester": "S2024",
+        "tracks": [
+            "T0",
+            "T3"
+        ],
+        "teachers": [
+            "Denis Lalanne"
+        ],
+        "period": "Weekly",
+        "schedule": "Friday, 10:15 - 13:00",
+        "day": 5,
+        "start": "10:15",
+        "end": "13:00"
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/quantitative-methods-of-performance-evaluation-for-computing-systems/",
+        "name": "Quantitative Methods of Performance Evaluation for Computing Systems",
+        "codes": [
+            "02121",
+            "62121"
+        ],
+        "type": "Course",
+        "site": "Neuch\u00e2tel",
+        "semester": "A2023",
+        "tracks": [
+            "T0",
+            "T6"
+        ],
+        "teachers": [
+            "Lydia Chen"
+        ],
+        "period": "Weekly",
+        "schedule": "Monday, 08:15 - 12:00",
+        "day": 1,
+        "start": "08:15",
+        "end": "12:00"
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/user-centered-design/",
+        "name": "User Centered Design",
+        "codes": [
+            "03018"
+        ],
+        "type": "Course",
+        "site": "Fribourg",
+        "semester": "A2023",
+        "tracks": [
+            "T0"
+        ],
+        "teachers": [
+            "Denis Lalanne"
+        ],
+        "period": "Weekly",
+        "schedule": "Monday, 14:15 - 17:00",
+        "day": 1,
+        "start": "14:15",
+        "end": "17:00"
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/advanced-software-engineering/",
+        "name": "Advanced Software Engineering",
+        "codes": [
+            "13000"
+        ],
+        "type": "Course",
+        "site": "Fribourg",
+        "semester": "A2023",
+        "tracks": [
+            "T1"
+        ],
+        "teachers": [
+            "Jacques Pasquier-Rocha",
+            "Mourad Khayati"
+        ],
+        "period": "Weekly",
+        "schedule": "Thursday, 09:15 - 12:00",
+        "day": 4,
+        "start": "09:15",
+        "end": "12:00"
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/compiler-construction-2/",
+        "name": "Compiler Construction",
+        "codes": [
+            "11114"
+        ],
+        "type": "Course",
+        "site": "Bern",
+        "semester": "S2024",
+        "tracks": [
+            "T1"
+        ],
+        "teachers": [
+            "Timo Kehrer"
+        ],
+        "period": "Weekly",
+        "schedule": "Tuesday, 10:15 - 13:00",
+        "day": 2,
+        "start": "10:15",
+        "end": "13:00"
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/concurrency-multi-core-programming-and-data-processing/",
+        "name": "Concurrency: Multi-core Programming and Data Processing",
+        "codes": [
+            "12027",
+            "62027"
+        ],
+        "type": "Course",
+        "site": "Neuch\u00e2tel",
+        "semester": "S2024",
+        "tracks": [
+            "T1",
+            "T6"
+        ],
+        "teachers": [
+            "Pascal Felber"
+        ],
+        "period": "Weekly",
+        "schedule": "Thursday, 08:15 - 12:00",
+        "day": 4,
+        "start": "08:15",
+        "end": "12:00"
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/emerging-technologies-in-digitalisation/",
+        "name": "Emerging Technologies in Digitalisation",
+        "codes": [
+            "13573",
+            "53573"
+        ],
+        "type": "Seminar",
+        "site": "Fribourg",
+        "semester": "S2024",
+        "tracks": [
+            "T5",
+            "T1"
+        ],
+        "teachers": [
+            "Hans-Georg Fill"
+        ],
+        "period": "Weekly",
+        "schedule": "Wednesday, 08:15 - 11:00",
+        "day": 3,
+        "start": "08:15",
+        "end": "11:00"
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/mobile-communications/",
+        "name": "Mobile Communications",
+        "codes": [
+            "11033"
+        ],
+        "type": "Course",
+        "site": "Bern",
+        "semester": "S2024",
+        "tracks": [
+            "T1"
+        ],
+        "teachers": [
+            "Torsten Braun"
+        ],
+        "period": "Weekly",
+        "schedule": "Monday, 10:15 - 13:00",
+        "day": 1,
+        "start": "10:15",
+        "end": "13:00"
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/scientific-reading-in-computer-networks/",
+        "name": "Scientific Reading in Computer Networks",
+        "codes": [
+            "11540"
+        ],
+        "type": "Seminar",
+        "site": "Bern",
+        "semester": "A2023",
+        "tracks": [
+            "T1"
+        ],
+        "teachers": [
+            "Torsten Braun"
+        ],
+        "period": "On Appointment",
+        "schedule": "",
+        "day": null,
+        "start": null,
+        "end": null
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/scientific-reading-in-computer-networks-2/",
+        "name": "Scientific Reading in Computer Networks",
+        "codes": [
+            "11556"
+        ],
+        "type": "Seminar",
+        "site": "Bern",
+        "semester": "S2024",
+        "tracks": [
+            "T1"
+        ],
+        "teachers": [
+            "Torsten Braun"
+        ],
+        "period": "On Appointment",
+        "schedule": "",
+        "day": null,
+        "start": null,
+        "end": null
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/scientific-writing-in-computer-networks/",
+        "name": "Scientific Writing in Computer Networks",
+        "codes": [
+            "11541"
+        ],
+        "type": "Seminar",
+        "site": "Bern",
+        "semester": "A2023",
+        "tracks": [
+            "T1"
+        ],
+        "teachers": [
+            "Torsten Braun"
+        ],
+        "period": "On Appointment",
+        "schedule": "",
+        "day": null,
+        "start": null,
+        "end": null
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/scientific-writing-in-computer-networks-2/",
+        "name": "Scientific Writing in Computer Networks",
+        "codes": [
+            "11557"
+        ],
+        "type": "Seminar",
+        "site": "Bern",
+        "semester": "S2024",
+        "tracks": [
+            "T1"
+        ],
+        "teachers": [
+            "Torsten Braun"
+        ],
+        "period": "On Appointment",
+        "schedule": "",
+        "day": null,
+        "start": null,
+        "end": null
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/seminar-communication-and-distributed-systems-2/",
+        "name": "Seminar Communication and Distributed Systems",
+        "codes": [
+            "11560"
+        ],
+        "type": "Seminar",
+        "site": "Bern",
+        "semester": "S2024",
+        "tracks": [
+            "T1"
+        ],
+        "teachers": [
+            "Torsten Braun"
+        ],
+        "period": "Weekly",
+        "schedule": "Monday, 13:15 - 15:00",
+        "day": 1,
+        "start": "13:15",
+        "end": "15:00"
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/seminar-distributed-learning-systems/",
+        "name": "Seminar Distributed Learning Systems",
+        "codes": [
+            "12572",
+            "62577"
+        ],
+        "type": "Seminar",
+        "site": "Neuch\u00e2tel",
+        "semester": "A2023",
+        "tracks": [
+            "T1",
+            "T6"
+        ],
+        "teachers": [
+            "Lydia Chen"
+        ],
+        "period": "On Appointment",
+        "schedule": "",
+        "day": null,
+        "start": null,
+        "end": null
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/seminar-foundations-of-dependable-systems-i/",
+        "name": "Seminar Foundations of Dependable Systems I",
+        "codes": [
+            "13546",
+            "43546"
+        ],
+        "type": "Seminar",
+        "site": "Fribourg",
+        "semester": "A2023",
+        "tracks": [
+            "T1",
+            "T4"
+        ],
+        "teachers": [
+            "Ulrich Ultes-Nitsche"
+        ],
+        "period": "On Appointment",
+        "schedule": "",
+        "day": null,
+        "start": null,
+        "end": null
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/seminar-foundations-of-dependable-systems-ii/",
+        "name": "Seminar Foundations of Dependable Systems II",
+        "codes": [
+            "13563",
+            "43563"
+        ],
+        "type": "Seminar",
+        "site": "Fribourg",
+        "semester": "S2024",
+        "tracks": [
+            "T1",
+            "T4"
+        ],
+        "teachers": [
+            "Ulrich Ultes-Nitsche"
+        ],
+        "period": "On Appointment",
+        "schedule": "",
+        "day": null,
+        "start": null,
+        "end": null
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/seminar-generative-ai/",
+        "name": "Seminar Generative AI",
+        "codes": [
+            "12574",
+            "62574"
+        ],
+        "type": "Seminar",
+        "site": "Neuch\u00e2tel",
+        "semester": "S2024",
+        "tracks": [
+            "T1",
+            "T6"
+        ],
+        "teachers": [
+            "Lydia Chen"
+        ],
+        "period": "Weekly",
+        "schedule": "Monday, 14:15 - 16:00",
+        "day": 1,
+        "start": "14:15",
+        "end": "16:00"
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/seminar-hot-topics-in-operating-systems/",
+        "name": "Seminar Hot Topics in Operating Systems",
+        "codes": [
+            "12548"
+        ],
+        "type": "Seminar",
+        "site": "Neuch\u00e2tel",
+        "semester": "A2023",
+        "tracks": [
+            "T1"
+        ],
+        "teachers": [
+            "Pascal Felber",
+            "Baptiste Lepers"
+        ],
+        "period": "On Appointment",
+        "schedule": "",
+        "day": null,
+        "start": null,
+        "end": null
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/seminar-software-engineering/",
+        "name": "Seminar Software Engineering",
+        "codes": [
+            "11571"
+        ],
+        "type": "Seminar",
+        "site": "Bern",
+        "semester": "S2024",
+        "tracks": [
+            "T1"
+        ],
+        "teachers": [
+            "Timo Kehrer"
+        ],
+        "period": "Weekly",
+        "schedule": "Tuesday, 14:15 - 16:00",
+        "day": 2,
+        "start": "14:15",
+        "end": "16:00"
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/seminar-software-engineering-2/",
+        "name": "Seminar Software Engineering",
+        "codes": [
+            "11555"
+        ],
+        "type": "Seminar",
+        "site": "Bern",
+        "semester": "A2023",
+        "tracks": [
+            "T1"
+        ],
+        "teachers": [
+            "Timo Kehrer"
+        ],
+        "period": "Weekly",
+        "schedule": "Tuesday, 10:15 - 12:00",
+        "day": 2,
+        "start": "10:15",
+        "end": "12:00"
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/software-product-lines/",
+        "name": "Software Product Lines",
+        "codes": [
+            "11113"
+        ],
+        "type": "Course",
+        "site": "Bern",
+        "semester": "A2023",
+        "tracks": [
+            "T1"
+        ],
+        "teachers": [
+            "Timo Kehrer"
+        ],
+        "period": "Weekly",
+        "schedule": "Tuesday, 14:15 - 17:00",
+        "day": 2,
+        "start": "14:15",
+        "end": "17:00"
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/systems-verification/",
+        "name": "Systems Verification",
+        "codes": [
+            "13081",
+            "43081"
+        ],
+        "type": "Course",
+        "site": "Fribourg",
+        "semester": "S2024",
+        "tracks": [
+            "T1",
+            "T4"
+        ],
+        "teachers": [
+            "Ulrich Ultes-Nitsche"
+        ],
+        "period": "Weekly",
+        "schedule": "Wednesday, 09:15 - 12:00",
+        "day": 3,
+        "start": "09:15",
+        "end": "12:00"
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/privacy-and-data-security/",
+        "name": "Privacy and Data Security",
+        "codes": [
+            "21109"
+        ],
+        "type": "Course",
+        "site": "Bern",
+        "semester": "S2024",
+        "tracks": [
+            "T2"
+        ],
+        "teachers": [],
+        "period": "Weekly",
+        "schedule": "Wednesday, 14:15 - 17:00",
+        "day": 3,
+        "start": "14:15",
+        "end": "17:00"
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/security/",
+        "name": "Security",
+        "codes": [
+            "22016"
+        ],
+        "type": "Course",
+        "site": "Neuch\u00e2tel",
+        "semester": "A2023",
+        "tracks": [
+            "T2"
+        ],
+        "teachers": [
+            "Herv\u00e9 Sanglard"
+        ],
+        "period": "Weekly",
+        "schedule": "Wednesday, 14:15 - 18:00",
+        "day": 3,
+        "start": "14:15",
+        "end": "18:00"
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/seminar-cryptography-and-data-security-2/",
+        "name": "Seminar Cryptography and Data Security",
+        "codes": [
+            "21561"
+        ],
+        "type": "Seminar",
+        "site": "Bern",
+        "semester": "S2024",
+        "tracks": [
+            "T2",
+            "T4"
+        ],
+        "teachers": [
+            "Christian Cachin",
+            "Philipp Schneider"
+        ],
+        "period": "Weekly",
+        "schedule": "Wednesday, 10:15 - 12:00",
+        "day": 3,
+        "start": "10:15",
+        "end": "12:00"
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/3d-geometry-processing/",
+        "name": "3D Geometry Processing",
+        "codes": [
+            "31097"
+        ],
+        "type": "Course",
+        "site": "Bern",
+        "semester": "S2024",
+        "tracks": [
+            "T3"
+        ],
+        "teachers": [
+            "David Bommes"
+        ],
+        "period": "Weekly",
+        "schedule": "Thursday, 09:15 - 12:00",
+        "day": 4,
+        "start": "09:15",
+        "end": "12:00"
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/applied-optimization/",
+        "name": "Applied Optimization",
+        "codes": [
+            "31099",
+            "61099"
+        ],
+        "type": "Course",
+        "site": "Bern",
+        "semester": "A2023",
+        "tracks": [
+            "T3",
+            "T6"
+        ],
+        "teachers": [
+            "David Bommes"
+        ],
+        "period": "Weekly",
+        "schedule": "Thursday, 09:15 - 12:00",
+        "day": 4,
+        "start": "09:15",
+        "end": "12:00"
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/computer-vision/",
+        "name": "Computer Vision",
+        "codes": [
+            "31062",
+            "61062"
+        ],
+        "type": "Course",
+        "site": "Bern",
+        "semester": "A2023",
+        "tracks": [
+            "T3",
+            "T6"
+        ],
+        "teachers": [
+            "Paolo Favaro"
+        ],
+        "period": "Weekly",
+        "schedule": "Monday, 14:15 - 17:00",
+        "day": 1,
+        "start": "14:15",
+        "end": "17:00"
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/deep-learning/",
+        "name": "Deep Learning",
+        "codes": [
+            "31088",
+            "61088"
+        ],
+        "type": "Course",
+        "site": "Bern",
+        "semester": "S2024",
+        "tracks": [
+            "T3",
+            "T6"
+        ],
+        "teachers": [
+            "Paolo Favaro"
+        ],
+        "period": "Weekly",
+        "schedule": "Monday, 14:15 - 17:00",
+        "day": 1,
+        "start": "14:15",
+        "end": "17:00"
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/design-and-graphics-programming-for-game-development/",
+        "name": "Design and Graphics Programming for Game Development",
+        "codes": [
+            "33006"
+        ],
+        "type": "Course",
+        "site": "Fribourg",
+        "semester": "S2024",
+        "tracks": [
+            "T3"
+        ],
+        "teachers": [
+            "Maurizio Rigamonti"
+        ],
+        "period": "Weekly",
+        "schedule": "Friday, 14:15 - 17:00",
+        "day": 5,
+        "start": "14:15",
+        "end": "17:00"
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/document-image-analysis/",
+        "name": "Document Image Analysis",
+        "codes": [
+            "33107",
+            "63107"
+        ],
+        "type": "Course",
+        "site": "Fribourg",
+        "semester": "S2024",
+        "tracks": [
+            "T3",
+            "T6"
+        ],
+        "teachers": [
+            "Rolf Ingold",
+            "Anna Scius-Bertrand"
+        ],
+        "period": "Weekly",
+        "schedule": "Tuesday, 09:15 - 12:00",
+        "day": 2,
+        "start": "09:15",
+        "end": "12:00"
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/graph-based-pattern-recognition/",
+        "name": "Graph Based Pattern Recognition",
+        "codes": [
+            "31118",
+            "61118"
+        ],
+        "type": "Course",
+        "site": "Bern",
+        "semester": "S2024",
+        "tracks": [
+            "T3",
+            "T6"
+        ],
+        "teachers": [
+            "Kaspar Riesen"
+        ],
+        "period": "Weekly",
+        "schedule": "Wednesday, 09:15 - 12:00",
+        "day": 3,
+        "start": "09:15",
+        "end": "12:00"
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/image-processing/",
+        "name": "Image Processing",
+        "codes": [
+            "33115"
+        ],
+        "type": "Course",
+        "site": "Fribourg",
+        "semester": "A2023",
+        "tracks": [
+            "T3"
+        ],
+        "teachers": [],
+        "period": "Weekly",
+        "schedule": "Tuesday, 09:15 - 12:00",
+        "day": 2,
+        "start": "09:15",
+        "end": "12:00"
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/seminar-affective-computing-for-empathic-behaviour-change/",
+        "name": "Seminar Affective Computing for Empathic Behaviour Change",
+        "codes": [
+            "33542",
+            "63542"
+        ],
+        "type": "Seminar",
+        "site": "Fribourg",
+        "semester": "A2023",
+        "tracks": [
+            "T3",
+            "T6"
+        ],
+        "teachers": [
+            "Denis Lalanne",
+            "Elena Mugellini",
+            "Omar Abou Khaled"
+        ],
+        "period": "On Appointment",
+        "schedule": "",
+        "day": null,
+        "start": null,
+        "end": null
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/seminar-applied-optimization/",
+        "name": "Seminar Applied Optimization",
+        "codes": [
+            "31559",
+            "61559"
+        ],
+        "type": "Seminar",
+        "site": "Bern",
+        "semester": "S2024",
+        "tracks": [
+            "T3",
+            "T6"
+        ],
+        "teachers": [
+            "David Bommes"
+        ],
+        "period": "Weekly",
+        "schedule": "Thursday, 14:15 - 16:00",
+        "day": 4,
+        "start": "14:15",
+        "end": "16:00"
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/seminar-chatbots-and-conversational-agents/",
+        "name": "Seminar Chatbots and Conversational Agents",
+        "codes": [
+            "33543",
+            "63543"
+        ],
+        "type": "Seminar",
+        "site": "Fribourg",
+        "semester": "A2023",
+        "tracks": [
+            "T3",
+            "T6"
+        ],
+        "teachers": [
+            "Elena Mugellini",
+            "Omar Abou Khaled",
+            "Philippe Cudr\u00e9-Mauroux"
+        ],
+        "period": "On Appointment",
+        "schedule": "",
+        "day": null,
+        "start": null,
+        "end": null
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/seminar-computer-graphics-and-geometry-processing/",
+        "name": "Seminar Computer Graphics and Geometry Processing",
+        "codes": [
+            "31544"
+        ],
+        "type": "Seminar",
+        "site": "Bern",
+        "semester": "A2023",
+        "tracks": [
+            "T3"
+        ],
+        "teachers": [
+            "David Bommes"
+        ],
+        "period": "Weekly",
+        "schedule": "Thursday, 14:15 - 16:00",
+        "day": 4,
+        "start": "14:15",
+        "end": "16:00"
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/seminar-explainable-ai-human-computer-interaction-meets-artificial-intelligence/",
+        "name": "Seminar Explainable AI \u2013 Human-Computer Interaction meets Artificial Intelligence",
+        "codes": [
+            "33562",
+            "63562"
+        ],
+        "type": "Seminar",
+        "site": "Fribourg",
+        "semester": "S2024",
+        "tracks": [
+            "T3",
+            "T6"
+        ],
+        "teachers": [
+            "Elena Mugellini",
+            "Omar Abou Khaled",
+            "Rolf Ingold"
+        ],
+        "period": "On Appointment",
+        "schedule": "",
+        "day": null,
+        "start": null,
+        "end": null
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/seminar-human-computer-interaction-i/",
+        "name": "Seminar Human-Computer Interaction I",
+        "codes": [
+            "33549",
+            "63549"
+        ],
+        "type": "Seminar",
+        "site": "Fribourg",
+        "semester": "A2023",
+        "tracks": [
+            "T3",
+            "T6"
+        ],
+        "teachers": [
+            "Denis Lalanne",
+            "Julien Nembrini"
+        ],
+        "period": "On Appointment",
+        "schedule": "",
+        "day": null,
+        "start": null,
+        "end": null
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/seminar-human-computer-interaction-ii/",
+        "name": "Seminar Human-Computer Interaction II",
+        "codes": [
+            "33564",
+            "63564"
+        ],
+        "type": "Seminar",
+        "site": "Fribourg",
+        "semester": "S2024",
+        "tracks": [
+            "T3",
+            "T6"
+        ],
+        "teachers": [
+            "Denis Lalanne"
+        ],
+        "period": "On Appointment",
+        "schedule": "",
+        "day": null,
+        "start": null,
+        "end": null
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/seminar-machine-learning-and-artificial-intelligence/",
+        "name": "Seminar Machine Learning and Artificial Intelligence",
+        "codes": [
+            "31552",
+            "61552"
+        ],
+        "type": "Seminar",
+        "site": "Bern",
+        "semester": "A2023",
+        "tracks": [
+            "T3",
+            "T6"
+        ],
+        "teachers": [
+            "Paolo Favaro",
+            "Sepehr Sameni"
+        ],
+        "period": "Weekly",
+        "schedule": "Monday, 10:15 - 12:00",
+        "day": 1,
+        "start": "10:15",
+        "end": "12:00"
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/seminar-machine-learning-and-artificial-intelligence-2/",
+        "name": "Seminar Machine Learning and Artificial Intelligence",
+        "codes": [
+            "31568",
+            "61568"
+        ],
+        "type": "Seminar",
+        "site": "Bern",
+        "semester": "S2024",
+        "tracks": [
+            "T3",
+            "T6"
+        ],
+        "teachers": [
+            "Paolo Favaro"
+        ],
+        "period": "Weekly",
+        "schedule": "Monday, 10:15 - 12:00",
+        "day": 1,
+        "start": "10:15",
+        "end": "12:00"
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/seminar-pattern-recognition-2/",
+        "name": "Seminar Pattern Recognition",
+        "codes": [
+            "31569",
+            "61569"
+        ],
+        "type": "Seminar",
+        "site": "Bern",
+        "semester": "S2024",
+        "tracks": [
+            "T3",
+            "T6"
+        ],
+        "teachers": [],
+        "period": "On Appointment",
+        "schedule": "",
+        "day": null,
+        "start": null,
+        "end": null
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/automata-on-infinite-structures/",
+        "name": "Automata on Infinite Structures",
+        "codes": [
+            "43024"
+        ],
+        "type": "Course",
+        "site": "Fribourg",
+        "semester": "A2023",
+        "tracks": [
+            "T4"
+        ],
+        "teachers": [
+            "Ulrich Ultes-Nitsche"
+        ],
+        "period": "Weekly",
+        "schedule": "Wednesday, 09:15 - 12:00",
+        "day": 3,
+        "start": "09:15",
+        "end": "12:00"
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/fairness-and-privacy-in-machine-learning/",
+        "name": "Fairness and Privacy in Machine Learning",
+        "codes": [
+            "42116",
+            "62116"
+        ],
+        "type": "Course",
+        "site": "Neuch\u00e2tel",
+        "semester": "A2023",
+        "tracks": [
+            "T4",
+            "T6"
+        ],
+        "teachers": [],
+        "period": "Weekly",
+        "schedule": "Friday, 08:45 - 12:00",
+        "day": 5,
+        "start": "08:45",
+        "end": "12:00"
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/machine-learning-and-data-mining/",
+        "name": "Machine Learning and Data Mining",
+        "codes": [
+            "42032",
+            "62032"
+        ],
+        "type": "Course",
+        "site": "Neuch\u00e2tel",
+        "semester": "A2023",
+        "tracks": [
+            "T4",
+            "T6"
+        ],
+        "teachers": [
+            "Christos Dimitrakakis"
+        ],
+        "period": "Weekly",
+        "schedule": "Tuesday, 08:45 - 12:00",
+        "day": 2,
+        "start": "08:45",
+        "end": "12:00"
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/proof-theory/",
+        "name": "Proof Theory",
+        "codes": [
+            "41120"
+        ],
+        "type": "Course",
+        "site": "Bern",
+        "semester": "A2023",
+        "tracks": [
+            "T4"
+        ],
+        "teachers": [
+            "Thomas Studer"
+        ],
+        "period": "Weekly",
+        "schedule": "Tuesday, 09:15 - 12:00",
+        "day": 2,
+        "start": "09:15",
+        "end": "12:00"
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/reinforcement-learning-and-decision-making-under-uncertainty/",
+        "name": "Reinforcement Learning and Decision Making Under Uncertainty",
+        "codes": [
+            "42111",
+            "62111"
+        ],
+        "type": "Course",
+        "site": "Neuch\u00e2tel",
+        "semester": "S2024",
+        "tracks": [
+            "T4",
+            "T6"
+        ],
+        "teachers": [
+            "Christos Dimitrakakis"
+        ],
+        "period": "Weekly",
+        "schedule": "Tuesday, 08:45 - 12:00",
+        "day": 2,
+        "start": "08:45",
+        "end": "12:00"
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/seminar-advanced-topics-in-reinforcement-learning-and-decision-making/",
+        "name": "Seminar Advanced Topics in Reinforcement Learning and Decision Making",
+        "codes": [
+            "42558",
+            "62558"
+        ],
+        "type": "Seminar",
+        "site": "Neuch\u00e2tel",
+        "semester": "S2024",
+        "tracks": [
+            "T4",
+            "T6"
+        ],
+        "teachers": [
+            "Christos Dimitrakakis"
+        ],
+        "period": "On Appointment",
+        "schedule": "",
+        "day": null,
+        "start": null,
+        "end": null
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/seminar-logic-and-theoretical-computer-science/",
+        "name": "Seminar Logic and Theoretical Computer Science",
+        "codes": [
+            "41551"
+        ],
+        "type": "Seminar",
+        "site": "Bern",
+        "semester": "A2023",
+        "tracks": [
+            "T4"
+        ],
+        "teachers": [
+            "Thomas Studer"
+        ],
+        "period": "Weekly",
+        "schedule": "Thursday, 13:30 - 15:00",
+        "day": 4,
+        "start": "13:30",
+        "end": "15:00"
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/seminar-logic-and-theoretical-computer-science-2/",
+        "name": "Seminar Logic and Theoretical Computer Science",
+        "codes": [
+            "41567"
+        ],
+        "type": "Seminar",
+        "site": "Bern",
+        "semester": "S2024",
+        "tracks": [
+            "T4"
+        ],
+        "teachers": [
+            "Thomas Studer"
+        ],
+        "period": "Weekly",
+        "schedule": "Thursday, 10:15 - 12:00",
+        "day": 4,
+        "start": "10:15",
+        "end": "12:00"
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/advanced-mathematical-modeling-and-optimization/",
+        "name": "Advanced Mathematical Modeling and Optimization",
+        "codes": [
+            "53073"
+        ],
+        "type": "Course",
+        "site": "Fribourg",
+        "semester": "A2023",
+        "tracks": [
+            "T5"
+        ],
+        "teachers": [
+            "Meritxell Pacheco"
+        ],
+        "period": "Weekly",
+        "schedule": "Tuesday, 14:15 - 17:00",
+        "day": 2,
+        "start": "14:15",
+        "end": "17:00"
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/advanced-topics-in-decision-support/",
+        "name": "Advanced Topics in Decision Support",
+        "codes": [
+            "53086"
+        ],
+        "type": "Course",
+        "site": "Fribourg",
+        "semester": "S2024",
+        "tracks": [
+            "T5"
+        ],
+        "teachers": [
+            "Bernard Ries"
+        ],
+        "period": "Weekly",
+        "schedule": "Wednesday, 15:15 - 18:00",
+        "day": 3,
+        "start": "15:15",
+        "end": "18:00"
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/choice-based-optimization-and-its-application-to-revenue-management/",
+        "name": "Choice-based Optimization and its Application to Revenue Management",
+        "codes": [
+            "53119"
+        ],
+        "type": "Course",
+        "site": "Fribourg",
+        "semester": "S2024",
+        "tracks": [
+            "T5"
+        ],
+        "teachers": [
+            "Meritxell Pacheco"
+        ],
+        "period": "Weekly",
+        "schedule": "Tuesday, 13:15 - 16:00",
+        "day": 2,
+        "start": "13:15",
+        "end": "16:00"
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/design-of-governance-in-socio-technical-information-systems/",
+        "name": "Design of Governance in Socio-technical Information Systems",
+        "codes": [
+            "52028"
+        ],
+        "type": "Course",
+        "site": "Neuch\u00e2tel",
+        "semester": "S2024",
+        "tracks": [
+            "T5"
+        ],
+        "teachers": [
+            "Alain Sandoz"
+        ],
+        "period": "Weekly",
+        "schedule": "Monday, 14:15 - 18:00",
+        "day": 1,
+        "start": "14:15",
+        "end": "18:00"
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/digitalization-and-information-systems/",
+        "name": "Digitalization and Information Systems",
+        "codes": [
+            "53101"
+        ],
+        "type": "Course",
+        "site": "Fribourg",
+        "semester": "S2024",
+        "tracks": [
+            "T5"
+        ],
+        "teachers": [
+            "Hans-Georg Fill"
+        ],
+        "period": "Weekly",
+        "schedule": "Wednesday, 12:15 - 15:00",
+        "day": 3,
+        "start": "12:15",
+        "end": "15:00"
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/foundations-and-tools-for-processing-semi-structured-data/",
+        "name": "Foundations and Tools for Processing Semi-structured Data",
+        "codes": [
+            "53110"
+        ],
+        "type": "Course",
+        "site": "Fribourg",
+        "semester": "S2024",
+        "tracks": [
+            "T5"
+        ],
+        "teachers": [
+            "Christine Vanoirbeek"
+        ],
+        "period": "Weekly",
+        "schedule": "Tuesday, 09:15 - 12:00",
+        "day": 2,
+        "start": "09:15",
+        "end": "12:00"
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/fuzzy-sets-and-systems-i/",
+        "name": "Fuzzy Sets and Systems I",
+        "codes": [
+            "53105"
+        ],
+        "type": "Course",
+        "site": "Fribourg",
+        "semester": "A2023",
+        "tracks": [
+            "T5"
+        ],
+        "teachers": [
+            "Edy Portmann"
+        ],
+        "period": "Weekly",
+        "schedule": "Friday, 14:15 - 17:00",
+        "day": 5,
+        "start": "14:15",
+        "end": "17:00"
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/fuzzy-sets-and-systems-ii/",
+        "name": "Fuzzy Sets and Systems II",
+        "codes": [
+            "53104",
+            "63104"
+        ],
+        "type": "Course",
+        "site": "Fribourg",
+        "semester": "S2024",
+        "tracks": [
+            "T5",
+            "T6"
+        ],
+        "teachers": [
+            "Edy Portmann"
+        ],
+        "period": "Weekly",
+        "schedule": "Friday, 14:15 - 17:00",
+        "day": 5,
+        "start": "14:15",
+        "end": "17:00"
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/graph-theory-and-applications/",
+        "name": "Graph Theory and Applications",
+        "codes": [
+            "53085"
+        ],
+        "type": "Course",
+        "site": "Fribourg",
+        "semester": "A2023",
+        "tracks": [
+            "T5"
+        ],
+        "teachers": [
+            "David Schindl"
+        ],
+        "period": "Weekly",
+        "schedule": "Thursday, 14:15 - 17:00",
+        "day": 4,
+        "start": "14:15",
+        "end": "17:00"
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/introduction-to-recommender-systems/",
+        "name": "Introduction to Recommender Systems",
+        "codes": [
+            "53084",
+            "63084"
+        ],
+        "type": "Course",
+        "site": "Fribourg",
+        "semester": "S2024",
+        "tracks": [
+            "T5",
+            "T6"
+        ],
+        "teachers": [
+            "Luis Ter\u00e1n"
+        ],
+        "period": "Weekly",
+        "schedule": "Monday, 09:15 - 12:00",
+        "day": 1,
+        "start": "09:15",
+        "end": "12:00"
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/seminar-hands-on-recommender-systems/",
+        "name": "Seminar Hands-On Recommender Systems",
+        "codes": [
+            "53547",
+            "63547"
+        ],
+        "type": "Seminar",
+        "site": "Fribourg",
+        "semester": "A2023",
+        "tracks": [
+            "T5",
+            "T6"
+        ],
+        "teachers": [
+            "Luis Ter\u00e1n"
+        ],
+        "period": "On Appointment",
+        "schedule": "",
+        "day": null,
+        "start": null,
+        "end": null
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/seminar-life-engineering/",
+        "name": "Seminar Life Engineering",
+        "codes": [
+            "53550",
+            "63550"
+        ],
+        "type": "Seminar",
+        "site": "Fribourg",
+        "semester": "A2023",
+        "tracks": [
+            "T5",
+            "T6"
+        ],
+        "teachers": [
+            "Edy Portmann"
+        ],
+        "period": "On Appointment",
+        "schedule": "",
+        "day": null,
+        "start": null,
+        "end": null
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/seminar-life-engineering-2/",
+        "name": "Seminar Life Engineering",
+        "codes": [
+            "53566",
+            "63566"
+        ],
+        "type": "Seminar",
+        "site": "Fribourg",
+        "semester": "S2024",
+        "tracks": [
+            "T5",
+            "T6"
+        ],
+        "teachers": [
+            "Edy Portmann"
+        ],
+        "period": "On Appointment",
+        "schedule": "",
+        "day": null,
+        "start": null,
+        "end": null
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/seminar-public-services/",
+        "name": "Seminar Public Services",
+        "codes": [
+            "53554",
+            "63554"
+        ],
+        "type": "Seminar",
+        "site": "Fribourg",
+        "semester": "A2023",
+        "tracks": [
+            "T5",
+            "T6"
+        ],
+        "teachers": [
+            "Edy Portmann"
+        ],
+        "period": "On Appointment",
+        "schedule": "",
+        "day": null,
+        "start": null,
+        "end": null
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/seminar-social-computing/",
+        "name": "Seminar Social Computing",
+        "codes": [
+            "53570",
+            "63570"
+        ],
+        "type": "Seminar",
+        "site": "Fribourg",
+        "semester": "S2024",
+        "tracks": [
+            "T5",
+            "T6"
+        ],
+        "teachers": [
+            "Edy Portmann"
+        ],
+        "period": "On Appointment",
+        "schedule": "",
+        "day": null,
+        "start": null,
+        "end": null
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/big-data-infrastructures/",
+        "name": "Big Data Infrastructures",
+        "codes": [
+            "63021"
+        ],
+        "type": "Course",
+        "site": "Fribourg",
+        "semester": "A2023",
+        "tracks": [
+            "T6"
+        ],
+        "teachers": [
+            "Philippe Cudr\u00e9-Mauroux",
+            "Alberto Lerner"
+        ],
+        "period": "Weekly",
+        "schedule": "Wednesday, 14:15 - 17:00",
+        "day": 3,
+        "start": "14:15",
+        "end": "17:00"
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/data-management-data-structures/",
+        "name": "Data Management Data Structures",
+        "codes": [
+            "63112"
+        ],
+        "type": "Course",
+        "site": "Fribourg",
+        "semester": "S2024",
+        "tracks": [
+            "T6"
+        ],
+        "teachers": [
+            "Alberto Lerner"
+        ],
+        "period": "Weekly",
+        "schedule": "Thursday, 14:15 - 17:00",
+        "day": 4,
+        "start": "14:15",
+        "end": "17:00"
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/distributed-deep-learning-systems/",
+        "name": "Distributed Deep Learning Systems",
+        "codes": [
+            "62122"
+        ],
+        "type": "Course",
+        "site": "Neuch\u00e2tel",
+        "semester": "S2024",
+        "tracks": [
+            "T6"
+        ],
+        "teachers": [
+            "Lydia Chen"
+        ],
+        "period": "Weekly",
+        "schedule": "Monday, 08:15 - 12:00",
+        "day": 1,
+        "start": "08:15",
+        "end": "12:00"
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/pattern-recognition/",
+        "name": "Pattern Recognition",
+        "codes": [
+            "63082"
+        ],
+        "type": "Course",
+        "site": "Fribourg",
+        "semester": "S2024",
+        "tracks": [
+            "T6"
+        ],
+        "teachers": [
+            "Andreas Fischer"
+        ],
+        "period": "Weekly",
+        "schedule": "Monday, 14:15 - 17:00",
+        "day": 1,
+        "start": "14:15",
+        "end": "17:00"
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/seminar-data-science/",
+        "name": "Seminar Data Science",
+        "codes": [
+            "63545"
+        ],
+        "type": "Seminar",
+        "site": "Fribourg",
+        "semester": "A2023",
+        "tracks": [
+            "T6"
+        ],
+        "teachers": [
+            "Mourad Khayati",
+            "Alberto Lerner"
+        ],
+        "period": "On Appointment",
+        "schedule": "",
+        "day": null,
+        "start": null,
+        "end": null
+    },
+    {
+        "url": "https://mcs.unibnf.ch/courses/social-media-analytics/",
+        "name": "Social Media Analytics",
+        "codes": [
+            "63091"
+        ],
+        "type": "Course",
+        "site": "Fribourg",
+        "semester": "S2024",
+        "tracks": [
+            "T6"
+        ],
+        "teachers": [
+            "Mourad Khayati",
+            "Philippe Cudr\u00e9-Mauroux"
+        ],
+        "period": "Weekly",
+        "schedule": "Tuesday, 14:15 - 17:00",
+        "day": 2,
+        "start": "14:15",
+        "end": "17:00"
+    }
+]

@@ -7,4 +7,6 @@ export interface Course extends Record<string, any> {
   code: string
   start: string
   end: string
+  track: number
+  semester: number
 }

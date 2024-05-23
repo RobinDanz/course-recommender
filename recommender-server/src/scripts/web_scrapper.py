@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+from datetime import time
 
 URL = 'https://mcs.unibnf.ch/program/courses-timetable/course-list/'
 
@@ -12,6 +13,7 @@ if __name__ == '__main__':
     tables = course_list_soup.find_all(id='course-list-table')
 
     courses = []
+    courses_codes = []
 
     track_index = 0
     for t in tables:
@@ -57,11 +59,51 @@ if __name__ == '__main__':
             course_period = schedule_cells[0].next_element
             course_schedule = ''
 
+            day = None
+            hours = ''
+            start = None
+            end = None
+
             if course_period == 'Weekly':
+                days_enum = {
+                    'Monday': 1,
+                    'Tuesday': 2,
+                    'Wednesday': 3,
+                    'Thursday': 4,
+                    'Friday': 5
+                }
+
                 course_schedule = schedule_cells[1].next_element
 
-            courses.append(course_details)
+                day = days_enum[course_schedule.split(',')[0].strip()]
+                hours = course_schedule.split(',')[1].split('-')
+                start = hours[0].strip()
+                end = hours[1].strip()
+
+            course_details['url'] = url
+            course_details['name'] = name
+            course_details['codes'] = codes
+            course_details['type'] = course_type
+            course_details['site'] = site
+            course_details['semester'] = semester
+            course_details['tracks'] = tracks
+            course_details['teachers'] = teachers
+            course_details['period'] = course_period
+            course_details['schedule'] = course_schedule
+            course_details['day'] = day
+            course_details['start'] = start
+            course_details['end'] = end
+
+            if codes not in courses_codes:
+                courses_codes.append(codes)
+                courses.append(course_details)
+            else:
+                print(f'{name} already saved !')
 
             course_index += 1
         track_index += 1
+
+    import json
+    with open('./out/data.json', 'w') as f:
+        json.dump(courses, f, indent=4)
 

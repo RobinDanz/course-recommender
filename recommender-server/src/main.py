@@ -1,8 +1,17 @@
 from fastapi import FastAPI
 from routers import users, auth, courses, forms
 from fastapi.middleware.cors import CORSMiddleware
+from contextlib import asynccontextmanager
+from database.config import fill_db, str_to_time
+from models.course import Course
 
-app = FastAPI()
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    await fill_db()
+    yield
+
+app = FastAPI(lifespan=lifespan)
+
 
 allowed_origins = [
     'http://localhost:5173'

@@ -5,25 +5,42 @@ import { ref } from 'vue'
 import * as yup from 'yup'
 import SliderInput from '@/components/forms/inputs/SliderInput.vue'
 
-const evaluationType = ref([])
+const evaluation = ref([])
 const university = ref([])
-const lectureType = ref([])
-const subjectOfInterest = ref([])
+const courseType = ref([])
+const track = ref([])
+const mainSubject = ref([])
+const lectures = ref([])
 
 const subjectType = ref(50)
-const studentInteractions = ref(50)
-const blackBoardUse = ref(50)
-const exampleUse = ref(50)
-const TAImplication = ref(50)
+const interactions = ref(50)
+const blackboard = ref(50)
+const recording = ref(50)
+const accessibility = ref(50)
 
-const lectureRecorded = ref(false)
+// evaluation : int
+// university : int
+// courseType : int
+// track : int
+// lectures : float
+// subjectType : float
+// interactions: float
+// blackboard : float
+// recordings : float
+// teacherAccessibilty : float
 
 const schema = yup.object({
-  evalType: yup.array().of(yup.string()).min(1, 'at least one').required(),
   university: yup.array().of(yup.string()).min(1, 'at least one').required(),
-  lectureType: yup.array().of(yup.string()).min(1, 'at least one').required(),
-  subjectOfInterest: yup.array().of(yup.string()).min(1, 'at least one').required(),
-  subjectType: yup.number().required()
+  evaluation: yup.array().of(yup.string()).min(1, 'at least one').required(),
+  courseType: yup.array().of(yup.string()).min(1, 'at least one').required(),
+  track: yup.array().of(yup.string()).min(1, 'at least one').required(),
+  lectures: yup.array().of(yup.string()).min(1, 'at least one').required(),
+  subjectType: yup.number().required(),
+  mainSubject: yup.array().of(yup.string()).min(1, 'at least one').required(),
+  interactions: yup.number().required(),
+  blackboard: yup.number().required(),
+  recording: yup.number().required(),
+  accessibility: yup.number().required()
 })
 
 const { values, errors, handleSubmit } = useForm({
@@ -45,19 +62,19 @@ const onSubmit = handleSubmit((values) => {
         <div class="flex xl:flex-row justify-content-between">
           <CheckboxInput
             name="university"
-            value="BE"
+            value="0"
             label="Bern"
             v-model="university"
           ></CheckboxInput>
           <CheckboxInput
             name="university"
-            value="FR"
+            value="1"
             label="Fribourg"
             v-model="university"
           ></CheckboxInput>
           <CheckboxInput
             name="university"
-            value="NE"
+            value="2"
             label="Neuchatel"
             v-model="university"
           ></CheckboxInput>
@@ -67,34 +84,28 @@ const onSubmit = handleSubmit((values) => {
         <h2>Type of evaluation</h2>
         <div class="flex flex-row justify-content-between">
           <CheckboxInput
-            name="evalType"
-            value="A"
+            name="evaluation"
+            value="0"
             label="Semester Project"
-            v-model="evaluationType"
+            v-model="evaluation"
           ></CheckboxInput>
           <CheckboxInput
-            name="evalType"
-            value="B"
-            label="Evaluated Series"
-            v-model="evaluationType"
+            name="evaluation"
+            value="1"
+            label="Continuous"
+            v-model="evaluation"
           ></CheckboxInput>
           <CheckboxInput
-            name="evalType"
-            value="C"
-            label="Non-Evaluated Series"
-            v-model="evaluationType"
-          ></CheckboxInput>
-          <CheckboxInput
-            name="evalType"
-            value="D"
-            label="Written exam"
-            v-model="evaluationType"
-          ></CheckboxInput>
-          <CheckboxInput
-            name="evalType"
-            value="E"
+            name="evaluation"
+            value="2"
             label="Oral exam"
-            v-model="evaluationType"
+            v-model="evaluation"
+          ></CheckboxInput>
+          <CheckboxInput
+            name="evaluation"
+            value="3"
+            label="Written exam"
+            v-model="evaluation"
           ></CheckboxInput>
         </div>
       </div>
@@ -102,72 +113,173 @@ const onSubmit = handleSubmit((values) => {
         <h2>Type of lecture</h2>
         <div class="flex flex-row justify-content-between">
           <CheckboxInput
-            name="lectureType"
-            value="A"
+            name="courseType"
+            value="0"
             label="Course"
-            v-model="lectureType"
+            v-model="courseType"
           ></CheckboxInput>
           <CheckboxInput
-            name="lectureType"
-            value="B"
+            name="courseType"
+            value="1"
             label="Seminar"
-            v-model="lectureType"
+            v-model="courseType"
           ></CheckboxInput>
         </div>
       </div>
-      <div class="interest">
-        <h2>Subject of interest</h2>
+      <div class="track">
+        <h2>Track</h2>
+        <div class="flex flex-row justify-content-between">
+          <CheckboxInput name="track" value="0" label="General" v-model="track"></CheckboxInput>
+          <CheckboxInput
+            name="track"
+            value="1"
+            label="Distributed Software Systems"
+            v-model="track"
+          ></CheckboxInput>
+          <CheckboxInput name="track" value="2" label="Security" v-model="track"></CheckboxInput>
+          <CheckboxInput
+            name="track"
+            value="3"
+            label="Visual Computing"
+            v-model="track"
+          ></CheckboxInput>
+          <CheckboxInput
+            name="track"
+            value="4"
+            label="Theory and Logic"
+            v-model="track"
+          ></CheckboxInput>
+          <CheckboxInput
+            name="track"
+            value="5"
+            label="Information Systems and Decision Support"
+            v-model="track"
+          ></CheckboxInput>
+          <CheckboxInput
+            name="track"
+            value="6"
+            label="Data Science"
+            v-model="track"
+          ></CheckboxInput>
+        </div>
+      </div>
+      <div class="lectures">
+        <h2>Lectures</h2>
         <div class="flex flex-row justify-content-between">
           <CheckboxInput
-            name="subjectOfInterest"
-            value="A"
-            label="Computer Science"
-            v-model="subjectOfInterest"
+            name="lectures"
+            value="0"
+            label="Only Lectures"
+            v-model="lectures"
           ></CheckboxInput>
           <CheckboxInput
-            name="subjectOfInterest"
-            value="B"
-            label="Logic"
-            v-model="subjectOfInterest"
+            name="lectures"
+            value="1"
+            label="Lectures and some exercises"
+            v-model="lectures"
           ></CheckboxInput>
           <CheckboxInput
-            name="subjectOfInterest"
-            value="C"
-            label="Math"
-            v-model="subjectOfInterest"
+            name="lectures"
+            value="2"
+            label="Lectures and exercises"
+            v-model="lectures"
+          ></CheckboxInput>
+          <CheckboxInput
+            name="lectures"
+            value="3"
+            label="Lectures and project(s)"
+            v-model="lectures"
+          ></CheckboxInput>
+          <CheckboxInput
+            name="lectures"
+            value="4"
+            label="Project(s) only"
+            v-model="lectures"
           ></CheckboxInput>
         </div>
       </div>
-      <div>
+      <div class="main-subject">
+        <h2>Main subject</h2>
+        <div class="flex flex-row justify-content-between">
+          <CheckboxInput
+            name="mainSubject"
+            value="0"
+            label="Computer Science"
+            v-model="mainSubject"
+          ></CheckboxInput>
+          <CheckboxInput
+            name="mainSubject"
+            value="1"
+            label="Logic"
+            v-model="mainSubject"
+          ></CheckboxInput>
+          <CheckboxInput
+            name="mainSubject"
+            value="2"
+            label="Math"
+            v-model="mainSubject"
+          ></CheckboxInput>
+        </div>
+      </div>
+      <div class="subject-type">
         <h2>Type of subject</h2>
         <div class="flex flex-row justify-content-center">
           <SliderInput
             name="subjectType"
             :initial-value="50"
             v-model="subjectType"
-            label="coucou"
+            left-label="theoritical"
+            right-label="practical"
           ></SliderInput>
         </div>
       </div>
-      <div>
+      <div class="interactions">
         <h2>Teacher/Students interactions</h2>
-        <div class="flex flex-row justify-content-center"></div>
+        <div class="flex flex-row justify-content-center">
+          <SliderInput
+            name="interactions"
+            :initial-value="50"
+            v-model="interactions"
+            left-label="None"
+            right-label="A lot"
+          ></SliderInput>
+        </div>
       </div>
-      <div>
+      <div class="blackboard">
         <h2>Black board uses</h2>
-        <div class="flex flex-row justify-content-center"></div>
+        <div class="flex flex-row justify-content-center">
+          <SliderInput
+            name="blackboard"
+            :initial-value="50"
+            v-model="blackboard"
+            left-label="Never"
+            right-label="Always"
+          ></SliderInput>
+        </div>
       </div>
-      <div>
-        <h2>Example use</h2>
-        <div class="flex flex-row justify-content-center"></div>
+      <div class="">
+        <h2>Teacher accessibility</h2>
+        <div class="flex justify-content-center">
+          <SliderInput
+            name="accessibility"
+            :initial-value="50"
+            v-model="accessibility"
+            left-label="Not accessible"
+            right-label="Always accessible"
+          ></SliderInput>
+        </div>
       </div>
-      <div>
-        <h2>Teaching assistant implication</h2>
-        <div class="flex flex-row justify-content-center"></div>
-      </div>
-      <div>
+      <div class="recording">
         <h2>Recorded lectures</h2>
-        <div class="flex flex-row justify-content-center"></div>
+        <div class="flex flex-row justify-content-center">
+          <SliderInput
+            name="recording"
+            :initial-value="50"
+            v-model="recording"
+            left-label="Never recorded"
+            right-label="Always recorded"
+          ></SliderInput>
+        </div>
       </div>
       <button type="submit">Send</button>
     </form>

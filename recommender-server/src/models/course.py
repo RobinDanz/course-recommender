@@ -6,13 +6,15 @@ class Course(SQLModel, table=True):
     Representation of a course in the database
     """
     id: int | None = Field(default=None, primary_key=True)
-    title: str = Field(unique=True)
+    title: str = Field()
     day: int = Field()
     type: int = Field()
     site: str = Field()
     code: str = Field()
     start: time = Field()
     end: time = Field()
+    track: int = Field()
+    semester: int = Field() # 0 = Spring, 1 = Autumn
 
 
 class CourseCreate(SQLModel):
@@ -23,6 +25,8 @@ class CourseCreate(SQLModel):
     code: str
     start: time = Field()
     end: time = Field()
+    track: int
+    semester: int
 
 
 class CourseRead(SQLModel):
@@ -32,5 +36,7 @@ class CourseRead(SQLModel):
     type: int
     site: str
     code: str
-    start: time = Field()
-    end: time = Field()
+    start: time
+    end: time
+    track: int
+    semester: int

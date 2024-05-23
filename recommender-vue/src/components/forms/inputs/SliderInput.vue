@@ -7,7 +7,8 @@ const props = defineProps({
   initialValue: {
     type: Number
   },
-  label: String
+  leftLabel: String,
+  rightLabel: String
 })
 
 const modelValue = defineModel<number>('modelValue')
@@ -18,15 +19,15 @@ const { value, handleChange, errorMessage } = useField(props.name as string, und
 </script>
 
 <template>
-  <div class="flex flex-column align-items-center w-5">
-    <div class="flex">
-      {{ value }}
-      <label :for="name">{{ label }}</label>
+  <div class="flex flex-column align-items-center w-full bordered">
+    <div class="grid w-full bordered">
+      <div class="col-4 bordered flex justify-content-center">{{ leftLabel }}</div>
+      <div class="col-4 bordered">
+        <Slider v-model="modelValue" :name="name" @update:model-value="handleChange"></Slider>
+      </div>
+      <div class="col-4 bordered flex justify-content-center">{{ rightLabel }}</div>
     </div>
-    <div class="w-5">
-      <Slider v-model="modelValue" :name="name" @update:model-value="handleChange"></Slider>
-    </div>
-
-    {{ errorMessage }}
   </div>
+
+  {{ errorMessage }}
 </template>

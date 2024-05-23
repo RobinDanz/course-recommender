@@ -12,16 +12,28 @@ import {
 import '@quasar/quasar-ui-qcalendar/src/QCalendarVariables.sass'
 import '@quasar/quasar-ui-qcalendar/src/QCalendarTransitions.sass'
 import '@quasar/quasar-ui-qcalendar/src/QCalendarDay.sass'
-import { time } from 'console'
 
 const courses = ref<Course[]>()
 const coursesMap = ref<Record<number, Array<Course>>>({})
 
 const selectedDate = today()
 
-const getCourses = (timestamp: Timestamp) => {
-  return coursesMap.value[timestamp.weekday]
-}
+const trackFilter = ref([1, 2, 3])
+const semesterFilter = ref([0])
+
+const trackerPos = ref({
+  left: 50,
+  top: 50
+})
+
+const trackerContent = ref({
+  title: '',
+  start: '',
+  end: ''
+})
+const displayTracker = ref(false)
+
+const colorPalette = ['', '', '', '', '', '', '']
 
 const eventStyle = (course: Course, timeStartPos: Function, timeDurationHeight: Function) => {
   const s = {
@@ -42,7 +54,7 @@ const eventStyle = (course: Course, timeStartPos: Function, timeDurationHeight: 
     s.left = index * size + '%'
 
     if (index === 0) index += 1
-    s.width = index * (size - 1) + '%'
+    s.width = size - 1 + '%'
   }
 
   return s
@@ -65,21 +77,55 @@ const calculateDuration = (course: Course) => {
 onBeforeMount(async () => {
   courses.value = await getCourseList()
 
-  courses.value.forEach((c) => {
-    if (!(c.day in coursesMap.value)) {
-      coursesMap.value[c.day] = []
-    }
-
-    coursesMap.value[c.day].push(c)
-  })
+  refreshCoursesMap()
 })
 
 const courseClick = (course: Course) => {
   console.log(course.id)
 }
+
+const refreshCoursesMap = () => {
+  if (courses.value) {
+    coursesMap.value = {}
+    courses.value.forEach((c) => {
+      console.log(c.title)
+      console.log(c.id)
+      console.log('================')
+      if (!(c.day in coursesMap.value)) {
+        coursesMap.value[c.day] = []
+      }
+      if (trackFilter.value.includes(c.track) && semesterFilter.value.includes(c.semester)) {
+        coursesMap.value[c.day].push(c)
+      }
+    })
+  }
+  console.log(coursesMap.value)
+  console.log(coursesMap.value['2'])
+}
+
+const filter = () => {
+  trackFilter.value = [4, 5, 6]
+  refreshCoursesMap()
+}
+
+const resetFilter = () => {
+  trackFilter.value = [0, 1, 2, 3, 4, 5, 6]
+  refreshCoursesMap()
+}
+
+const mouseMove = (event: MouseEvent, course: Course) => {
+  trackerPos.value.left = event.pageX
+  trackerPos.value.top = event.pageY
+
+  trackerContent.value.title = course.title
+  trackerContent.value.start = course.start
+  trackerContent.value.end = course.end
+}
 </script>
 
 <template>
+  <button @click="filter">filter</button>
+  <button @click="resetFilter">reset filter</button>
   <div v-if="courses" class="flex" style="max-width: 2000px; width: 100%; height: 600px">
     <QCalendarDay
       v-model="selectedDate"
@@ -92,17 +138,29 @@ const courseClick = (course: Course) => {
       bordered
     >
       <template #day-body="{ scope: { timestamp, timeStartPos, timeDurationHeight } }">
-        <template v-for="ev in getCourses(timestamp)" :key="ev.id">
+        <template v-for="ev in coursesMap[timestamp.weekday]" :key="ev.id">
           <div
             class="event"
             :style="eventStyle(ev, timeStartPos, timeDurationHeight)"
             @click="courseClick(ev)"
+            @mouseenter="displayTracker = true"
+            @mouseleave="displayTracker = false"
+            @mousemove="mouseMove($event, ev)"
           >
             <span class="m-auto"> {{ ev.title }} </span>
           </div>
         </template>
       </template>
     </QCalendarDay>
+  </div>
+  <div
+    v-show="displayTracker"
+    class="tracker p-2"
+    :style="{ left: 15 + trackerPos.left + 'px', top: 15 + trackerPos.top + 'px' }"
+  >
+    {{ trackerContent.title }}
+    {{ trackerContent.start }}
+    {{ trackerContent.end }}
   </div>
 </template>
 
@@ -126,5 +184,16 @@ const courseClick = (course: Course) => {
   box-shadow: 3px 3px 5px rgb(0 0 0 / 50%);
   z-index: 1000;
   cursor: pointer;
+}
+.tracker {
+  border-radius: 10px;
+  position: absolute;
+  background-color: gray;
+  height: 150px;
+  width: 150px;
+  z-index: 1500;
+  pointer-events: none;
+  box-shadow: 3px 3px 5px rgb(0 0 0 / 50%);
+  overflow: hidden;
 }
 </style>
