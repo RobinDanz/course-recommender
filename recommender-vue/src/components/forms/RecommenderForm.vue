@@ -10,7 +10,6 @@ const evaluation = ref([])
 const university = ref([])
 const courseType = ref([])
 const track = ref([])
-const mainSubject = ref([])
 const lectures = ref([])
 
 const subjectType = ref(50)
@@ -26,7 +25,6 @@ const schema = yup.object({
   track: yup.array().of(yup.number()).min(1, 'at least one').required(),
   lectures: yup.array().of(yup.number()).min(1, 'at least one').required(),
   subjectType: yup.number().required(),
-  mainSubject: yup.array().of(yup.number()).min(1, 'at least one').required(),
   interactions: yup.number().required(),
   blackboard: yup.number().required(),
   recordings: yup.number().required(),
@@ -186,29 +184,6 @@ const onSubmit = handleSubmit(async (values) => {
             :value="4"
             label="Project(s) only"
             v-model="lectures"
-          ></CheckboxInput>
-        </div>
-      </div>
-      <div class="main-subject">
-        <h2>Main subject</h2>
-        <div class="flex flex-row justify-content-between">
-          <CheckboxInput
-            name="mainSubject"
-            :value="0"
-            label="Computer Science"
-            v-model="mainSubject"
-          ></CheckboxInput>
-          <CheckboxInput
-            name="mainSubject"
-            :value="1"
-            label="Logic"
-            v-model="mainSubject"
-          ></CheckboxInput>
-          <CheckboxInput
-            name="mainSubject"
-            :value="2"
-            label="Math"
-            v-model="mainSubject"
           ></CheckboxInput>
         </div>
       </div>
