@@ -56,7 +56,7 @@ const eventStyle = (course: Course, timeStartPos: Function, timeDurationHeight: 
     s.left = index * size + '%'
 
     if (index === 0) index += 1
-    s.width = size + 10 + '%'
+    s.width = size - 1 + '%'
   }
 
   return s
