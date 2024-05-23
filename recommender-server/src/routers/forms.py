@@ -1,10 +1,7 @@
-from fastapi import APIRouter, Depends
-from sqlmodel import Session, select
-from database import config
-from typing import Annotated
+from fastapi import APIRouter
 
 from models.form import *
-from controllers.form_controller import *
+from controllers.form_controller import fuzzy_set_variables
 
 router = APIRouter(
     prefix='/forms',
@@ -14,6 +11,7 @@ router = APIRouter(
 
 @router.post('/', response_model=FormResponse)
 async def handle_form(form: FormRequest):
-    data = form
-    response = fuzzy(data)
+    response = fuzzy_set_variables(form)
+    print(response)
+    response = FormResponse(response={'coucou': 123})
     return response

@@ -2,13 +2,11 @@
 import Checkbox from 'primevue/checkbox'
 import { useField } from 'vee-validate'
 
-const props = defineProps({
-  name: String,
-  value: {
-    type: String
-  },
+const props = defineProps<{
+  name: string
+  value: string | number
   label: String
-})
+}>()
 
 const modelValue = defineModel('modelValue')
 

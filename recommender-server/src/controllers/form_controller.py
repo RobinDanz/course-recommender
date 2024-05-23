@@ -5,7 +5,6 @@ import numpy as np
 # from controllers.rules import RULES
 from controllers.rules import RULES
 
-
 FS = sf.FuzzySystem()
 courses = ['SocialComputing', 'Concurrency', 'FuzzySets2', 'test']
 VARIABLES = ['Evaluation', 'University', 'CourseType', 'Track', 'Lectures', 'SubjectType', 'Interactions', 'Blackboard', 'Recordings', 'TeacherAccessibilty']
@@ -18,7 +17,7 @@ def fuzzy_set_variables(form: FormRequest):
     if len(form.evaluation) > 1:
         mean_eval = np.mean(form.evaluation)
         weight = 1- len(form.evaluation)/4
-        for i in len(rules):
+        for i in range(len(rules)):
             if str(rules[i]).find('Evaluation') != -1:
                 new_rule = ' '.join([rules[i], f'WEIGHT {weight}']) 
                 FS.replace_rule(i, new_rule)
@@ -29,7 +28,7 @@ def fuzzy_set_variables(form: FormRequest):
     if len(form.university) > 1:
         mean_eval = np.mean(form.university)
         weight = 1- len(form.university)/3
-        for i in len(rules):
+        for i in range(len(rules)):
             if str(rules[i]).find('University') != -1:
                 new_rule = ' '.join([rules[i], f'WEIGHT {weight}']) 
                 FS.replace_rule(i, new_rule)
@@ -40,7 +39,7 @@ def fuzzy_set_variables(form: FormRequest):
     if len(form.courseType) > 1:
         mean_eval = np.mean(form.courseType)
         weight = 1- len(form.courseType)/2
-        for i in len(rules):
+        for i in range(len(rules)):
             if str(rules[i]).find('CourseType') != -1:
                 new_rule = ' '.join([rules[i], f'WEIGHT {weight}']) 
                 FS.replace_rule(i, new_rule)
@@ -51,7 +50,7 @@ def fuzzy_set_variables(form: FormRequest):
     if len(form.track) > 1:
         mean_eval = np.mean(form.track)
         weight = 1- len(form.track)/7
-        for i in len(rules):
+        for i in range(len(rules)):
             if str(rules[i]).find('Track') != -1:
                 new_rule = ' '.join([rules[i], f'WEIGHT {weight}']) 
                 FS.replace_rule(i, new_rule)
@@ -62,7 +61,7 @@ def fuzzy_set_variables(form: FormRequest):
     if len(form.lectures) > 1:
         mean_eval = np.mean(form.lectures)
         weight = 1- len(form.lectures)/5
-        for i in len(rules):
+        for i in range(len(rules)):
             if str(rules[i]).find('Lectures') != -1:
                 new_rule = ' '.join([rules[i], f'WEIGHT {weight}']) 
                 FS.replace_rule(i, new_rule)
@@ -148,45 +147,45 @@ FS.set_crisp_output_value('SocialComputing', 0.0)
 FS.set_crisp_output_value('Concurrency', 1.0)
 """
 
-FS.set_crisp_output_value('notRecommended', 0)
-FS.set_crisp_output_value('recommended', 100)
+FS.set_crisp_output_value('notRecommended', 1)
+FS.set_crisp_output_value('recommended', 99)
 
 # IF/THEN rules
 # FS.add_rules_from_file('/Users/michelefischer/MA1P/SocialComputing/course-recommender/recommender-server/src/controllers/rules.txt')
 FS.add_rules(RULES)
 
-# Test with a random answer
+# # Test with a random answer
 
-eva = [0, 1, 3, 4]
-rules = FS.get_rules()
-if len(eva) > 1:
-    mean_eval = np.mean(eva)
-    weight = 1- len(eva)/4
-    for i in range(len(rules)):
-        if str(rules[i]).find('Evaluation') != -1:
-            new_rule = ' '.join([rules[i], f'WEIGHT {weight}']) 
-            FS.replace_rule(i, new_rule)
-    FS.set_variable('Evaluation', mean_eval)
-else:
-        FS.set_variable('Evaluation', eva[0])
+# eva = [0, 1, 3, 4]
+# rules = FS.get_rules()
+# if len(eva) > 1:
+#     mean_eval = np.mean(eva)
+#     weight = 1- len(eva)/4
+#     for i in range(len(rules)):
+#         if str(rules[i]).find('Evaluation') != -1:
+#             new_rule = ' '.join([rules[i], f'WEIGHT {weight}']) 
+#             FS.replace_rule(i, new_rule)
+#     FS.set_variable('Evaluation', mean_eval)
+# else:
+#         FS.set_variable('Evaluation', eva[0])
 
-FS.set_variable('University', 1)
-FS.set_variable('CourseType', 0)
-FS.set_variable('Track', 5)
-FS.set_variable('Lectures', 90)
-FS.set_variable('SubjectType', 70)
-FS.set_variable('Interactions', 10)
-FS.set_variable('Blackboard', 10)
-FS.set_variable('Recordings', 10)
-FS.set_variable('TeacherAccessibilty', 84)
+# FS.set_variable('University', 1)
+# FS.set_variable('CourseType', 0)
+# FS.set_variable('Track', 5)
+# FS.set_variable('Lectures', 90)
+# FS.set_variable('SubjectType', 70)
+# FS.set_variable('Interactions', 10)
+# FS.set_variable('Blackboard', 10)
+# FS.set_variable('Recordings', 10)
+# FS.set_variable('TeacherAccessibilty', 84)
 
-"""
-for variable in VARIABLES:
-    FS.set_variable(variable, np.random.random(), verbose=False)
-"""
+# """
+# for variable in VARIABLES:
+#     FS.set_variable(variable, np.random.random(), verbose=False)
+# """
 
-# Run results
-# print(FS.Mamdani_inference([course for course in courses], verbose=False))
-print(FS.Sugeno_inference([course for course in courses], verbose=False))
-# print(FS.Mamdani_inference(['Course'], verbose=False))
-# print(FS.Sugeno_inference(['Course'], verbose=False))
+# # Run results
+# # print(FS.Mamdani_inference([course for course in courses], verbose=False))
+# # print(FS.Sugeno_inference([course for course in courses], verbose=False))
+# # print(FS.Mamdani_inference(['Course'], verbose=False))
+# # print(FS.Sugeno_inference(['Course'], verbose=False))

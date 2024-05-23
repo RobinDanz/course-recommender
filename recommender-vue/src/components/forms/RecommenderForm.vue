@@ -4,6 +4,7 @@ import CheckboxInput from '@/components/forms/inputs/CheckboxInput.vue'
 import { ref } from 'vue'
 import * as yup from 'yup'
 import SliderInput from '@/components/forms/inputs/SliderInput.vue'
+import { sendRecommender } from '@/services/recommenderService'
 
 const evaluation = ref([])
 const university = ref([])
@@ -18,37 +19,27 @@ const blackboard = ref(50)
 const recording = ref(50)
 const accessibility = ref(50)
 
-// evaluation : int
-// university : int
-// courseType : int
-// track : int
-// lectures : float
-// subjectType : float
-// interactions: float
-// blackboard : float
-// recordings : float
-// teacherAccessibilty : float
-
 const schema = yup.object({
-  university: yup.array().of(yup.string()).min(1, 'at least one').required(),
-  evaluation: yup.array().of(yup.string()).min(1, 'at least one').required(),
-  courseType: yup.array().of(yup.string()).min(1, 'at least one').required(),
-  track: yup.array().of(yup.string()).min(1, 'at least one').required(),
-  lectures: yup.array().of(yup.string()).min(1, 'at least one').required(),
+  university: yup.array().of(yup.number()).min(1, 'at least one').required(),
+  evaluation: yup.array().of(yup.number()).min(1, 'at least one').required(),
+  courseType: yup.array().of(yup.number()).min(1, 'at least one').required(),
+  track: yup.array().of(yup.number()).min(1, 'at least one').required(),
+  lectures: yup.array().of(yup.number()).min(1, 'at least one').required(),
   subjectType: yup.number().required(),
-  mainSubject: yup.array().of(yup.string()).min(1, 'at least one').required(),
+  mainSubject: yup.array().of(yup.number()).min(1, 'at least one').required(),
   interactions: yup.number().required(),
   blackboard: yup.number().required(),
-  recording: yup.number().required(),
-  accessibility: yup.number().required()
+  recordings: yup.number().required(),
+  teacherAccessibilty: yup.number().required()
 })
 
 const { values, errors, handleSubmit } = useForm({
   validationSchema: schema
 })
 
-const onSubmit = handleSubmit((values) => {
-  alert(JSON.stringify(values))
+const onSubmit = handleSubmit(async (values) => {
+  console.log(values)
+  await sendRecommender(values)
 })
 </script>
 
@@ -62,19 +53,19 @@ const onSubmit = handleSubmit((values) => {
         <div class="flex xl:flex-row justify-content-between">
           <CheckboxInput
             name="university"
-            value="0"
+            :value="0"
             label="Bern"
             v-model="university"
           ></CheckboxInput>
           <CheckboxInput
             name="university"
-            value="1"
+            :value="1"
             label="Fribourg"
             v-model="university"
           ></CheckboxInput>
           <CheckboxInput
             name="university"
-            value="2"
+            :value="2"
             label="Neuchatel"
             v-model="university"
           ></CheckboxInput>
@@ -85,25 +76,25 @@ const onSubmit = handleSubmit((values) => {
         <div class="flex flex-row justify-content-between">
           <CheckboxInput
             name="evaluation"
-            value="0"
+            :value="0"
             label="Semester Project"
             v-model="evaluation"
           ></CheckboxInput>
           <CheckboxInput
             name="evaluation"
-            value="1"
+            :value="1"
             label="Continuous"
             v-model="evaluation"
           ></CheckboxInput>
           <CheckboxInput
             name="evaluation"
-            value="2"
+            :value="2"
             label="Oral exam"
             v-model="evaluation"
           ></CheckboxInput>
           <CheckboxInput
             name="evaluation"
-            value="3"
+            :value="3"
             label="Written exam"
             v-model="evaluation"
           ></CheckboxInput>
@@ -114,13 +105,13 @@ const onSubmit = handleSubmit((values) => {
         <div class="flex flex-row justify-content-between">
           <CheckboxInput
             name="courseType"
-            value="0"
+            :value="0"
             label="Course"
             v-model="courseType"
           ></CheckboxInput>
           <CheckboxInput
             name="courseType"
-            value="1"
+            :value="1"
             label="Seminar"
             v-model="courseType"
           ></CheckboxInput>
@@ -129,35 +120,35 @@ const onSubmit = handleSubmit((values) => {
       <div class="track">
         <h2>Track</h2>
         <div class="flex flex-row justify-content-between">
-          <CheckboxInput name="track" value="0" label="General" v-model="track"></CheckboxInput>
+          <CheckboxInput name="track" :value="0" label="General" v-model="track"></CheckboxInput>
           <CheckboxInput
             name="track"
-            value="1"
+            :value="1"
             label="Distributed Software Systems"
             v-model="track"
           ></CheckboxInput>
-          <CheckboxInput name="track" value="2" label="Security" v-model="track"></CheckboxInput>
+          <CheckboxInput name="track" :value="2" label="Security" v-model="track"></CheckboxInput>
           <CheckboxInput
             name="track"
-            value="3"
+            :value="3"
             label="Visual Computing"
             v-model="track"
           ></CheckboxInput>
           <CheckboxInput
             name="track"
-            value="4"
+            :value="4"
             label="Theory and Logic"
             v-model="track"
           ></CheckboxInput>
           <CheckboxInput
             name="track"
-            value="5"
+            :value="5"
             label="Information Systems and Decision Support"
             v-model="track"
           ></CheckboxInput>
           <CheckboxInput
             name="track"
-            value="6"
+            :value="6"
             label="Data Science"
             v-model="track"
           ></CheckboxInput>
@@ -168,31 +159,31 @@ const onSubmit = handleSubmit((values) => {
         <div class="flex flex-row justify-content-between">
           <CheckboxInput
             name="lectures"
-            value="0"
+            :value="0"
             label="Only Lectures"
             v-model="lectures"
           ></CheckboxInput>
           <CheckboxInput
             name="lectures"
-            value="1"
+            :value="1"
             label="Lectures and some exercises"
             v-model="lectures"
           ></CheckboxInput>
           <CheckboxInput
             name="lectures"
-            value="2"
+            :value="2"
             label="Lectures and exercises"
             v-model="lectures"
           ></CheckboxInput>
           <CheckboxInput
             name="lectures"
-            value="3"
+            :value="3"
             label="Lectures and project(s)"
             v-model="lectures"
           ></CheckboxInput>
           <CheckboxInput
             name="lectures"
-            value="4"
+            :value="4"
             label="Project(s) only"
             v-model="lectures"
           ></CheckboxInput>
@@ -203,19 +194,19 @@ const onSubmit = handleSubmit((values) => {
         <div class="flex flex-row justify-content-between">
           <CheckboxInput
             name="mainSubject"
-            value="0"
+            :value="0"
             label="Computer Science"
             v-model="mainSubject"
           ></CheckboxInput>
           <CheckboxInput
             name="mainSubject"
-            value="1"
+            :value="1"
             label="Logic"
             v-model="mainSubject"
           ></CheckboxInput>
           <CheckboxInput
             name="mainSubject"
-            value="2"
+            :value="2"
             label="Math"
             v-model="mainSubject"
           ></CheckboxInput>
@@ -261,7 +252,7 @@ const onSubmit = handleSubmit((values) => {
         <h2>Teacher accessibility</h2>
         <div class="flex justify-content-center">
           <SliderInput
-            name="accessibility"
+            name="teacherAccessibilty"
             :initial-value="50"
             v-model="accessibility"
             left-label="Not accessible"
@@ -273,7 +264,7 @@ const onSubmit = handleSubmit((values) => {
         <h2>Recorded lectures</h2>
         <div class="flex flex-row justify-content-center">
           <SliderInput
-            name="recording"
+            name="recordings"
             :initial-value="50"
             v-model="recording"
             left-label="Never recorded"

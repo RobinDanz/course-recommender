@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from routers import users, auth, courses, forms
 from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
-from database.config import fill_db, str_to_time
+from database.config import fill_db
 from models.course import Course
 
 @asynccontextmanager

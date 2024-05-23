@@ -37,10 +37,10 @@ RULES.append("IF "
              "THEN "
              "(SocialComputing IS recommended)")
 
-RULES.append("IF "
-             "(NOT(Track IS T5)) "
-             "THEN "
-             "(SocialComputing IS notRecommended)")
+# RULES.append("IF "
+#              "(NOT(Track IS T5)) "
+#              "THEN "
+#              "(SocialComputing IS notRecommended)")
 
 RULES.append("IF "
              "(Lectures IS always) "
@@ -68,10 +68,10 @@ RULES.append("IF "
              "THEN "
              "(SocialComputing IS recommended")
 
-RULES.append("IF "
-             "(NOT(Interactions IS some)) "
-             "THEN "
-             "(SocialComputing IS notRecommended)")
+# RULES.append("IF "
+#              "(NOT(Interactions IS some)) "
+#              "THEN "
+#              "(SocialComputing IS notRecommended)")
 
 RULES.append("IF "
              "(Blackboard IS none) "
@@ -140,10 +140,10 @@ RULES.append("IF "
              "THEN "
              "(Concurrency IS recommended)")
 
-RULES.append("IF "
-             "(NOT(Track IS T1)) "
-             "THEN "
-             "(Concurrency IS notRecommended)")
+# RULES.append("IF "
+#              "(NOT(Track IS T1)) "
+#              "THEN "
+#              "(Concurrency IS notRecommended)")
 
 RULES.append("IF "
              "(Lectures IS some) "
@@ -242,10 +242,10 @@ RULES.append("IF "
              "THEN "
              "(FuzzySets2 IS recommended)")
 
-RULES.append("IF "
-             "(NOT(Track IS T5)) "
-             "THEN "
-             "(FuzzySets2 IS notRecommended)")
+# RULES.append("IF "
+#              "(NOT(Track IS T5)) "
+#              "THEN "
+#              "(FuzzySets2 IS notRecommended)")
 
 RULES.append("IF "
              "(Lectures IS regularly) "

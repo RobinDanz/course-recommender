@@ -12,6 +12,7 @@ import {
 import '@quasar/quasar-ui-qcalendar/src/QCalendarVariables.sass'
 import '@quasar/quasar-ui-qcalendar/src/QCalendarTransitions.sass'
 import '@quasar/quasar-ui-qcalendar/src/QCalendarDay.sass'
+import { useRouter } from 'vue-router'
 
 const courses = ref<Course[]>()
 const coursesMap = ref<Record<number, Array<Course>>>({})
@@ -33,14 +34,15 @@ const trackerContent = ref({
 })
 const displayTracker = ref(false)
 
-const colorPalette = ['', '', '', '', '', '', '']
+const colorPalette = ['#81E67F', '#FF3E2E', '#E6AE84', '#2233E6', '#DE1FF0', '#F5CF35', '#31E4E6']
 
 const eventStyle = (course: Course, timeStartPos: Function, timeDurationHeight: Function) => {
   const s = {
     top: '',
     height: '',
     left: '',
-    width: '100%'
+    width: '100%',
+    backgroundColor: colorPalette[course.track]
   }
 
   if (timeStartPos && timeDurationHeight) {
@@ -54,7 +56,7 @@ const eventStyle = (course: Course, timeStartPos: Function, timeDurationHeight: 
     s.left = index * size + '%'
 
     if (index === 0) index += 1
-    s.width = size - 1 + '%'
+    s.width = size + 10 + '%'
   }
 
   return s
@@ -80,8 +82,10 @@ onBeforeMount(async () => {
   refreshCoursesMap()
 })
 
+const router = useRouter()
+
 const courseClick = (course: Course) => {
-  console.log(course.id)
+  router.push({ name: 'course-details', params: { courseId: course.id } })
 }
 
 const refreshCoursesMap = () => {
@@ -175,7 +179,6 @@ const mouseMove = (event: MouseEvent, course: Course) => {
   position: absolute;
   border: 1px solid black;
   border-radius: 3px;
-  background-color: blueviolet;
   color: white;
 }
 
