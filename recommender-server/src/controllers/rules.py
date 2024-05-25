@@ -1,109 +1,95 @@
 RULES = []
 
-# Social computing
+# Track 0: Quantitative Methods of Performance Evaluation for Computing Systems (QMPECS)
 RULES.append("IF "
+             "(Evaluation IS continuous) OR "
              "(Evaluation IS project) "
              "THEN "
-             "(SocialComputing IS recommended)")
+             "(QMPECS IS recommended)")
 
 RULES.append("IF "
-             "(NOT(Evaluation IS project)) "
+             "(University IS neuchatel) "
              "THEN "
-             "(SocialComputing IS notRecommended)")
+             "(QMPECS IS recommended)")
 
 RULES.append("IF "
-             "(University IS fribourg) "
+             "(NOT(University IS neuchatel)) "
              "THEN "
-             "(SocialComputing IS recommended) ")
+             "(QMPECS IS notRecommended)")
 
 RULES.append("IF "
-             "(NOT(University IS fribourg)) "
+             "(CourseType IS course) "
              "THEN "
-             "(SocialComputing IS notRecommended)")
+             "(QMPECS IS recommended)")
 
 RULES.append("IF "
-             "(CourseType IS seminar) "
+             "(NOT(CourseType IS course)) "
              "THEN "
-             "(SocialComputing IS recommended)")
+             "(QMPECS IS notRecommended)")
 
 RULES.append("IF "
-             "(NOT(CourseType IS seminar)) "
-             "THEN "
-             "(SocialComputing IS notRecommended)")
-
-RULES.append("IF "
-             "(Track IS T5) OR "
+             "(Track IS T0) OR "
              "(Track IS T6) "
              "THEN "
-             "(SocialComputing IS recommended)")
-
-# RULES.append("IF "
-#              "(NOT(Track IS T5)) "
-#              "THEN "
-#              "(SocialComputing IS notRecommended)")
+             "(QMPECS IS recommended)")
 
 RULES.append("IF "
-             "(Lectures IS always) "
+             "(Lectures IS regularly) "
              "THEN "
-             "(SocialComputing IS recommended)")
+             "(QMPECS IS recommended)")
 
 RULES.append("IF "
-             "(NOT(Lectures IS always)) "
+             "(NOT(Lectures IS regularly)) "
              "THEN "
-             "(SocialComputing IS notRecommended)")
+             "(QMPECS IS notRecommended)")
 
 RULES.append("IF "
-             "(SubjectType IS always) "
+             "(SubjectType IS none) OR "
+             "(SubjectType IS some) "
              "THEN "
-             "(SocialComputing IS recommended)")
+             "(QMPECS IS recommended)")
 
 RULES.append("IF "
-             "(NOT(SubjectType IS always)) "
+             "(Interactions IS middle) "
              "THEN "
-             "(SocialComputing IS notRecommended)")
+             "(QMPECS IS recommended)")
 
 RULES.append("IF "
-             "(Interactions IS some) OR "
-             "(Interactions IS none) "
+             "(NOT(Interactions IS middle)) "
              "THEN "
-             "(SocialComputing IS recommended")
-
-# RULES.append("IF "
-#              "(NOT(Interactions IS some)) "
-#              "THEN "
-#              "(SocialComputing IS notRecommended)")
+             "(QMPECS IS notRecommended)")
 
 RULES.append("IF "
-             "(Blackboard IS none) "
+             "(Blackboard IS some) "
              "THEN "
-             "(SocialComputing IS recommended)")
+             "(QMPECS IS recommended)")
 
 RULES.append("IF "
-             "(NOT(Blackboard IS none)) "
+             "(NOT(Blackboard IS some)) "
              "THEN "
-             "(SocialComputing IS notRecommended)")
+             "(FuzzySets2 IS notRecommended)")
 
 RULES.append("IF "
              "(Recordings IS none) "
              "THEN "
-             "(SocialComputing IS recommended)")
+             "(FuzzySets2 IS recommended)")
 
 RULES.append("IF "
              "(NOT(Recordings IS none)) "
              "THEN "
-             "(SocialComputing IS notRecommended)")
+             "(FuzzySets2 IS notRecommended)")
 
 RULES.append("IF "
-             "(TeacherAccessibilty IS middle) "
+             "(TeacherAccessibilty IS some) "
              "THEN "
-             "(SocialComputing IS recommended)")
+             "(FuzzySets2 IS recommended)")
 
 RULES.append("IF "
-             "(NOT(TeacherAccessibilty IS middle)) "
+             "(NOT(TeacherAccessibilty IS some)) "
              "THEN "
-             "(SocialComputing IS notRecommended)")
+             "(FuzzySets2 IS notRecommended)")
 
-# Concurrency
+# Track 1: Concurrency
 RULES.append("IF "
              "(Evaluation IS written) "
              "THEN "
@@ -139,11 +125,6 @@ RULES.append("IF "
              "(Track IS T6) "
              "THEN "
              "(Concurrency IS recommended)")
-
-# RULES.append("IF "
-#              "(NOT(Track IS T1)) "
-#              "THEN "
-#              "(Concurrency IS notRecommended)")
 
 RULES.append("IF "
              "(Lectures IS some) "
@@ -205,7 +186,297 @@ RULES.append("IF "
              "THEN "
              "(Concurrency IS notRecommended)")
 
-# Fuzzy Sets 2
+# Track 2:
+
+# Track 3: Applied Optimization
+RULES.append("IF "
+             "(Evaluation IS written) "
+             "THEN "
+             "(AppliedOptimization IS recommended)")
+
+RULES.append("IF "
+             "(NOT(Evaluation IS written)) "
+             "THEN "
+             "(AppliedOptimization IS notRecommended)")
+
+RULES.append("IF "
+             "(University IS bern) "
+             "THEN "
+             "(AppliedOptimization IS recommended)")
+
+RULES.append("IF "
+             "(NOT(University IS bern)) "
+             "THEN "
+             "(AppliedOptimization IS notRecommended)")
+
+RULES.append("IF "
+             "(CourseType IS course) "
+             "THEN "
+             "(AppliedOptimization IS recommended)")
+
+RULES.append("IF "
+             "(NOT(CourseType IS course)) "
+             "THEN "
+             "(AppliedOptimization IS notRecommended)")
+
+RULES.append("IF "
+             "(Track IS T3) OR "
+             "(Track IS T6) "
+             "THEN "
+             "(AppliedOptimization IS recommended)")
+
+RULES.append("IF "
+             "(Lectures IS middle) "
+             "THEN "
+             "(AppliedOptimization IS recommended)")
+
+RULES.append("IF "
+             "(NOT(Lectures IS middle)) "
+             "THEN "
+             "(AppliedOptimization IS notRecommended)")
+
+RULES.append("IF "
+             "(SubjectType IS some) "
+             "THEN "
+             "(AppliedOptimization IS recommended)")
+
+RULES.append("IF "
+             "(NOT(SubjectType IS some)) "
+             "THEN "
+             "(AppliedOptimization IS notRecommended)")
+
+RULES.append("IF "
+             "(Interactions IS some) "
+             "THEN "
+             "(AppliedOptimization IS recommended)")
+
+RULES.append("IF "
+             "(NOT(Interactions IS some)) "
+             "THEN "
+             "(AppliedOptimization IS notRecommended)")
+
+RULES.append("IF "
+             "(Blackboard IS middle) "
+             "THEN "
+             "(AppliedOptimization IS recommended)")
+
+RULES.append("IF "
+             "(NOT(Blackboard IS middle)) "
+             "THEN "
+             "(AppliedOptimization IS notRecommended)")
+
+RULES.append("IF "
+             "(Recordings IS always) "
+             "THEN "
+             "(AppliedOptimization IS recommended)")
+
+RULES.append("IF "
+             "(NOT(Recordings IS always)) "
+             "THEN "
+             "(AppliedOptimization IS notRecommended)")
+
+RULES.append("IF "
+             "(TeacherAccessibilty IS middle) "
+             "THEN "
+             "(AppliedOptimization IS recommended)")
+
+RULES.append("IF "
+             "(NOT(TeacherAccessibilty IS middle)) "
+             "THEN "
+             "(AppliedOptimization IS notRecommended)")
+
+# Track 4: Machine Learning and Data Mining
+RULES.append("IF "
+             "(Evaluation IS written) "
+             "THEN "
+             "(MLDM IS recommended)")
+
+RULES.append("IF "
+             "(NOT(Evaluation IS written)) "
+             "THEN "
+             "(MLDM IS notRecommended)")
+
+RULES.append("IF "
+             "(University IS neuchatel) "
+             "THEN "
+             "(MLDM IS recommended)")
+
+RULES.append("IF "
+             "(NOT(University IS neuchatel)) "
+             "THEN "
+             "(MLDM IS notRecommended)")
+
+RULES.append("IF "
+             "(CourseType IS course) "
+             "THEN "
+             "(MLDM IS recommended)")
+
+RULES.append("IF "
+             "(NOT(CourseType IS course)) "
+             "THEN "
+             "(MLDM IS notRecommended)")
+
+RULES.append("IF "
+             "(Track IS T4) OR "
+             "(Track IS T6) "
+             "THEN "
+             "(MLDM IS recommended)")
+
+RULES.append("IF "
+             "(Lectures IS middle) "
+             "THEN "
+             "(MLDM IS recommended)")
+
+RULES.append("IF "
+             "(NOT(Lectures IS middle)) "
+             "THEN "
+             "(MLDM IS notRecommended)")
+
+RULES.append("IF "
+             "(SubjectType IS none) "
+             "THEN "
+             "(MLDM IS recommended)")
+
+RULES.append("IF "
+             "(NOT(SubjectType IS none)) "
+             "THEN "
+             "(MLDM IS notRecommended)")
+
+RULES.append("IF "
+             "(Interactions IS some) "
+             "THEN "
+             "(MLDM IS recommended)")
+
+RULES.append("IF "
+             "(NOT(Interactions IS some)) "
+             "THEN "
+             "(MLDM IS notRecommended)")
+
+RULES.append("IF "
+             "(Blackboard IS always) "
+             "THEN "
+             "(MLDM IS recommended)")
+
+RULES.append("IF "
+             "(NOT(Blackboard IS always)) "
+             "THEN "
+             "(MLDM IS notRecommended)")
+
+RULES.append("IF "
+             "(Recordings IS always) "
+             "THEN "
+             "(MLDM IS recommended)")
+
+RULES.append("IF "
+             "(NOT(Recordings IS always)) "
+             "THEN "
+             "(MLDM IS notRecommended)")
+
+RULES.append("IF "
+             "(TeacherAccessibilty IS middle) "
+             "THEN "
+             "(MLDM IS recommended)")
+
+RULES.append("IF "
+             "(NOT(TeacherAccessibilty IS middle)) "
+             "THEN "
+             "(MLDM IS notRecommended)")
+
+# Track 5: Social computing
+RULES.append("IF "
+             "(Evaluation IS project) "
+             "THEN "
+             "(SocialComputing IS recommended)")
+
+RULES.append("IF "
+             "(NOT(Evaluation IS project)) "
+             "THEN "
+             "(SocialComputing IS notRecommended)")
+
+RULES.append("IF "
+             "(University IS fribourg) "
+             "THEN "
+             "(SocialComputing IS recommended) ")
+
+RULES.append("IF "
+             "(NOT(University IS fribourg)) "
+             "THEN "
+             "(SocialComputing IS notRecommended)")
+
+RULES.append("IF "
+             "(CourseType IS seminar) "
+             "THEN "
+             "(SocialComputing IS recommended)")
+
+RULES.append("IF "
+             "(NOT(CourseType IS seminar)) "
+             "THEN "
+             "(SocialComputing IS notRecommended)")
+
+RULES.append("IF "
+             "(Track IS T5) OR "
+             "(Track IS T6) "
+             "THEN "
+             "(SocialComputing IS recommended)")
+
+RULES.append("IF "
+             "(Lectures IS always) "
+             "THEN "
+             "(SocialComputing IS recommended)")
+
+RULES.append("IF "
+             "(NOT(Lectures IS always)) "
+             "THEN "
+             "(SocialComputing IS notRecommended)")
+
+RULES.append("IF "
+             "(SubjectType IS always) "
+             "THEN "
+             "(SocialComputing IS recommended)")
+
+RULES.append("IF "
+             "(NOT(SubjectType IS always)) "
+             "THEN "
+             "(SocialComputing IS notRecommended)")
+
+RULES.append("IF "
+             "(Interactions IS some) OR "
+             "(Interactions IS none) "
+             "THEN "
+             "(SocialComputing IS recommended)")
+
+RULES.append("IF "
+             "(Blackboard IS none) "
+             "THEN "
+             "(SocialComputing IS recommended)")
+
+RULES.append("IF "
+             "(NOT(Blackboard IS none)) "
+             "THEN "
+             "(SocialComputing IS notRecommended)")
+
+RULES.append("IF "
+             "(Recordings IS none) "
+             "THEN "
+             "(SocialComputing IS recommended)")
+
+RULES.append("IF "
+             "(NOT(Recordings IS none)) "
+             "THEN "
+             "(SocialComputing IS notRecommended)")
+
+RULES.append("IF "
+             "(TeacherAccessibilty IS regularly) "
+             "THEN "
+             "(SocialComputing IS recommended)")
+
+RULES.append("IF "
+             "(NOT(TeacherAccessibilty IS regularly)) "
+             "THEN "
+             "(SocialComputing IS notRecommended)")
+
+
+# Track 5: Fuzzy Sets 2
 RULES.append("IF "
              "(Evaluation IS written) "
              "THEN "
@@ -242,11 +513,6 @@ RULES.append("IF "
              "THEN "
              "(FuzzySets2 IS recommended)")
 
-# RULES.append("IF "
-#              "(NOT(Track IS T5)) "
-#              "THEN "
-#              "(FuzzySets2 IS notRecommended)")
-
 RULES.append("IF "
              "(Lectures IS regularly) "
              "THEN "
@@ -258,12 +524,12 @@ RULES.append("IF "
              "(FuzzySets2 IS notRecommended)")
 
 RULES.append("IF "
-             "(SubjectType IS some) "
+             "(SubjectType IS middle) "
              "THEN "
              "(FuzzySets2 IS recommended)")
 
 RULES.append("IF "
-             "(NOT(SubjectType IS some)) "
+             "(NOT(SubjectType IS middle)) "
              "THEN "
              "(FuzzySets2 IS notRecommended)")
 
@@ -298,16 +564,13 @@ RULES.append("IF "
              "(FuzzySets2 IS notRecommended)")
 
 RULES.append("IF "
-             "(TeacherAccessibilty IS middle) "
+             "(TeacherAccessibilty IS regularly) "
              "THEN "
              "(FuzzySets2 IS recommended)")
 
 RULES.append("IF "
-             "(NOT(TeacherAccessibilty IS middle)) "
+             "(NOT(TeacherAccessibilty IS regularly)) "
              "THEN "
              "(FuzzySets2 IS notRecommended)")
 
-RULES.append("IF "
-             "(University IS bern) "
-             "THEN "
-             "(test IS recommended)")
+

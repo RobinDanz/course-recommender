@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 
 from models.form import *
-from controllers.form_controller import fuzzy_set_variables
+from controllers.form_controller import fuzzy_set_variables, create_fuzzy
 
 router = APIRouter(
     prefix='/forms',
@@ -11,7 +11,8 @@ router = APIRouter(
 
 @router.post('/', response_model=FormResponse)
 async def handle_form(form: FormRequest):
-    response = fuzzy_set_variables(form)
+    FS = create_fuzzy()
+    response = fuzzy_set_variables(form, FS)
     print(response)
     response = FormResponse(response={'coucou': 123})
     return response
