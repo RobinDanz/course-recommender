@@ -1,5 +1,11 @@
 <script setup lang="ts">
-import { type Course, dayToString } from '@/models/course'
+import {
+  type Course,
+  dayToString,
+  formatStartToEnd,
+  formatCourseUniversity,
+  formatCourseSemester
+} from '@/models/course'
 
 const props = defineProps<{
   course: Course
@@ -17,7 +23,21 @@ const props = defineProps<{
         <div>
           <h4>{{ props.course.title }}</h4>
         </div>
-        {{ dayToString(props.course) + ': ' + props.course.start + ' - ' + props.course.end }}
+        <div class="grid">
+          <div class="col-6" v-if="course.start != '00:00:00'">
+            {{ dayToString(props.course) + ': ' + formatStartToEnd(course) }}
+          </div>
+          <div class="col-6" v-else>
+            {{ dayToString(props.course) }}
+          </div>
+          <div class="col-6 flex justify-content-end">
+            <div>
+              {{
+                formatCourseUniversity(course) + ', ' + formatCourseSemester(course) + ' semester'
+              }}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </RouterLink>

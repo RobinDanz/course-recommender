@@ -32,3 +32,23 @@ export const dayToString = (course: Course) => {
 
   return days[course.day]
 }
+
+export const formatStartToEnd = (course: Course) => {
+  const start = course.start.split(':').splice(0, 2).join(':')
+  const end = course.end.split(':').splice(0, 2).join(':')
+
+  return start + ' - ' + end
+}
+
+export const formatCourseType = (course: Course) => {
+  return course.type == 0 ? 'Course' : 'Seminar'
+}
+
+export const formatCourseUniversity = (course: Course) => {
+  const universities = ['Bern', 'Fribourg', 'Neuchâtel']
+  return universities[course.site]
+}
+
+export const formatCourseSemester = (course: Course) => {
+  return course.semester == 0 ? 'Spring' : 'Autumn'
+}

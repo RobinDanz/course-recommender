@@ -1,5 +1,11 @@
 <script setup lang="ts">
-import type { Course } from '@/models/course'
+import {
+  type Course,
+  dayToString,
+  formatStartToEnd,
+  formatCourseType,
+  formatCourseUniversity
+} from '@/models/course'
 import { onBeforeMount, ref } from 'vue'
 import { getCourse } from '@/services/courseService'
 import PageHeader from '@/components/page/PageHeader.vue'
@@ -16,8 +22,6 @@ const course = ref<Course>()
 
 onBeforeMount(async () => {
   course.value = await getCourse(parseInt(props.courseId))
-
-  console.log(course.value)
 })
 </script>
 
@@ -25,20 +29,44 @@ onBeforeMount(async () => {
   <PageHeader :title="course?.title"></PageHeader>
   <PageContent>
     <template #content>
-      <div class="flex flex-column">
-        <h3>Course Description</h3>
-        <pre class="description">{{ course?.description }}</pre>
-        <h3>Course Details</h3>
-        <p>{{ 'day: ' + course?.day }}</p>
-        <p>{{ 'type: ' + course?.type }}</p>
-        <p>{{ 'university:' + course?.site }}</p>
-        <p>{{ 'code:' + course?.code }}</p>
-        <p>{{ 'start:' + course?.start }}</p>
-        <p>{{ 'end:' + course?.end }}</p>
-        <p>{{ 'track:' + course?.track }}</p>
-        <p>{{ 'semester:' + course?.semester }}</p>
-        <h3>External links</h3>
-        <p>{{ 'JMCS url:' + course?.url }}</p>
+      <div class="flex flex-column" v-if="course">
+        <h3>Description</h3>
+        <pre class="description">{{ course.description }}</pre>
+        <h3>Details</h3>
+        <div class="flex flex-column">
+          <div class="grid">
+            <div class="col-6">Day</div>
+            <div class="col-6">{{ dayToString(course) }}</div>
+          </div>
+          <div class="grid">
+            <div class="col-6">Type</div>
+            <div class="col-6">{{ formatCourseType(course) }}</div>
+          </div>
+          <div class="grid">
+            <div class="col-6">University</div>
+            <div class="col-6">{{ formatCourseUniversity(course) }}</div>
+          </div>
+          <div class="grid">
+            <div class="col-6">Course Code</div>
+            <div class="col-6">{{ course.code }}</div>
+          </div>
+          <div class="grid">
+            <div class="col-6">Schedule</div>
+            <div class="col-6">{{ formatStartToEnd(course) }}</div>
+          </div>
+          <div class="grid">
+            <div class="col-6">Track</div>
+            <div class="col-6">{{ course.track }}</div>
+          </div>
+          <div class="grid">
+            <div class="col-6">Semester</div>
+            <div class="col-6">{{ course.semester }}</div>
+          </div>
+          <div class="grid">
+            <div class="col-6">JMCS URL</div>
+            <div class="col-6"><a :href="course.url">Visit JMCS website</a></div>
+          </div>
+        </div>
       </div>
     </template>
   </PageContent>

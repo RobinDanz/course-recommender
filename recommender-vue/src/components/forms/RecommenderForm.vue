@@ -5,6 +5,10 @@ import * as yup from 'yup'
 import SliderInput from '@/components/forms/inputs/SliderInput.vue'
 import { sendRecommender } from '@/services/recommenderService'
 import MultiSelectInput from '@/components/forms/inputs/MultiSelectInput.vue'
+import Button from 'primevue/button'
+import { getCourse } from '@/services/courseService'
+import type { Course } from '@/models/course'
+import HomeNavCard from '../cards/HomeNavCard.vue'
 
 const evaluation = ref([])
 const university = ref([])
@@ -71,15 +75,49 @@ const { values, errors, handleSubmit } = useForm({
   validationSchema: schema
 })
 
+const resultRecieved = ref(false)
+const resultCourse = ref<RecommendationCourse[]>([])
+
+interface RecommendationCourse {
+  id: number
+  title: string
+  recommendation: number
+}
+
+const mapResult = (courses: Course[], result: Record<number, number>) => {
+  const resultObj = courses.map((c) => {
+    return {
+      id: c.id,
+      title: c.title,
+      recommendation: Math.ceil(result[c.id])
+    }
+  })
+  return resultObj.sort((a, b) => b.recommendation - a.recommendation).slice(0, 3)
+}
+
 const onSubmit = handleSubmit(async (values) => {
-  console.log(values)
-  await sendRecommender(values)
+  const result = await sendRecommender(values)
+
+  if (result) {
+    resultRecieved.value = true
+    const courses = []
+    for (const key in result['result']) {
+      const course = await getCourse(parseInt(key))
+      courses.push(course)
+    }
+    resultCourse.value = mapResult(courses, result['result'])
+  }
 })
+
+const refillForm = () => {
+  resultCourse.value = []
+  resultRecieved.value = false
+}
 </script>
 
 <template>
   <div class="width m-auto">
-    <form @submit="onSubmit">
+    <form @submit="onSubmit" v-show="!resultRecieved" id="recommender">
       <div class="university">
         <h2>Favorite University</h2>
         <div class="flex justify-content-center">
@@ -186,13 +224,31 @@ const onSubmit = handleSubmit(async (values) => {
           ></SliderInput>
         </div>
       </div>
-      <button type="submit">Send</button>
+      <Button class="test" type="submit" form="recommender">Send</Button>
     </form>
+    <div v-show="resultRecieved">
+      <h2>Here are the top three course recommended to you depending on your answers !</h2>
+      <div v-for="course in resultCourse" :key="course.id">
+        <HomeNavCard
+          :title="course.title"
+          :subtitle="'Recommended at: ' + course.recommendation + '%'"
+          :local-redirect="{ name: 'course-details', params: { courseId: course.id } }"
+        ></HomeNavCard>
+      </div>
+
+      <Button @click="refillForm">Go back to the form</Button>
+    </div>
   </div>
 </template>
 
 <style scoped>
 .width {
   width: 50vw;
+}
+
+.test {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
 }
 </style>
