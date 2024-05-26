@@ -13,11 +13,11 @@ const items = ref([
     icon: 'pi pi-lightbulb',
     route_name: 'recommender'
   },
-  {
-    label: 'About',
-    icon: 'pi pi-star',
-    route_name: 'about'
-  },
+  // {
+  //   label: 'About',
+  //   icon: 'pi pi-star',
+  //   route_name: 'about'
+  // },
   {
     label: 'Courses',
     icon: 'pi pi-book',
@@ -47,24 +47,24 @@ const items = ref([
         custom
       >
         <a :href="href" v-bind="props.action" @click="navigate">
-          <span :class="item.icon" />
+          <span :class="item.icon"></span>
           <span class="ml-2">{{ item.label }}</span>
         </a>
       </RouterLink>
       <a v-else :href="item.url" :target="item.target" v-bind="props.action">
-        <span :class="item.icon" />
+        <span :class="item.icon"></span>
         <span class="ml-2">{{ item.label }}</span>
         <span v-if="hasSubmenu" class="pi pi-fw pi-angle-down ml-2" />
       </a>
     </template>
 
-    <template #end>
+    <!-- <template #end>
       <RouterLink :to="{ name: 'login' }" v-slot="{ href, navigate }" custom>
         <a :href="href" @click="navigate">
           <span class="ml-2">login</span>
         </a>
       </RouterLink>
-    </template>
+    </template> -->
   </Menubar>
 </template>
 

@@ -1,11 +1,14 @@
 <script setup lang="ts">
 import PageHeader from '@/components/page/PageHeader.vue'
 import RecommenderForm from '@/components/forms/RecommenderForm.vue'
+import PageContent from '@/components/page/PageContent.vue'
 </script>
 
 <template>
   <PageHeader title="Recommender"></PageHeader>
-  <div class="flex justify-content-center">
-    <RecommenderForm></RecommenderForm>
-  </div>
+  <PageContent>
+    <template #content>
+      <RecommenderForm></RecommenderForm>
+    </template>
+  </PageContent>
 </template>

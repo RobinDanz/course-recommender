@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Course } from '@/models/course'
+import { type Course, dayToString } from '@/models/course'
 
 const props = defineProps<{
   course: Course
@@ -8,19 +8,24 @@ const props = defineProps<{
 
 <template>
   <RouterLink
-    v-slot="{ href, navigate }"
+    v-slot="{ navigate }"
     :to="{ name: 'course-details', params: { courseId: props.course.id } }"
     custom
   >
-    <a :href="href" @click="navigate">
-      <div class="course-card bordered m-2">
-        <div class="flex flex-column">
-          <div>
-            <h4>{{ props.course.title }}</h4>
-          </div>
-          {{ props.course.start + ' - ' + props.course.end }}
+    <div class="course-card bordered m-2" @click="navigate">
+      <div class="flex flex-column">
+        <div>
+          <h4>{{ props.course.title }}</h4>
         </div>
+        {{ dayToString(props.course) + ': ' + props.course.start + ' - ' + props.course.end }}
       </div>
-    </a>
+    </div>
   </RouterLink>
 </template>
+
+<style scoped>
+.course-card:hover {
+  cursor: pointer;
+  background: rgb(16, 185, 129, 0.3);
+}
+</style>

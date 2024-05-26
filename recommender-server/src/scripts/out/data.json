@@ -18,7 +18,8 @@
         "schedule": "Thursday, 13:15 - 16:00",
         "day": 4,
         "start": "13:15",
-        "end": "16:00"
+        "end": "16:00",
+        "description": "In this course, students will firstly experiment with standard fabrication and prototyping technologies such as arduino, raspberry PI and digital 3D fabrication. They will then choose a specific topic for further in-depth work and finally collaborate between each other to build complex demo prototypes.\nThe course is divided in two parts:\n\t1. hands-on appropriation of a specific technology\n\t2. open group projects involving multiple technologies\nEvaluation is project-based with a final oral examination. Two exercises are graded:\n\t1. specific technology presentation, demonstration and shared knowledge contribution\n\t2. open project final presentation, demonstration and documentation, including project relevance\nThe course consists in weekly 3-hours long sessions in presence, alternating between theory and hands-on practice. Theory will provide introductive information on:\n\t1. real-time embedded programming\n\t2. service containerization\n\t3. electronics and sensors/actuators\n\t4. inter-process communication\n\t5. 3d modelling/printing\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/multimodal-user-interfaces/",
@@ -41,7 +42,8 @@
         "schedule": "Friday, 10:15 - 13:00",
         "day": 5,
         "start": "10:15",
-        "end": "13:00"
+        "end": "13:00",
+        "description": "Multimodal interfaces (MMIs) coordinate natural input modalities (such as voice, gesture, facial expressions etc.) with multimedia output modalities (such as video, audio, information visualizations, 3D graphics etc.). This course is oriented towards Master students who want to gain a deeper understanding of the domain and will give them the basic techniques for designing, implementing and evaluating multimodal interfaces, as well as theoretical knowledge on multimodality, representation, visualisation of information and cognitive ergonomics.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/quantitative-methods-of-performance-evaluation-for-computing-systems/",
@@ -64,7 +66,8 @@
         "schedule": "Monday, 08:15 - 12:00",
         "day": 1,
         "start": "08:15",
-        "end": "12:00"
+        "end": "12:00",
+        "description": "Today\u2019s computing systems (e.g., Deep learning systems), become ever more complex, due to the rapid development of hardware and software technology. It is challenging to design and run computing systems that guarantee users\u2019 performance requirements in a resource-efficient way. Various quantitative methods are applied to capture such complex system dynamics and predict metrics of interests, from the designing phase of the systems to the runtime performance, e.g., job response times and system anomalies. To optimize the performance of computing systems, a deep understanding of those methods and their applications on the system design is essential. Having practical hand-on experience on designing experiments, deriving models, and validating results with benchmark systems will prepare students to tackle challenges of real-world systems.\nCourse topics include:\n\t1. Design of experiments and statistical tests.\n\t2. Operational laws and queueing methods for modelling computing systems.\n\t3. Scheduling and load balancing.\n\t4. Machine learning methods for modelling computing systems.\n\t5. System dependability and scalability analysis.\n\t6. Optimization and resource management.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/user-centered-design/",
@@ -85,7 +88,8 @@
         "schedule": "Monday, 14:15 - 17:00",
         "day": 1,
         "start": "14:15",
-        "end": "17:00"
+        "end": "17:00",
+        "description": "This master course will present User-Centered Design (UCD) process and methodologies. UCD provide methods to put in light the needs, wants, and limitations of end users of an interface at each stage of the design process. Further, UCD provides methods to support and evaluate early designs, low fidelity prototypes and products. In addition to design support and user requirements analysis, the class will present usability engineering methods to evaluate the performance and efficiency of a given user interface, as well as statistical methods to conclude on the significance of the results. All along the class, students will apply the methodologies learned on the design and prototyping of an interactive product.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/advanced-software-engineering/",
@@ -107,7 +111,8 @@
         "schedule": "Thursday, 09:15 - 12:00",
         "day": 4,
         "start": "09:15",
-        "end": "12:00"
+        "end": "12:00",
+        "description": "Today\u2019s Internet is the dominating communication infrastructure for supporting distributed scalable software systems as different as social networks, interactive games, smart homes, smart cites, IoT infrastructure or supply chain management. In this lecture, we will investigate some of the main technologies, which will shape the future of Internet from a software engineering perspective. This journey will start with a recap of web basics such as URIs, HTTP, JSON; then continue with web services (WS) with a strong focus on RESTful ones and some notions of asynchronous programming with event loops. We will conclude with actual topics such as the Web of Things (WoT), cloud computing, advanced databases and smart contracts.\nThe theoretical part of the lecture is accompanied by a larger software project, where you will apply your new knowledge to design and implement a state of the art web application, complete with a web-based UI and a service-driven application logic using languages such as Python and/or Node.JS, smart devices such as Thingy:91 boxes of environmental sensors and Node-RED workflow engine. The project will be developed by groups of four students following a strict agile methodology (SCRUM) and will count for half of your grade. For a successful completion of the project, good programming skills are an absolute must. The latter will be tested after three weeks on an individual basis within a first pass or fail small REST server application project.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/compiler-construction-2/",
@@ -128,7 +133,8 @@
         "schedule": "Tuesday, 10:15 - 13:00",
         "day": 2,
         "start": "10:15",
-        "end": "13:00"
+        "end": "13:00",
+        "description": "Programs that run on a computer are written in a computer language, and the languages used for writing computer programs have significantly evolved over time. By abstracting from the details of the underlying computer architecture, higher-level languages aim at making the process of developing a program simpler and more understandable than when using a lower-level language. Modern languages offer us a variety of different concepts for expressing (executable) programs. Domain-specific (modeling) languages are even created specifically to solve problems in a particular domain of interest. However, programs written in a higher-level language must be translated into a lower-level, executable representation, which requires various forms of compilers doing this job for us.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/concurrency-multi-core-programming-and-data-processing/",
@@ -151,7 +157,8 @@
         "schedule": "Thursday, 08:15 - 12:00",
         "day": 4,
         "start": "08:15",
-        "end": "12:00"
+        "end": "12:00",
+        "description": "This course covers the foundations of concurrent systems and multiprocessor synchronization. Students who take this course will learn the basics of multicore programming, the new paradigm of computer science. The main topics covered in the course include foundations of concurrency: concurrent objects and consistency, foundations of shared memory, the relative power of synchronization operations, universality of consensus; and practical algorithms: mutual exclusion, spin locks and contention, lock-free and wait-free algorithms, concurrent data structures (linked lists, skip lists, queues, stacks, hash tables), scheduling and work distribution, barriers, transactional memory. The course will be complemented by practical, hands-on exercises on multi-core computers.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/emerging-technologies-in-digitalisation/",
@@ -174,7 +181,8 @@
         "schedule": "Wednesday, 08:15 - 11:00",
         "day": 3,
         "start": "08:15",
-        "end": "11:00"
+        "end": "11:00",
+        "description": "In this course we will investigate emgerging technologies in the area of digitalization of enterprises such as blockchains and smart contracts, augmented and virtual reality, data warehouses, machine learning platforms, semantic technologies and others. The concrete range of technologies will be announced at the beginning of the course. The goal is to conduct explorative research on the characteristics of these technologies and the resulting opportunities for business applications.\nFor this purpose, small projects will be conducted in teams for analyzing particular usage scenarios for the technologies, designing according solutions using techniques of conceptual modeling and implementing them in the form of prototypes. Following lectures for introducing the foundations of the technologies, students will set up their own projects and regularly report upon the advancement in the projects in the form of common presentations. At the end, final presentations of the projects including working prototypes and the submission of a seminal report based on scientific standards are required. For the implementation of the prototypes it is necessary to dispose of programming knowledge, e.g. in Java, Node.js, or Python.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/mobile-communications/",
@@ -195,7 +203,8 @@
         "schedule": "Monday, 10:15 - 13:00",
         "day": 1,
         "start": "10:15",
-        "end": "13:00"
+        "end": "13:00",
+        "description": "The course introduces technologies and protocols from physical layer to transport layer in wireless and mobile networks. Wireless communications suffers from network characteristics that are quite different than in fixed networks, e.g., interference, attenuation, bad channel conditions, mobility of end systems and users etc. The course covers protocols on physical, medium access, routing, and transport level in wireless local / personal area networks (WLAN, Bluetooth, Zigbee etc.) as well as satellite and cellular networks (GSM, GPRS, UMTS, LTE, 5G). Novel network architectures such as mobile ad-hoc and wireless mesh networks are also discussed.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/scientific-reading-in-computer-networks/",
@@ -216,7 +225,8 @@
         "schedule": "",
         "day": null,
         "start": null,
-        "end": null
+        "end": null,
+        "description": "Analysing related work is essential to plan and organize scientific work. The usually vast amount of existing related work requires selecting and reading the most important parts of a scientific paper, in particular in the research area of computer networks. The course will prepare for scientific work such as a master thesis in the area of computer networks. Students will get a certain number of scientific journal and/or conference articles in computer networks and have to finalize a written summary on these articles by discussing advantages and disadvantages of the concepts described in the articles. Concepts described in related articles should be compared to each other.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/scientific-reading-in-computer-networks-2/",
@@ -237,7 +247,8 @@
         "schedule": "",
         "day": null,
         "start": null,
-        "end": null
+        "end": null,
+        "description": "Analysing related work is essential to plan and organize scientific work. The usually vast amount of existing related work requires selecting and reading the most important parts of a scientific paper, in particular in the research area of computer networks. The course will prepare for scientific work such as a master thesis in the area of computer networks. Students will get a certain number of scientific journal and/or conference articles in computer networks and have to finalize a written summary on these articles by discussing advantages and disadvantages of the concepts described in the articles. Concepts described in related articles should be compared to each other.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/scientific-writing-in-computer-networks/",
@@ -258,7 +269,8 @@
         "schedule": "",
         "day": null,
         "start": null,
-        "end": null
+        "end": null,
+        "description": "Publications of research results in journal and/or conference articles are essential for any researcher in order to improve his/her track record. Articles must be organized and written in a form that other researchers are able to understand the main ideas and results of scientific work quickly and that these can comprehend and reproduce scientific results. Within this course, students will write a scientific article to be submitted to conference or journal based on the results gained from scientific work such as a master thesis in the area of computer networks.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/scientific-writing-in-computer-networks-2/",
@@ -279,7 +291,8 @@
         "schedule": "",
         "day": null,
         "start": null,
-        "end": null
+        "end": null,
+        "description": "Publications of research results in journal and/or conference articles are essential for any researcher in order to improve his/her track record. Articles must be organized and written in a form that other researchers are able to understand the main ideas and results of scientific work quickly and that these can comprehend and reproduce scientific results. Within this course, students will write a scientific article to be submitted to conference or journal based on the results gained from scientific work such as a master thesis in the area of computer networks.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/seminar-communication-and-distributed-systems-2/",
@@ -300,7 +313,8 @@
         "schedule": "Monday, 13:15 - 15:00",
         "day": 1,
         "start": "13:15",
-        "end": "15:00"
+        "end": "15:00",
+        "description": "The topic of the seminar is on current research works and topics in the area of computer networks and distributed systems. Students on different level will report about their current research work. Each participant has to give a presentation based on current research work or based on a set of scientific journal/conference articles and actively discuss presentations given by other participants.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/seminar-distributed-learning-systems/",
@@ -323,7 +337,8 @@
         "schedule": "",
         "day": null,
         "start": null,
-        "end": null
+        "end": null,
+        "description": "Machine learning systems are often conventionally designed for centralized processing in that they first collect data from distributed sources and then execute algorithms on a single server. Due to the limited scalability of processing large amount of data and the long latency delay, there is a strong demand for a paradigm shift to distributed or decentralized ML systems which execute ML algorithms on multiple and in some cases even geographically dispersed nodes. The aim of this seminar course is to let students learn how to design and build distributed ML systems via paper reading, presentation, discussion, and project prototyping. We provide a broad overview on the design of the state-of-the-art distributed ML systems, with a strong focus on the scalability, resource efficiency, data requirements, and robustness of the solutions. We will present an array of methodologies and techniques that can efficiently scale ML analysis to a large number of distributed nodes against all operation conditions, e.g., system failures and malicious attacks. The specific course topics are listed below. The course materials will be based on a mixture of classic and recently published papers. For each topic, the basic concepts and technology landscape will be first provided and then two state-of-the art of papers will be presented and discussed by students. Course topics include:\n\t1. Distributed machine learning systems\n\t2. Federated machine learning systems\n\t3. Performance and scalability of state-of-the-art systems\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/seminar-foundations-of-dependable-systems-i/",
@@ -346,7 +361,8 @@
         "schedule": "",
         "day": null,
         "start": null,
-        "end": null
+        "end": null,
+        "description": "The available topics are: affective computing, brain-inspired computing, cognitive computing, fuzzy computing, perceptual computing, phenotropic computing, soft computing, etc.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/seminar-foundations-of-dependable-systems-ii/",
@@ -369,7 +385,8 @@
         "schedule": "",
         "day": null,
         "start": null,
-        "end": null
+        "end": null,
+        "description": "In the seminar, students will read scientific papers, give a presentation about the topics they acquired, and write a short scientific report about these topics. The topics vary from semester to semester.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/seminar-generative-ai/",
@@ -392,7 +409,8 @@
         "schedule": "Monday, 14:15 - 16:00",
         "day": 1,
         "start": "14:15",
-        "end": "16:00"
+        "end": "16:00",
+        "description": "Generative artificial intelligence is ubiquitous in our daily life, generating synthetic images, text, sound tracks, and videos. Example tasks include image synthesis, image styling, text to image synthesizing, voice to text translation, text translation, and question and answering.\nThe aim of this seminar course is to let students learn the principles and models of generative AI via paper reading, presentation, and discussion. We provide a broad overview on the design of the state-of-the-art generative models, spanning from generative adversarial networks, diffusion models and generative pre-trained transformers (GPT). We will present an array of methodologies and techniques that can efficiently and effectively train generative models against all operational conditions.\nThe course materials will be based on a mixture of classic and recently published papers. The first 4 lectures, the basic concept of distributed machine learning will be covered, followed by presentations from my PhD students and the students taking this course.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/seminar-hot-topics-in-operating-systems/",
@@ -414,7 +432,8 @@
         "schedule": "",
         "day": null,
         "start": null,
-        "end": null
+        "end": null,
+        "description": "In this seminar, we will investigate hot topics in the domain of operating systems, encompassing computer architecture, hardware and emerging technologies, storage systems, and networking. At the kick-off sessions, we will present the scope of the seminar and given an overview of the domain. During the seminar, students will be assigned individual projects, which include reading and presenting state-of-the-art research papers. Regular meetings will be scheduled during the semester.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/seminar-software-engineering/",
@@ -435,7 +454,8 @@
         "schedule": "Tuesday, 14:15 - 16:00",
         "day": 2,
         "start": "14:15",
-        "end": "16:00"
+        "end": "16:00",
+        "description": "The seminar covers changing topics on software engineering, catching up recent developments in software engineering research as well as focused problems of our own research projects and those of our students. Areas of interest include but are not limited to model-based methods that enable formal reasoning and simulation, the automation of recurring software engineering tasks, the application of AI-enabled and data-driven methods to software engineering problems, or the management of software variability and evolution. The seminar is open to all Bachelor\u2019s and Master\u2019s students interested in advanced topics in software engineering.\nThe concrete structure of the seminar may change and depends on the chosen topic. Typically, we start with a very few introductory lectures before students will work on a small practically oriented project during the semester, supervised by a member of the Software Engineering Group, and present their results at the end of the semester. Further information on the changing topics as well as the concrete structure of the seminar may be found on the SEG website (\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/seminar-software-engineering-2/",
@@ -456,7 +476,8 @@
         "schedule": "Tuesday, 10:15 - 12:00",
         "day": 2,
         "start": "10:15",
-        "end": "12:00"
+        "end": "12:00",
+        "description": "The seminar covers changing topics on software engineering, catching up recent developments in software engineering research as well as focused problems of our own research projects and those of our students. Areas of interest include but are not limited to model-based methods that enable formal reasoning and simulation, the automation of recurring software engineering tasks, the application of AI-enabled and data-driven methods to software engineering problems, or the management of software variability and evolution. The seminar is open to all Bachelor\u2019s and Master\u2019s students interested in advanced topics in software engineering.\nThe concrete structure of the seminar may change and depends on the chosen topic. Typically, we start with a very few introductory lectures before students will work on a small practically oriented project during the semester, supervised by a member of the Software Engineering Group, and present their results at the end of the semester. Further information on the changing topics as well as the concrete structure of the seminar may be found on the SEG website (\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/software-product-lines/",
@@ -477,7 +498,8 @@
         "schedule": "Tuesday, 14:15 - 17:00",
         "day": 2,
         "start": "14:15",
-        "end": "17:00"
+        "end": "17:00",
+        "description": "To meet various customer requirements, to ensure availability on different platforms, or to satisfy business goals and marketing strategies, today\u2019s software products typically need to be released in multiple variants. As a consequence, software development is faced with the challenge of producing and maintaining flexible software systems which can be customized through several configuration options. This fact may result in many combinations of configuration options which may too many to maintain an overview of the entirety of software variants that implement these configurations. For the Linux kernel, a prominent example of a highly configurable software system, we may easily create a dedicated variant for every person on earth \u2013 it is even assumed that we could create more Linux variants than atoms in the universe.\nIn this lecture, we gradually dive into the active research field of engineering software product lines. After reviewing classical approaches for developing variable software in an ad-hoc manner, we introduce systematic methods and techniques amenable to software mass-customization by generating individual software products based on an integrated platform, following the idea of product line engineering known from traditional manufacturing and engineering disciplines. The course demonstrates how configurability of software systems can be modeled and analyzed, which variability implementation techniques can be used by fostering software reuse and dedicated variation points, and which strategies allow for testing the huge number of software variants that exponentially grows with the number of configuration options.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/systems-verification/",
@@ -500,7 +522,8 @@
         "schedule": "Wednesday, 09:15 - 12:00",
         "day": 3,
         "start": "09:15",
-        "end": "12:00"
+        "end": "12:00",
+        "description": "Verification refers to a systematic analysis of a system design in order to identify existing conceptual errors in the design. Initially, we discuss the verification of digital systems (i.e. standard computer systems) in this lecture. After having dealt with the general concepts of verification and several small example system models, we will extend the concept of verification to digital systems that control systems in the physical world. The resulting models will contain a part that describes the digital system plus a part describing physical properties of the system (the combination of a digital system with a physical system is called a cyber-physical system or a hybrid system).\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/privacy-and-data-security/",
@@ -519,7 +542,8 @@
         "schedule": "Wednesday, 14:15 - 17:00",
         "day": 3,
         "start": "14:15",
-        "end": "17:00"
+        "end": "17:00",
+        "description": "The reliance of the information society on pervasive networks, mobile computing, online services, and cloud platforms continues to grow. The privacy of human activities and the security of personal data are challenged by today\u2019s information technology in ways never seen before in history. This course focuses on privacy and security in a digital world. It presents cryptographic and non-cryptographic methods relevant for protecting privacy, anonymity, and data security. Topics include pseudonymity, data anonymization and de-anonymization, notions of privacy and privacy regulation, measures for the privacy of data, steganography and traffic hiding, network anonymity, and censorship resistance. Systems like onion routing (TOR) and Freenet are presented. Knowledge in computer science and networking is needed, but no background in cryptography is expected.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/security/",
@@ -540,7 +564,8 @@
         "schedule": "Wednesday, 14:15 - 18:00",
         "day": 3,
         "start": "14:15",
-        "end": "18:00"
+        "end": "18:00",
+        "description": "The principal objective of the course is to provide the student the essential knowledge for understanding the risks and technics to fight against hackers attacks. The course presents the fundamental concepts of security, security equipements, mecanisms and software solutions. The course combines lectures with practical exercices that are integral part of course. These projects focus on many aspects : developping security mecanisms, configuring infrastructure, securing network, approach and behaviour regarding to security.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/seminar-cryptography-and-data-security-2/",
@@ -563,7 +588,8 @@
         "schedule": "Wednesday, 10:15 - 12:00",
         "day": 3,
         "start": "10:15",
-        "end": "12:00"
+        "end": "12:00",
+        "description": "The seminar in cryptology and data security covers various relevant topics in the area and its contents will change from one semester to another. Typical subjects are cryptographic protocols, secure computation, privacy, distributed trust and blockchains. A seminar will start with an overview of the topic, where some basic principles are introduced. The main content will typically consist of interactive presentations by the participants, on the basis of the existing literature, ranging from classic research papers to recently developed systems. In addition, students as well as members of the cryptology and data security research group will present their own current work.\nDetailed information about the topic for each semester is available from \n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/3d-geometry-processing/",
@@ -584,7 +610,8 @@
         "schedule": "Thursday, 09:15 - 12:00",
         "day": 4,
         "start": "09:15",
-        "end": "12:00"
+        "end": "12:00",
+        "description": "3D geometry processing is the technology to represent and process, and edit virtual 3D objects. It has applications in 3D computer graphics content production, computer-aided design and manufacturing, 3D printing, or computer simulation. This class gives an introduction to algorithms and data structures for 3D geometry processing, including 3D geometry representations, surface reconstruction from scanned 3D data, algorithms for 3D surface processing such as smoothing and parameterization, and algorithms for interactive 3D object editing. The class also discusses applications such as 3D printing and computer simulation. In practical projects, students will implement several geometry processing algorithms in C++.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/applied-optimization/",
@@ -607,7 +634,8 @@
         "schedule": "Thursday, 09:15 - 12:00",
         "day": 4,
         "start": "09:15",
-        "end": "12:00"
+        "end": "12:00",
+        "description": "Nowadays, numerical optimization is a fundamental component of many applications, e.g. in engineering, finances, biomedical applications, machine learning and many more. Therefore, understanding the underlying principles and available algorithms of numerical optimization can be considered an essential skill for a computer scientist. This course offers an applied introduction, covering a broad range of practically important topics, as for instance: Mathematical modeling of real-world problems, theory of convexity, Lagrange dualism, algorithms for unconstrained and constrained optimization with inequalities (e.g. gradient descent, Newton\u2019s method, trust-region methods, active set approaches, interior point methods, \u2026). A major goal of the course is to train students in appropriately modelling optimization problems, and identifying suitable optimization algorithms, based on the understanding of their specific strengths and weaknesses.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/computer-vision/",
@@ -630,7 +658,8 @@
         "schedule": "Monday, 14:15 - 17:00",
         "day": 1,
         "start": "14:15",
-        "end": "17:00"
+        "end": "17:00",
+        "description": "An image is worth thousand words. That is to say: Images are very rich of information and this course aims to provide the basic understanding and algorithms to automatically extract it. The ultimate objective of computer vision is to design machine vision systems (e.g., camera sensors, computers, algorithms and robotic actuators) that can assist humans with applications to science (e.g., medicine), safety (e.g., traffic monitoring), consumer products (e.g., consumer cameras), entertainment (e.g., Microsoft Kinect, cell-phone apps), and manufacturing. This course covers the following fundamental topics in computer vision: introduction to image formation, image processing, feature detection, segmentation, multiple view geometry and 3D reconstruction, motion, face detection, object recognition and classification. Students will implement algorithms that are presented in the class and have a chance to test them first hand on images.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/deep-learning/",
@@ -653,7 +682,8 @@
         "schedule": "Monday, 14:15 - 17:00",
         "day": 1,
         "start": "14:15",
-        "end": "17:00"
+        "end": "17:00",
+        "description": "Recent progress in Computer Vision and Machine Learning has had a tremendous effect in the society and has provided new technologies in several fields, including, for example, information retrieval (image understanding, natural language processing) and automotive (self-driving cars and drones). This course is concerned with the latest developments in these fields and provides a hand-on understanding of the state-of-the-art methods. In particular, of interest are the current developments in neural networks (also known as deep learning). The course will provide detailed understanding of the latest architectures in neural networks and how to train them to solve vision- and text-related tasks.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/design-and-graphics-programming-for-game-development/",
@@ -674,7 +704,8 @@
         "schedule": "Friday, 14:15 - 17:00",
         "day": 5,
         "start": "14:15",
-        "end": "17:00"
+        "end": "17:00",
+        "description": "This class will give all the theoretical fundamentals to design, develop and evaluate videogames. Those principles will make the participants aware of user-centric development. Furthermore, the students will acquire the technical knowledge required to integrate advanced methods for rendering real-time 2D computer graphics and techniques currently used in game development. In this context, students will develop simple games, by developing an idea, producing a design document, and by implementing the interactive application.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/document-image-analysis/",
@@ -698,7 +729,8 @@
         "schedule": "Tuesday, 09:15 - 12:00",
         "day": 2,
         "start": "09:15",
-        "end": "12:00"
+        "end": "12:00",
+        "description": "Document Image Analysis (DIA) is a cross-domain of computer vision and pattern recognition and refers to an established research field dealing with the extraction of any kind of exploitable information from document images. Printed and handwritten text recognition, known as OCR/ICR (Optical/Intelligent Character recognition), is part of the discipline, but represents only one aspect. Other challenging topics include document classification, layout analysis, writer identification/authentication, signature recognition, table recognition, logical structure recognition, etc.\nThe aim of the Master course is to provide an overview of methods, from basic image processing to machine learning, which are described in the scientific literature to address different steps of DIA; this includes image binarization, page segmentation, graphics/text separation, text bock and text line detection, feature extraction and classification (at various levels). As a practical exercise, students will be asked to do a project (either individually or within a group of max. 4 peoples), which addresses a specific DIA challenge, including potentially the participation to international competitions.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/graph-based-pattern-recognition/",
@@ -721,7 +753,8 @@
         "schedule": "Wednesday, 09:15 - 12:00",
         "day": 3,
         "start": "09:15",
-        "end": "12:00"
+        "end": "12:00",
+        "description": "The aim of pattern recognition (PR) is to research methods that are able to (partially) imitate the human capacity of perception and intelligence. PR algorithms are actually employed in various applications (from handwriting recognition to activity predictions for molecular compounds). The question how to represent the underlying data in a formal way is a key issue in PR and related fields. In general, there are two major ways to tackle this step, viz. the statistical approach (using feature vectors) and the structural approach (using graphs). Graphs provide two seminal advantages when compared to feature vectors:\n\t1. Graphs are not only able to describe properties, but also relationships among different parts of the underlying data.\n\t2. Graphs are not constrained to a fixed size, i.e. the number of nodes and edges can be adapted to the size and the complexity of each individual data object\nDue to their power and flexibility, graphs have found widespread application in PR. A prominent example of entities, which can be formally represented in a more suitable and natural way by means of graphs rather than with feature vectors, are chemical compounds.\nThe field of graph based pattern recognition has a long tradition and can roughly be subdivided into three main eras:\n\t1. First era: Graph matching and graph clustering\n\t2. Second era: Graph kernels\n\t3. Third era: Graph neural networks\nThis lecture is structured along these three eras (in twelve Chapters). The course includes practical exercises in which the concepts and models presented in the lectures can be implemented and tested on real data.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/image-processing/",
@@ -740,7 +773,8 @@
         "schedule": "Tuesday, 09:15 - 12:00",
         "day": 2,
         "start": "09:15",
-        "end": "12:00"
+        "end": "12:00",
+        "description": ""
     },
     {
         "url": "https://mcs.unibnf.ch/courses/seminar-affective-computing-for-empathic-behaviour-change/",
@@ -765,7 +799,8 @@
         "schedule": "",
         "day": null,
         "start": null,
-        "end": null
+        "end": null,
+        "description": "How would your computer respond if you looked frustrated, upset or stressed? Could your phone comfort you if you were sad after getting a call? Could your smart home adjust the music, lighting, or other aspects of the environment around you after you\u2019ve had a bad day at work \u2014 without being asked?[1] Can your computer offer you help if it sees you stressed without the need of your assistance?\nThe goal of this seminar is to study some of the latest advances in emotion recognition and emphatic behaviour change as well as emphatic companions. Moreover responses generally and empathic responses specifically will be studied. In this context a special case is considered which is \u201cstress\u201d, a body and mental effect that we face daily. Two types of stress exist: the negative known as distress and the positive one known as eustress.\nEmpathy is the capacity to understand or feel what another person is experiencing from within the other person\u2019s frame of reference, i.e., the capacity to place oneself in another\u2019s position [2], [3]. Despite there are still many definitions for empathy that encompass a broad range of emotional states, nowadays there is considerable agreement in the research community that empathy consists of three different aspects [4]: recognizing someone else\u2019s emotional state (i.e., cognitive empathy), the convergence of feelings between people (i.e., emotional convergence), and responding to another person\u2019s (inferred) feelings or the emotional convergence those feelings initiate (i.e., empathic responding).\nStress is a tension and pressure felt in the body that might be affecting positively or negatively our mental and physical health. By mental health we mean our emotional state, mood and behaviour, by physical health we mean the body, diet, weight and sleep etc. Stress is affecting every individual so what are the advantages of positive stress, and disadvantages of negative stress? What are the effects that can be seen in the body? What type of emotions can induced by stress, can it change our mood and behaviour?\nHuman emotions recognition is a complex task, stress is much more complex as well. Body and face temperature change, facial expressions, body language and voice tone, all these are examples of features related to the emotional state and stress reactional effects of a person.\nThis seminar will investigate how we can recognize human emotion and stress (using facial expression, physiological signals, etc.) and design interactive technologies and empathic companions to enhance quality of life and support the user during their daily activities (e.g. reduce cumulative stress at work, boost positive stress to increase performances, manage stress in semi-autonomous driving, etc.). This seminar will help the students to improve their research and practical abilities. It will have a strong practical component as students will investigate existing applications as well as develop new concepts in the aforementioned domains.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/seminar-applied-optimization/",
@@ -788,7 +823,8 @@
         "schedule": "Thursday, 14:15 - 16:00",
         "day": 4,
         "start": "14:15",
-        "end": "16:00"
+        "end": "16:00",
+        "description": "The seminar on applied optimization covers a wide range of different topics related to numerical optimization algorithms and their implementation. The general theme will change from one year to another and up-to-date information can be found at \n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/seminar-chatbots-and-conversational-agents/",
@@ -813,7 +849,8 @@
         "schedule": "",
         "day": null,
         "start": null,
-        "end": null
+        "end": null,
+        "description": "Nowadays, chatbots (or conversational agents) are available on different platforms. It can be in a professional context (Skype, Slack) or a private one (Facebook Messenger, Discord, Telegram). Since Facebook\u2019s F8 2016 conference, these bots have become more democratic and have flooded the different platforms. They tend to replace mobile applications for their ease of use and various functionalities. In addition, there is no need to install them because they are available on apps that everyone already has.\nTransactional chatbots are all over the place and are the first step of chatbots. We now search for more human-like conversations, with emotions, understanding and eventually empathy. We want to coach the user, to understand him, to help him, depending on the context (eg. customer service, mental illness treatment, coach, companion). Thanks to the outstanding evolutions in artificial intelligence and natural language processing in the last decade, it is now possible to converse in a more or less natural way with bots.\nThis seminar focuses on investigating approaches and technologies used in today\u2019s chatbots, as well as comparing and applying underlying psychological theories. There are different types of bot for different uses. It is then worthwhile to understand the advantages and disadvantages of each of these techniques. All bots are not powered by machine learning, some are rule-based. Natural language understanding as well as natural language generation are two fundamental aspects of chatbots. Monitoring a context in a conversation is also a very important element. Analyzing and designing a human-machine interface is not an easy task. Bots can have moods and a personality. All these aspects must be considered while designing a chatbot.\nA particular emphasis this year will be given to mood, personality and language generation.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/seminar-computer-graphics-and-geometry-processing/",
@@ -834,7 +871,8 @@
         "schedule": "Thursday, 14:15 - 16:00",
         "day": 4,
         "start": "14:15",
-        "end": "16:00"
+        "end": "16:00",
+        "description": "This seminar offers the possibility for students to get in touch with cutting-edge research topics in the area of computer graphics and geometry processing. Each participant in the seminar will prepare one topic and present it to the group. In addition to learning about the latest research results, other goals of the seminar include learning about literature research, independent review of scientific material, and presentation skills. For some topics there will be the opportunity to implement prototypes of the presented algorithms and include practical experience into the presentation.\nThe general theme will change from one year to another and up-to-date information can be found at \n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/seminar-explainable-ai-human-computer-interaction-meets-artificial-intelligence/",
@@ -859,7 +897,8 @@
         "schedule": "",
         "day": null,
         "start": null,
-        "end": null
+        "end": null,
+        "description": "With the increasing use of automation, users tend to delegate more and more tasks to the machines. Complex systems are usually developed with an Artificial Intelligence (AI) and can embed different kinds of models and algorithms including Machine Learning and Deep Learning, which make these systems difficult to understand for the user. This assumption is for instance particularly true in the field of automated driving since the level of automation is increasing or in the health domain where more and more sophisticated AI powered diagnostic tools are used every day. In order to better understand how AI works and build trust in the decisions made by AIs, new techniques in the field are emerging that are referred to as Explainable AI (XAI) [1].\n\t1. understand the functioning of algorithms and AIs in order to optimize their design and architecture, their features but also to understand and interpret the results\n\t2. increase human confidence in systems\n\t3. increase and improve cooperation between agents\nAs shown by [2], providing appropriate explanations to the user increases the user\u2019s confidence in the system and thus allows for better human-IA collaboration.\nThe goal of this seminar is to investigate the field of Explainable AI (XAI) with a particular focus on the perspective of human interaction since it has not been sufficiently studied in existing explainable approaches [1] [3]. The seminar will address the topics related to the design of human-computer interfaces for XAI. Effective knowledge transfer through an explanation depends on a combination of AI algorithms used, explanation dialogues, and interfaces that can accommodate explanations.\nThis seminar will help the students to improve their research and practical abilities. It will have a strong practical component as students will investigate existing applications as well as develop new concepts in the aforementioned domains.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/seminar-human-computer-interaction-i/",
@@ -883,7 +922,8 @@
         "schedule": "",
         "day": null,
         "start": null,
-        "end": null
+        "end": null,
+        "description": "This is the main seminar of the HCI group of the Human-IST Institute. The topics will change each semester and will be proposed by Human-IST members. Each participant will be supervised by one Human-IST member.\nThrough a set of topics for the participants to choose from, the different research fields studied within the Human-IST institute will be reviewed and discussed. Again, each specific topic is proposed by a member of the Human-IST team who will be available, each time needed, during the semester to follow the work of the student selecting it.\nMore details can be found at \n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/seminar-human-computer-interaction-ii/",
@@ -906,7 +946,8 @@
         "schedule": "",
         "day": null,
         "start": null,
-        "end": null
+        "end": null,
+        "description": "Data visualization, also known as information visualisation, is a field concerned with the visual representation of data and interaction with it in order to amplify cognition. This seminar will explore some recent trends and selected chapters in this research domain, e.g. combination of data mining techniques with parallel coordinates visualisation, the evaluation of graph & network visualisation, the representation of uncertainty in visualisation, etc.\nPlease note that the exact topic of the seminar changes each year, yet stays in the broad context of data visualization.\nThe goal of this seminar is to review selected chapters in the domain of Data Visualization. Another objective of this seminar is to develop skills in reading, writing and reviewing academic papers. In this context, students will be asked to write and present a state of the art of a sub-domain of the Data Visualization research field. Sub topics such as the combination of data mining techniques with parallel coordinates visualisation, the evaluation of graph & network visualisation, the representation of uncertainty in visualisation etc. will be addressed in this context.\nEach student will be assigned a theme within the domain, select state-of-the-art references relevant to the chosen thematic, synthesize these references and present them. There must be an oral presentation done during one of the final seminar sessions, plus in a written report of 4 pages, authored in LaTeX following ACM Strict format.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/seminar-machine-learning-and-artificial-intelligence/",
@@ -930,7 +971,8 @@
         "schedule": "Monday, 10:15 - 12:00",
         "day": 1,
         "start": "10:15",
-        "end": "12:00"
+        "end": "12:00",
+        "description": "The objective of the computer vision seminar is to create a research background and culture (e.g., awareness of what has been done and is being done in computer vision and machine learning) and to develop presentation and critical analysis skills. Themes in computer vision and machine learning will be presented for a few weeks. Each theme will consist of a general presentation of the topic and of a more specialized recent work within the topic. Attendees will be required to attend all seminars and to present once per theme a paper selected from the literature. It is also possible to arrange presentations of own research work.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/seminar-machine-learning-and-artificial-intelligence-2/",
@@ -953,7 +995,8 @@
         "schedule": "Monday, 10:15 - 12:00",
         "day": 1,
         "start": "10:15",
-        "end": "12:00"
+        "end": "12:00",
+        "description": "The objective of the computer vision seminar is to create a research background and culture (e.g., awareness of what has been done and is being done in computer vision and machine learning) and to develop presentation and critical analysis skills. Themes in computer vision and machine learning will be presented for a few weeks. Each theme will consist of a general presentation of the topic and of a more specialized recent work within the topic. Attendees will be required to attend all seminars and to present once per theme a paper selected from the literature. It is also possible to arrange presentations of own research work.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/seminar-pattern-recognition-2/",
@@ -974,7 +1017,8 @@
         "schedule": "",
         "day": null,
         "start": null,
-        "end": null
+        "end": null,
+        "description": "The PRG seminar can be seen as a general platform for students interested in pattern recognition and related fields. Students as well as members of PRG present their current work (Bachelor, Master and PhD theses). The main topics are: artificial intelligence, pattern recognition, machine learning, graph based pattern representation, and others. Contributions from the field of human-computer-interaction are also possible.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/automata-on-infinite-structures/",
@@ -995,7 +1039,8 @@
         "schedule": "Wednesday, 09:15 - 12:00",
         "day": 3,
         "start": "09:15",
-        "end": "12:00"
+        "end": "12:00",
+        "description": "In this course unit, we deal with a fraction of automata theory that is applied when it comes to representing behaviours of reactive systems (OS, communications protocols, control systems, etc.). The common abstraction of the indefinite running time of such systems is the assumption that they run forever, leading to automata models operating on infinite sequences or trees. We will explore different equivalent models of automata on infinite words, namely B\u00fcchi, Muller, and Rabin Automata. We will learn how to manipulate them algorithmically, and explore their relation to logic, in particular to the monadic second-order logic of one successor. Finally, we will look at what changes, when these automata are applied to infinite trees rather than infinite words.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/fairness-and-privacy-in-machine-learning/",
@@ -1016,7 +1061,8 @@
         "schedule": "Friday, 08:45 - 12:00",
         "day": 5,
         "start": "08:45",
-        "end": "12:00"
+        "end": "12:00",
+        "description": "This course gives a thorough technical introduction to algorithmic privacy and fairness. The course work is centered around individual assignments and group project work.\n\t1. Introduction: algorithmic privacy, fairness and reproducibility.\n\t2. Privacy and anonymity\n\t3. Differential privacy\n\t4. Approximate differential privacy\n\t5. Privacy amplification\n\t6. Group fairness: Equalised odds\n\t7. Group fairness: Balance and calibration\n\t8. Individual fairness: Meritocracy\n\t9. Individual fairness: Smoothness\n\t10. Reproducibility\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/machine-learning-and-data-mining/",
@@ -1039,7 +1085,8 @@
         "schedule": "Tuesday, 08:45 - 12:00",
         "day": 2,
         "start": "08:45",
-        "end": "12:00"
+        "end": "12:00",
+        "description": "Introduction to Data Mining perspective; Association rules; Decision trees; Instance-based learning (nearest neighbors); Clustering; Support Vector machines (SVM); Evaluation (Train & Test, Cross-validation, Leaving-one-out); Data Streams.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/proof-theory/",
@@ -1060,7 +1107,8 @@
         "schedule": "Tuesday, 09:15 - 12:00",
         "day": 2,
         "start": "09:15",
-        "end": "12:00"
+        "end": "12:00",
+        "description": ""
     },
     {
         "url": "https://mcs.unibnf.ch/courses/reinforcement-learning-and-decision-making-under-uncertainty/",
@@ -1083,7 +1131,8 @@
         "schedule": "Tuesday, 08:45 - 12:00",
         "day": 2,
         "start": "08:45",
-        "end": "12:00"
+        "end": "12:00",
+        "description": "The course will give a thorough introduction to reinforcement learning. The first 8 weeks will be devoted to the core theory and algorithms of reinforcement learning. The final 6 weeks will be focused on project work, during which more advanced topics will be inroduced.\nThe first 6 weeks will require the students to complete 3 assignments. The remainder of the term, the students will have to prepare a project, for which they will need to submit a report.\n\t1. Beliefs and Decisions\n\t2. Bayesian Analysis\n\t3. Bandit problems\n\t4. MDP Theory: Value Iteration\n\t5. Temporal Differences\n\t6. Sarsa / Q-Learning\n\t7. Function Approximation, Gradient Methods\n\t8. Bayesian RL\n\t9. UCB, Regret bounds\n\t10. Monte Carlo Planning: UCT/MCTS/AlphaZero\n\t11. Advanced Bayesian models\n\t12. Inverse Reinforcement Learning\n\t13. Multiagent extensions: Bayesian Games\n\t14. Group work\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/seminar-advanced-topics-in-reinforcement-learning-and-decision-making/",
@@ -1106,7 +1155,8 @@
         "schedule": "",
         "day": null,
         "start": null,
-        "end": null
+        "end": null,
+        "description": "This will cover current research in the area of learning and decision making. Students will give a presentation of their own research and selected published articles, as well as discuss the presentation given by the other participants. Topics covered include:\n\t1. Reinforcement learning\n\t2. Learning theory\n\t3. Game theory\n\t4. Economics and computation\n\t5. Fairness in machine learning\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/seminar-logic-and-theoretical-computer-science/",
@@ -1127,7 +1177,8 @@
         "schedule": "Thursday, 13:30 - 15:00",
         "day": 4,
         "start": "13:30",
-        "end": "15:00"
+        "end": "15:00",
+        "description": "Students as well as members of the Logic and Theory Research Group (LTG) present their current work. The main topics are: explicit mathematics and operational set theory, subsystems of second order arithmetic and set theory, systems of bounded arithmetic and bounded set theory, modal logics.\nA general platform for students interested in theoretical computer science, logic, and the foundations of mathematics.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/seminar-logic-and-theoretical-computer-science-2/",
@@ -1148,7 +1199,8 @@
         "schedule": "Thursday, 10:15 - 12:00",
         "day": 4,
         "start": "10:15",
-        "end": "12:00"
+        "end": "12:00",
+        "description": "Students as well as members of the Logic and Theory Research Group (LTG) present their current work. The main topics are: explicit mathematics and operational set theory, subsystems of second order arithmetic and set theory, systems of bounded arithmetic and bounded set theory, modal logics.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/advanced-mathematical-modeling-and-optimization/",
@@ -1169,7 +1221,8 @@
         "schedule": "Tuesday, 14:15 - 17:00",
         "day": 2,
         "start": "14:15",
-        "end": "17:00"
+        "end": "17:00",
+        "description": "This course considers modeling and optimization aspects of mixed-integer linear programming (or integer programming for short). This important subdomain of mathematical programming and extension of linear programming considers the problem of optimizing a linear function of many variables, some or all of them restricted to be integers, subject to linear constraints.\nInteger programming is a thriving area of optimization. It has countless applications in production planning and scheduling, logistics, layout planning and revenue management, to name just a few. Thanks to effective and reliable software, it is widely applied in industry to improve decision-making.\nIn this course, we cover the theory and practice of integer programming. In the first part, we address mathematical modeling aspects. We discuss how integer variables can be used to model various practically relevant, complex decision problems. We then introduce some standard optimization problems and develop, analyze and compare different integer programming formulations for them. We also introduce powerful modeling and solving tools and test them on the optimization problems given in the course. In the second part, we address optimization aspects, in which we discuss the basic methodology applied to solve integer programs. In particular, we consider implicit enumeration techniques (branch and bound), polyhedral theory, cutting planes and primal heuristics. We also look at some advanced techniques, such as Danzig-Wolfe decomposition and column generation.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/advanced-topics-in-decision-support/",
@@ -1190,7 +1243,8 @@
         "schedule": "Wednesday, 15:15 - 18:00",
         "day": 3,
         "start": "15:15",
-        "end": "18:00"
+        "end": "18:00",
+        "description": "In this course, we start with a presentation of the dynamic programming approach which is a mathematical optimization method. This technique will be illustrated using well-known problems like the knapsack problem, the stock management problem, the resource allocation problem or the shortest path problem.\nIn a second part, we will concentrate on network flow problems (max flow, min cost flow, etc\u2026). Our focus will be on the modeling part but we will also see how to solve such problems efficiently using well-known algorithms.\nIn the last part, we introduce project management/scheduling problems, present the critical path method as well as the concept of crashing. We also focus on the case when the exact durations of the tasks to be executed are not known.\nAll topics will be illustrated by examples taken from economics, management science and operations research.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/choice-based-optimization-and-its-application-to-revenue-management/",
@@ -1211,7 +1265,8 @@
         "schedule": "Tuesday, 13:15 - 16:00",
         "day": 2,
         "start": "13:15",
-        "end": "16:00"
+        "end": "16:00",
+        "description": "Choice-based optimization enable planners to make decisions while taking into account individual\u2019s choice behavior. This behavior is modeled with discrete choice models, which correspond to the state-of-the-art of the disaggregate mathematical representation of the demand. They assume that each individual associates a utility with each alternative they can choose from and selects the one with the highest alternative.\nChoice-based optimization problems are receiving increasing attention because they allow to explicitly capture the interplay between the planner\u2019s decisions and the expected demand provided that the decisions are explanatory variables of the discrete choice model. In this course, we first introduce discrete choice models by reviewing their assumptions, mathematical formulations and applications. We then discuss how they can be integrated in an optimization problem by expressing the discrete choice model as a set of linear constraints that can be embedded in a mixed-integer linear formulation (i.e., linear model with both integer and continuous variables). We then apply the introduced modelling techniques in the context of revenue management, one of the application areas where the demand representation plays a very important role in the associated decision-making processes. Revenue management refers to the pricing and revenue optimization as a quantitative approach to set and update pricing and product availability decisions in a consistent and effective fashion. It has proven particularly successful in the airline industry, where fares and ticket offerings dynamically change as a function of the number of free seats, forecast of future demand and specific request characteristics. We introduce the basics on pricing with and without a capacity constraint, then discuss price differentiation aspects and look at revenue optimization problems including customer segmentation. From these single resource problems, we move to the network case, in which multiple resources are used to provide a service. We look at these revenue management topics from a choice-based optimization perspective concerning their modeling, solving and interpretation.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/design-of-governance-in-socio-technical-information-systems/",
@@ -1232,7 +1287,8 @@
         "schedule": "Monday, 14:15 - 18:00",
         "day": 1,
         "start": "14:15",
-        "end": "18:00"
+        "end": "18:00",
+        "description": "The Internet has become the most important infrastructure component underlying every modern socio-technical system, either as the means to provide access to the information managed by the system (as in transport or health), as the core of the information system (as in banking and finance), or both (as in research).\nHow are the components that run the information sub-systems of socio-technical systems designed? How are design and architecture conducted in order for the system to fulfil requirements related to needs or rules embedded in society?\nThese are some of the questions that will be studied and discussed during the lectures on \u201cThe design of governance in socio-technical (information) systems\u201d.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/digitalization-and-information-systems/",
@@ -1253,7 +1309,8 @@
         "schedule": "Wednesday, 12:15 - 15:00",
         "day": 3,
         "start": "12:15",
-        "end": "15:00"
+        "end": "15:00",
+        "description": "The goal of this course is to familiarize students with novel technologies in the context of digitalization and information systems and enable them to apply and evaluate these technologies in small practical business scenarios. This includes the use of enterprise modeling methods, software environments as well as programming languages.\nThe course will comprise units with:\n\t1. Theoretical explanations of technologies and enterprise modeling methods used for digitalization\n\t2. Practical exercises for using the technologies\n\t3. Project work for applying the technologies to concrete use cases\nThe technologies will be selected based on the current research topics of the DIGITS group and may include for example: IT-based enterprise modeling methods, blockchains, visualization and virtual/augmented reality, device-less interaction, artificial intelligence, natural language processing, additive manufacturing.\nCourse requirements:\nThe course is directed towards students in information management (business informatics) and students in business administration who want to understand the technologies behind digitalization and gain first experiences in applying them to practical scenarios.\nA laptop is needed for the practical exercises and the project part.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/foundations-and-tools-for-processing-semi-structured-data/",
@@ -1274,7 +1331,8 @@
         "schedule": "Tuesday, 09:15 - 12:00",
         "day": 2,
         "start": "09:15",
-        "end": "12:00"
+        "end": "12:00",
+        "description": "The course is about the foundations and tools for dealing with tree shaped data, a prevalent data model used for representing semi-structured data over distributed information systems. It aims at presenting an approach for modelling, querying and processing either document-centric or data-centric information in a homogeneous way. The theoretical part introduces underlying concepts sustaining the approach. The practical part illustrates the application of concepts in a concrete context: the development of Web applications that make use of an XML native database (one category of the NoSQL databases) and associated standardized languages.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/fuzzy-sets-and-systems-i/",
@@ -1295,7 +1353,8 @@
         "schedule": "Friday, 14:15 - 17:00",
         "day": 5,
         "start": "14:15",
-        "end": "17:00"
+        "end": "17:00",
+        "description": "The idea of this lecture series is to introduce students into the design and engineering of fuzzy sets and systems. It is thought of a self-contained treatment of fuzzy systems engineering, offering conceptual fundamentals, design methodologies, development guidelines, and particular illustrative material. Throughout the lecture series, we thus emphasize on the direct applicability of the concepts being discussed, and historical and bibliographical aspects are included.\nTo deal with human-center systems, Lotfi A. Zadeh introduced fuzzy sets and systems, from where a wealth of theoretical developments, conceptual pursuits, algorithmic environments, and other applications have emerged. As a departure from current views on the subject, the lecture series presents fuzzy sets as an enabling technology whose impact, contributions, and methodology stretch beyond any specific discipline, making it applicable to researchers and practitioners in engineering, computer science and business. With this in mind, the series presents an up-to-date approach to fuzzy systems design and engineering. The result is a holistic view of fuzzy sets and systems as a fundamental component of computational intelligence and human-centric systems.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/fuzzy-sets-and-systems-ii/",
@@ -1318,7 +1377,8 @@
         "schedule": "Friday, 14:15 - 17:00",
         "day": 5,
         "start": "14:15",
-        "end": "17:00"
+        "end": "17:00",
+        "description": "The idea of this lecture series is to introduce students into fuzzy modelling methods. With today\u2019s information overload, it has become increasingly difficult to analyze the huge amounts of data and to generate appropriate management decisions. Furthermore, the data are often imprecise and will include both quantitative and qualitative elements. For these reasons it is important to extend traditional decision making processes by adding intuitive reasoning, human subjectivity and imprecision.\nTo deal with uncertainty, vagueness, and imprecision, Lotfi A. Zadeh introduced fuzzy sets and fuzzy logic. In this series fuzzy logic is applied to extend and model portfolio analysis, scoring methods, customer relationship management, performance measurement, web reputation, web analytics and controlling, community marketing and other business domains to improve managerial decisions. Thus, fuzzy logic can be seen as a modeling and management method where appropriate concepts, software tools and languages build a powerful instrument for analyzing and controlling the business.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/graph-theory-and-applications/",
@@ -1339,7 +1399,8 @@
         "schedule": "Thursday, 14:15 - 17:00",
         "day": 4,
         "start": "14:15",
-        "end": "17:00"
+        "end": "17:00",
+        "description": "In this course, we first introduce some basic concepts and notions of graph theory. We then present a series of graph theoretical problems (vertex coloring, edge coloring, maximum matching, \u2026) which have real world applications (in sports scheduling, timetabling, transmission problems, \u2026 ) and focus on how these problems may be solved. The students will also learn how to model other real world problems using the graph theoretical notions introduced.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/introduction-to-recommender-systems/",
@@ -1362,7 +1423,8 @@
         "schedule": "Monday, 09:15 - 12:00",
         "day": 1,
         "start": "09:15",
-        "end": "12:00"
+        "end": "12:00",
+        "description": "Recommender systems (RSs) are computer-based techniques that attempt to present information about products that are likely to be of interest to a user. These techniques are mainly used in Electronic Commerce (eCommerce) in order to provide suggestions on items that a customer is, presumably, going to like. Nevertheless, there are other applications that make use of RSs, such as social networks and community-building processes, among others. A recommender system is a specific type of information filtering technique that tries to present users with information about items (movies, music, books, news, web pages, among others) in which they are interested. The term \u201citem\u201d is used to denote what the system recommends to users. To achieve this goal, the user profile is contrasted with the characteristics of the items. These features may come from the item content (content-based approach) or the user\u2019s social environment (CF). The use of these systems is becoming increasingly popular in the Internet because they are very useful to evaluate and filter the vast amount of information available on the Web in order to assist users in their search processes and retrieval. RSs have been highly used and play an important role in different Internet sites that offer products and services in social networks, such as Amazon, YouTube, Netflix, Yahoo!, TripAdvisor, Facebook, and Twitter, among others. Many different companies are developing RSs techniques as an added value to the services they provide to their subscribers.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/seminar-hands-on-recommender-systems/",
@@ -1385,7 +1447,8 @@
         "schedule": "",
         "day": null,
         "start": null,
-        "end": null
+        "end": null,
+        "description": "Recommender systems (RSs) are computer-based techniques that attempt to present information about products that are likely to be of interest to a user. These techniques are mainly used in Electronic Commerce (eCommerce) in order to provide suggestions on items that a customer is, presumably, going to like. Nevertheless, there are other applications that make use of RSs, such as social networks and community-building processes, among others. A recommender system is a specific type of information filtering technique that tries to present users with information about items (movies, music, books, news, web pages, among others) in which they are interested.\nThe term \u201citem\u201d is used to denote what the system recommends to users. To achieve this goal, the user profile is contrasted with the characteristics of the items. These features may come from the item content (content-based approach) or the user\u2019s social environment (Collaborative Filtering). The use of these systems is becoming increasingly popular in the Internet because they are very useful to evaluate and filter the vast amount of information available on the Web in order to assist users in their search processes and retrieval.\nRSs have been highly used and play an important role in different Internet sites that offer products and services in social networks, such as Amazon, YouTube, Netflix, Yahoo!, TripAdvisor, Facebook, and Twitter, among others. Many different companies are developing RSs techniques as an added value to the services they provide to subscribers.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/seminar-life-engineering/",
@@ -1408,7 +1471,8 @@
         "schedule": "",
         "day": null,
         "start": null,
-        "end": null
+        "end": null,
+        "description": "The idea of this virtual seminar is to introduce students into a human-centered reflection on ethics and sustainability of digitalization. With this in mind, an ethics by design mindset is applied as a humanistic way to model and engineer fair systems that imperatively involve ethical values and sustainable principles, requirements as well as procedures into design. In the course of the semesters, together we seek to understand computational ethics and sustainability approaches, by reading and discussing the latest books on digital ethics and sustainability, in the form of a colloquium, a discussion-intensive seminar.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/seminar-life-engineering-2/",
@@ -1431,7 +1495,8 @@
         "schedule": "",
         "day": null,
         "start": null,
-        "end": null
+        "end": null,
+        "description": "The idea of this virtual laboratory for an integral fuzzy engineering, or short life engineering, is to introduce students into a human-centred reflection on ethics and sustainability of digitalisation. With this in mind, in this virtual online laboratory, we apply an ethics by design mindset as a humanistic way to design and engineer fair systems that imperatively involve ethical values and sustainable principles, requirements as well as procedures into design. In the course of the semesters, together we seek to understand computational ethics and sustainability approaches, by reading and discussing the latest books on digital ethics and sustainability, in the form of a colloquium, a discussion-intensive seminar on life.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/seminar-public-services/",
@@ -1454,7 +1519,8 @@
         "schedule": "",
         "day": null,
         "start": null,
-        "end": null
+        "end": null,
+        "description": "The idea of this seminar is to give students insights into actual public service challenges. Thereby, our focus is on citizen-centered design of new services, technologies, and business models. At the kick-off session, various topics from and for Swiss network industries (as Post, SBB and Swisscom, etc.) will be introduced. For each topic, a project is supposed to be developed by student groups (preferably of two) to get a deeper knowledge in the respective topic. In the final presentation, the compiled data, information and knowledge must be shared with the fellow students.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/seminar-social-computing/",
@@ -1477,7 +1543,8 @@
         "schedule": "",
         "day": null,
         "start": null,
-        "end": null
+        "end": null,
+        "description": "The idea of this seminar is to give students insights into actual social computing systems. Thereby, our focus is on the design of new computing with words and perception services, technologies, and business models. At the kick-off session, various topics from and for Swiss network industries (as Post, SBB and Swisscom, etc.) will be introduced. For each topic, a project is supposed to be developed by student groups (preferably of two) to get a deeper knowledge in the respective topic. In the final presentation, the compiled data, information and knowledge must be shared with the fellow students.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/big-data-infrastructures/",
@@ -1499,7 +1566,8 @@
         "schedule": "Wednesday, 14:15 - 17:00",
         "day": 3,
         "start": "14:15",
-        "end": "17:00"
+        "end": "17:00",
+        "description": "This course focuses on conceptual and architectural issues related to the design and deployment of modern data management infrastructures in a Big Data context. It starts with a review of distributed transaction processing techniques, classical parallel databases systems and ACID-style semantics in shared-nothing architectures. The course then delves into modern wide-area data processing, with an emphasis on recent systems developed to solve large-scale problems using clusters of commodity machines. In this second part, the course covers distributed storage systems (such as Google\u2019s BigTable), wide-area hash-tables (like Cassandra), data-intensive computing platforms (Hadoop) and nosql systems. Hands on programming exercises using those platforms will be an important part of this course.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/data-management-data-structures/",
@@ -1520,7 +1588,8 @@
         "schedule": "Thursday, 14:15 - 17:00",
         "day": 4,
         "start": "14:15",
-        "end": "17:00"
+        "end": "17:00",
+        "description": "Data structures are often studied along algorithms but they are also essential for organizing data in database management and analytic systems.\nThe families of data structures in which we are interested, and the respective representative instances, are the following:\n\t1. Modern Hash-base Structure \u2013 This is an important class of structure for point access. We will look into open addressing (cuckoo, swiss table) and close addressing (TBD) options.\n\t2. Scalable Trees \u2013 These structures cover in addition range access and we study examples of compact/efficient trees such as radix tree (ART) and concurrent access structures such as range index (Masstree)\n\t3. Persistent Structures \u2013 There are structures that lend themselves well to be operated in-memory but that present a persistent component. We will study structures with In-place updates (B-link* tree) and append-only (Log-Structured Merge Trees)\n\t4. Probabilistic Structures \u2013 We look into the use of approximation techniques into data structures. In particular, we look into compact set membership (Bloom Filter) and Approximate Balancing techniques (Skiplist).\n\t5. Compressed/Learned Structures \u2013 Similarly to approximation, compression also creates interesting possibilities. We look into lossless approaches in dictionary compression and lossy ones in learned Index (TBD).\n\t6. Each of the five modules is comprised of two classes. There are two classes reserved for student projects presentations.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/distributed-deep-learning-systems/",
@@ -1541,7 +1610,8 @@
         "schedule": "Monday, 08:15 - 12:00",
         "day": 1,
         "start": "08:15",
-        "end": "12:00"
+        "end": "12:00",
+        "description": "Machine learning systems are often conventionally designed for centralized processing in that they first collect data from distributed sources and then execute algorithms on a single server. Due to the limited scalability of processing large amount of data and the long latency delay, there is a strong demand for a paradigm shift to distributed or decentralized ML systems which execute ML algorithms on multiple and in some cases even geographically dispersed nodes.\nThe aim of this course is to let students learn how to design and build distributed ML systems via paper reading, presentation, and discussion; We provide a broad overview on the design of the state-of-the-art distributed ML systems, with a strong focus on the scalability, resource efficiency, data requirements, and robustness of the solutions. We will present an array of methodologies and techniques that can efficiently scale ML analysis to a large number of distributed nodes against all operation conditions, e.g., system failures and malicious attacks. The specific course topics are listed below.\nThe course materials will be based on a mixture of classic and recently published papers.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/pattern-recognition/",
@@ -1562,7 +1632,8 @@
         "schedule": "Monday, 14:15 - 17:00",
         "day": 1,
         "start": "14:15",
-        "end": "17:00"
+        "end": "17:00",
+        "description": "In this course, we study the fundaments of pattern recognition. We adopt an engineering point of view on the development of intelligent machines which are able to identify patterns in data. The core methods and algorithms are elaborated that enable pattern recognition for a wide range of data sources including sensory data (image, video, audio, location, etc.) as well as born-digital data (text, network traffic, chemical formulas, etc.). The course is organized in two parts. In the first part, we explore statistical pattern recognition based on feature vector representation. Standard methods for unsupervised clustering and supervised classification in vector spaces will be discussed. In the second part, we investigate structural pattern recognition based on string and graph representation. For clustering and classification of structural data, dissimilarity measures will be introduced alongside with explicit and implicit vector space embedding approaches. The course is accompanied by practical exercises that involve the implementation of algorithms discussed in class and their application to exemplary pattern recognition tasks.\n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/seminar-data-science/",
@@ -1584,7 +1655,8 @@
         "schedule": "",
         "day": null,
         "start": null,
-        "end": null
+        "end": null,
+        "description": "The seminar on data science involves presentations that cover recent topics on data science. The area of this year\u2019s seminar is benchmarking. In the scope of this seminar, we investigate papers that describe various benchmarks for systems, algorithms and data generation. The papers explore configuration mechanisms and parameterization techniques that optimize the performance of the evaluated entities when applied to large datasets.\nLink to the seminar website: \n"
     },
     {
         "url": "https://mcs.unibnf.ch/courses/social-media-analytics/",
@@ -1606,6 +1678,7 @@
         "schedule": "Tuesday, 14:15 - 17:00",
         "day": 2,
         "start": "14:15",
-        "end": "17:00"
+        "end": "17:00",
+        "description": "The course will cover techniques and algorithms to analyze the structure of large social networks, and to identify their main properties. We start by introducing the basic concepts of social media analytics. Next, the course will delve into studying the main measures and models used for social media networks and techniques applied to identify communities. Then, the course will cover social media application topics including, diffusion/influence in social networks, crowdsourcing in the web, social recommendation and location-based social media.\n"
     }
 ]

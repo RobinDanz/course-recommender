@@ -20,16 +20,16 @@ const router = createRouter({
       name: 'recommender',
       component: RecommenderView
     },
-    {
-      path: '/about',
-      name: 'about',
-      component: AboutView
-    },
-    {
-      path: '/login',
-      name: 'login',
-      component: LoginView
-    },
+    // {
+    //   path: '/about',
+    //   name: 'about',
+    //   component: AboutView
+    // },
+    // {
+    //   path: '/login',
+    //   name: 'login',
+    //   component: LoginView
+    // },
     {
       path: '/list',
       name: 'course-list',

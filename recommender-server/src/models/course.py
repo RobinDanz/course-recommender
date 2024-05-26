@@ -9,24 +9,28 @@ class Course(SQLModel, table=True):
     title: str = Field()
     day: int = Field()
     type: int = Field()
-    site: str = Field()
+    site: int = Field()
     code: str = Field()
     start: time = Field()
     end: time = Field()
     track: int = Field()
-    semester: int = Field() # 0 = Spring, 1 = Autumn
+    semester: int = Field()
+    description: str = Field()
+    url: str = Field()
 
 
 class CourseCreate(SQLModel):
     title: str
     day: int
     type: int
-    site: str
+    site: int
     code: str
     start: time = Field()
     end: time = Field()
     track: int
     semester: int
+    description: str
+    url: str
 
 
 class CourseRead(SQLModel):
@@ -34,9 +38,11 @@ class CourseRead(SQLModel):
     title: str
     day: int
     type: int
-    site: str
+    site: int
     code: str
     start: time
     end: time
     track: int
     semester: int
+    description: str
+    url: str

@@ -10,3 +10,13 @@ export async function getCourseList(): Promise<Course[]> {
     throw new Error()
   }
 }
+
+export async function getCourse(id: number): Promise<Course> {
+  try {
+    const { data } = await axiosClient.get<Course>('/courses/' + id)
+
+    return data
+  } catch (error) {
+    throw new Error()
+  }
+}

@@ -21,6 +21,11 @@ async def get_db_session():
 
 
 async def fill_db():
+    site_dict = {
+        'Bern': 0,
+        'Fribourg': 1,
+        'Neuchâtel': 2 
+    }
     courses_model = []
     with open('scripts/out/data.json') as f:
         courses = json.load(f)
@@ -30,12 +35,14 @@ async def fill_db():
                 title=course['name'],
                 day=0 if not course['day'] else course['day'],
                 type=0 if course['type'] == 'Course' else 1,
-                site=course['site'],
+                site=site_dict[course['site']],
                 code=course['codes'][0],
                 start=str_to_time(course['start']),
                 end=str_to_time(course['end']),
                 track=int(course['tracks'][0].replace('T', '')),
-                semester=0 if sem == 'S' else 1
+                semester=0 if sem == 'S' else 1,
+                description=course['description'],
+                url=course['url']
             )
 
             db_course = Course.model_validate(c)
@@ -45,9 +52,6 @@ async def fill_db():
                 if len(session.exec(select(Course).where(Course.code == c.code)).all()) < 1:
                     session.add(db_course)
                     session.commit()
-
-
-    
 
 
 def str_to_time(time_str: str):

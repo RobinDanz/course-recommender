@@ -19,13 +19,13 @@ const { value, handleChange, errorMessage } = useField(props.name as string, und
 </script>
 
 <template>
-  <div class="flex flex-column align-items-center w-full bordered">
-    <div class="grid w-full bordered">
-      <div class="col-4 bordered flex justify-content-center">{{ leftLabel }}</div>
-      <div class="col-4 bordered">
+  <div class="flex flex-column align-items-center w-full">
+    <div class="grid w-full">
+      <div class="col-4 flex justify-content-center">{{ leftLabel }}</div>
+      <div class="col-4 my-auto">
         <Slider v-model="modelValue" :name="name" @update:model-value="handleChange"></Slider>
       </div>
-      <div class="col-4 bordered flex justify-content-center">{{ rightLabel }}</div>
+      <div class="col-4 flex justify-content-center">{{ rightLabel }}</div>
     </div>
   </div>
 

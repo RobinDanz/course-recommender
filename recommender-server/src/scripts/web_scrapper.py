@@ -30,6 +30,25 @@ if __name__ == '__main__':
             course_page = requests.get(current['href'])
             course_soup = BeautifulSoup(course_page.content, 'html.parser')
 
+            description = ''
+
+            description_components = course_soup.find('h1').find_next_siblings(['p', 'ol', 'ul'])
+
+            # print(description_components)
+                                                                         
+            for desc in description_components:
+                if desc.name == 'p':
+                    if isinstance(desc.next_element, str):
+                        description += desc.next_element + '\n'
+                elif desc.name == 'ol' or desc.name == 'ul':
+                    index = 1
+                    for content in desc.contents:
+                        if content.name == 'li':
+                            description += '\t' + str(index) + '. ' + content.next_element + '\n'
+                            index += 1
+            
+            print(description)
+
             course_tables = course_soup.find_all('table', class_='course-details-table')
 
             details_cells = course_tables[0].find_all('td', class_='course-details-content')
@@ -93,6 +112,7 @@ if __name__ == '__main__':
             course_details['day'] = day
             course_details['start'] = start
             course_details['end'] = end
+            course_details['description'] = description
 
             if codes not in courses_codes:
                 courses_codes.append(codes)
