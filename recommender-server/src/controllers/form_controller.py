@@ -2,29 +2,50 @@ from models.form import *
 from models.course import *
 import simpful as sf
 import numpy as np
-# from controllers.rules import RULES
 from controllers.rules import RULES
 
-FS = sf.FuzzySystem()
-courses = ['SocialComputing', 'Concurrency', 'FuzzySets2', 'test']
+courses = ['QMPECS', 'Concurrency', 'AppliedOptimization', 'MLDM', 'SocialComputing', 'FuzzySets2']
+full_names = ['Quantitative Methods of Performance Evaluation for Computing Systems', 
+              'Concurrency: Multi-core Programming and Data Processing', 
+              'Applied Optimization',
+              'Machine Learning and Data Mining',
+              'Seminar Social Computing',
+              'Fuzzy Sets and Systems II']
 VARIABLES = ['Evaluation', 'University', 'CourseType', 'Track', 'Lectures', 'SubjectType', 'Interactions', 'Blackboard', 'Recordings', 'TeacherAccessibilty']
 
-def fuzzy_set_variables(form: FormRequest):
+def fuzzy_set_variables(form: FormRequest, FS: sf.FuzzySystem) -> dict:
+    """Function setting the values of the different variables of the fuzzy system.
+
+    Args:
+        form (FormRequest): Answers from the form 
+        FS (sf.FuzzySystem): Fuzzy system to use
+
+    Returns:
+        dict: Dictionnary with percent of recommendation for each course
     """
-    test
-    """
+
+    # Fetches de rules of the fuzzy system 
     rules = FS.get_rules()
+
+    # For each variable with more than one choice possible we reduce the weight of the concerned rules and take the mean answer.
+    # First we control if there are more than one answer
     if len(form.evaluation) > 1:
+        # We caculate the mean 
         mean_eval = np.mean(form.evaluation)
+        # We calculate the weight in proportion to how many they choose
         weight = 1- len(form.evaluation)/4
+        # Then we add the weight to the rules that are concerned by this variable, in this case 'Evaluation'
         for i in range(len(rules)):
-            if str(rules[i]).find('Evaluation') != -1:
+            if str(rules[i]).find('Evaluation') != -1: # If it does not find 'Evaluation' it returns -1
                 new_rule = ' '.join([rules[i], f'WEIGHT {weight}']) 
                 FS.replace_rule(i, new_rule)
+        # Then set the variable to the mean value
         FS.set_variable('Evaluation', mean_eval)
     else:
+        # Else we set the variable normally
         FS.set_variable('Evaluation', form.evaluation[0])
 
+    # University variable
     if len(form.university) > 1:
         mean_eval = np.mean(form.university)
         weight = 1- len(form.university)/3
@@ -36,6 +57,7 @@ def fuzzy_set_variables(form: FormRequest):
     else:
         FS.set_variable('University', form.university[0])
 
+    # CourseType variable
     if len(form.courseType) > 1:
         mean_eval = np.mean(form.courseType)
         weight = 1- len(form.courseType)/2
@@ -47,6 +69,7 @@ def fuzzy_set_variables(form: FormRequest):
     else:
         FS.set_variable('CourseType', form.courseType[0])
 
+    # Track variable
     if len(form.track) > 1:
         mean_eval = np.mean(form.track)
         weight = 1- len(form.track)/7
@@ -58,6 +81,7 @@ def fuzzy_set_variables(form: FormRequest):
     else:
         FS.set_variable('Track', form.track[0])
 
+    # Lectures variable
     if len(form.lectures) > 1:
         mean_eval = np.mean(form.lectures)
         weight = 1- len(form.lectures)/5
@@ -69,123 +93,112 @@ def fuzzy_set_variables(form: FormRequest):
     else:
         FS.set_variable('Lectures', form.lectures[0])
 
+    # These variable are sliders and only one answer is possible between 0 and 100
     FS.set_variable('SubjectType', form.subjectType)
     FS.set_variable('Interactions', form.interactions)
     FS.set_variable('Blackboard', form.blackboard)
     FS.set_variable('Recordings', form.recordings)
     FS.set_variable('TeacherAccessibilty', form.teacherAccessibilty)
-    return FS.Sugeno_inference([course for course in courses])
+
+    # Calculate the inference 
+    outputs = FS.inference()
+
+    # Sorts the output dictionnary
+    sorted_outputs = dict(sorted(outputs.items(), key=lambda item: item[1], reverse=True))
+    
+    # Changes the names of the courses to their full names
+    full_dict = {}
+    for key in sorted_outputs.keys():
+        full_dict[full_names[courses.index(key)]]= sorted_outputs[key]
+
+    return full_dict
 
 
-def add_course(CourseRead):
-    courses.append(CourseRead.title)
+def create_fuzzy() -> sf.FuzzySystem:
+    """Function creating the fuzzy system.
 
-def add_rules():
+    Returns:
+        sf.FuzzySystem: Returns a fuzzy system for the course recommender
+    """
 
-    pass
+    # Creating the fuzzy system
+    FS = sf.FuzzySystem(show_banner=False)
 
-# Evaluation 
-E_1 = sf.CrispSet(a=0, b=0.5, term='project')
-E_2 = sf.CrispSet(a=0.5, b=1.5, term='continuous')
-E_3 = sf.CrispSet(a=1.5, b=2.5, term='written')
-E_4 = sf.CrispSet(a=2.5, b=3, term='oral')
-evaluation = sf.LinguisticVariable([E_1, E_2, E_3, E_4], universe_of_discourse=[0, 3])
-FS.add_linguistic_variable('Evaluation', evaluation)
+    # Evaluation: variable between 0 and 3
+    E_1 = sf.CrispSet(a=0, b=0.5, term='project')
+    E_2 = sf.CrispSet(a=0.5, b=1.5, term='continuous')
+    E_3 = sf.CrispSet(a=1.5, b=2.5, term='written')
+    E_4 = sf.CrispSet(a=2.5, b=3, term='oral')
+    evaluation = sf.LinguisticVariable([E_1, E_2, E_3, E_4], universe_of_discourse=[0, 3])
+    FS.add_linguistic_variable('Evaluation', evaluation)
 
-# University
-U_1 = sf.CrispSet(a=0, b=0.5, term='bern')
-U_2 = sf.CrispSet(a=0.5, b=1.5, term='fribourg')
-U_3 = sf.CrispSet(a=1.5, b=2, term='neuchatel')
-university = sf.LinguisticVariable([U_1, U_2, U_3], universe_of_discourse=[0, 2])
-FS.add_linguistic_variable('University', university)
+    # University: variable between 0 and 2
+    U_1 = sf.CrispSet(a=0, b=0.5, term='bern')
+    U_2 = sf.CrispSet(a=0.5, b=1.5, term='fribourg')
+    U_3 = sf.CrispSet(a=1.5, b=2, term='neuchatel')
+    university = sf.LinguisticVariable([U_1, U_2, U_3], universe_of_discourse=[0, 2])
+    FS.add_linguistic_variable('University', university)
 
-# Course type
-C_1 = sf.CrispSet(a=0, b=0.5, term='seminar')
-C_2 = sf.CrispSet(a=0.5, b=1, term='course')
-course_type = sf.LinguisticVariable([C_1, C_2], universe_of_discourse=[0, 1])
-FS.add_linguistic_variable('CourseType', course_type)
+    # Course type: variable between 0 and 1
+    C_1 = sf.CrispSet(a=0, b=0.5, term='seminar')
+    C_2 = sf.CrispSet(a=0.5, b=1, term='course')
+    course_type = sf.LinguisticVariable([C_1, C_2], universe_of_discourse=[0, 1])
+    FS.add_linguistic_variable('CourseType', course_type)
 
-# Track
-T_1 = sf.CrispSet(a=0, b=0.5, term='T0')
-T_2 = sf.CrispSet(a=0.5, b=1.5, term='T1')
-T_3 = sf.CrispSet(a=1.5, b=2.5, term='T2')
-T_4 = sf.CrispSet(a=2.5, b=3.5, term='T3')
-T_5 = sf.CrispSet(a=3.5, b=4.5, term='T4')
-T_6 = sf.CrispSet(a=4.5, b=5.5, term='T5')
-T_7 = sf.CrispSet(a=5.5, b=6, term='T6')
-track = sf.LinguisticVariable([T_1, T_2, T_3, T_4, T_5, T_6, T_7], universe_of_discourse=[0, 6])
-FS.add_linguistic_variable('Track', track)
+    # Track: variable between 0 and 6
+    T_1 = sf.CrispSet(a=0, b=0.5, term='T0')
+    T_2 = sf.CrispSet(a=0.5, b=1.5, term='T1')
+    T_3 = sf.CrispSet(a=1.5, b=2.5, term='T2')
+    T_4 = sf.CrispSet(a=2.5, b=3.5, term='T3')
+    T_5 = sf.CrispSet(a=3.5, b=4.5, term='T4')
+    T_6 = sf.CrispSet(a=4.5, b=5.5, term='T5')
+    T_7 = sf.CrispSet(a=5.5, b=6, term='T6')
+    track = sf.LinguisticVariable([T_1, T_2, T_3, T_4, T_5, T_6, T_7], universe_of_discourse=[0, 6])
+    FS.add_linguistic_variable('Track', track)
 
-# Linguistic variable for the fuzzy variables
-LV = sf.AutoTriangle(5, terms=['none', 'some', 'middle', 'regularly', 'always'], universe_of_discourse=[0, 100])
-FS.add_linguistic_variable('Lectures', LV) # only lectures,	lectures + some exercices,	lectures + exercices,	lectures + project,	no lectures + project
-FS.add_linguistic_variable('SubjectType', LV)  # theoretical to practical
-FS.add_linguistic_variable('Interactions', LV)
-FS.add_linguistic_variable('Blackboard', LV)
-FS.add_linguistic_variable('Recordings', LV)
-FS.add_linguistic_variable('TeacherAccessibilty', LV)
+    # Linguistic variable for the fuzzy variables
+    LV = sf.AutoTriangle(5, terms=['none', 'some', 'middle', 'regularly', 'always'], universe_of_discourse=[0, 100])
+    FS.add_linguistic_variable('Lectures', LV) # only lectures,	lectures + some exercices,	lectures + exercices,	lectures + project,	no lectures + project
+    FS.add_linguistic_variable('SubjectType', LV)  # theoretical to practical
+    FS.add_linguistic_variable('Interactions', LV) # none to always
+    FS.add_linguistic_variable('Blackboard', LV) # no use of the blackboard to always
+    FS.add_linguistic_variable('Recordings', LV) # no recordings available to always
+    FS.add_linguistic_variable('TeacherAccessibilty', LV) # never accessible to always
 
-# Output
-"""
-LO = sf.AutoTriangle(len(courses), terms=[course for course in courses], universe_of_discourse=[0, len(courses)])
-FS.add_linguistic_variable('Course', LO)
-"""
-"""
-# LO = sf.AutoTriangle(3, terms=['notRecommended', 'okay', 'recommended'], universe_of_discourse=[0., 1.])
-O_1 = sf.TrapezoidFuzzySet(a=40, b=60, c=100, d=100, term='notRecommended')
-O_2 = sf.TrapezoidFuzzySet(a=0, b=0, c=40, d=60, term='recommended')
-LO = sf.LinguisticVariable([O_1, O_2], universe_of_discourse=[0, 100])
-for course in courses:
-    FS.add_linguistic_variable(course, LO)
-"""
-"""
-for i in range(len(courses)):
-    FS.set_crisp_output_value(courses[i], i)
-"""
-"""
-FS.set_crisp_output_value('SocialComputing', 0.0)
-FS.set_crisp_output_value('Concurrency', 1.0)
-"""
+    # Output
+    FS.set_crisp_output_value('notRecommended', 0)
+    FS.set_crisp_output_value('recommended', 100)
 
-FS.set_crisp_output_value('notRecommended', 1)
-FS.set_crisp_output_value('recommended', 99)
+    # IF/THEN rules
+    FS.add_rules(RULES)
 
-# IF/THEN rules
-# FS.add_rules_from_file('/Users/michelefischer/MA1P/SocialComputing/course-recommender/recommender-server/src/controllers/rules.txt')
-FS.add_rules(RULES)
+    return FS
 
-# # Test with a random answer
 
-# eva = [0, 1, 3, 4]
-# rules = FS.get_rules()
-# if len(eva) > 1:
-#     mean_eval = np.mean(eva)
-#     weight = 1- len(eva)/4
-#     for i in range(len(rules)):
-#         if str(rules[i]).find('Evaluation') != -1:
-#             new_rule = ' '.join([rules[i], f'WEIGHT {weight}']) 
-#             FS.replace_rule(i, new_rule)
-#     FS.set_variable('Evaluation', mean_eval)
-# else:
-#         FS.set_variable('Evaluation', eva[0])
+# Test answers
+# test_FS = create_fuzzy()
 
-# FS.set_variable('University', 1)
-# FS.set_variable('CourseType', 0)
-# FS.set_variable('Track', 5)
-# FS.set_variable('Lectures', 90)
-# FS.set_variable('SubjectType', 70)
-# FS.set_variable('Interactions', 10)
-# FS.set_variable('Blackboard', 10)
-# FS.set_variable('Recordings', 10)
-# FS.set_variable('TeacherAccessibilty', 84)
+# test_FS.set_variable('Evaluation', 2)
+# test_FS.set_variable('University', 2)
+# test_FS.set_variable('CourseType', 1)
+# test_FS.set_variable('Track', 1)
+# test_FS.set_variable('Lectures', 25)
+# test_FS.set_variable('SubjectType', 75)
+# test_FS.set_variable('Interactions', 25)
+# test_FS.set_variable('Blackboard', 0)
+# test_FS.set_variable('Recordings', 100)
+# test_FS.set_variable('TeacherAccessibilty', 75)
 
-# """
-# for variable in VARIABLES:
-#     FS.set_variable(variable, np.random.random(), verbose=False)
-# """
+# outputs = test_FS.inference(verbose=False)
+# sorted_outputs = dict(sorted(outputs.items(), key=lambda item: item[1], reverse=True))
 
-# # Run results
-# # print(FS.Mamdani_inference([course for course in courses], verbose=False))
-# # print(FS.Sugeno_inference([course for course in courses], verbose=False))
-# # print(FS.Mamdani_inference(['Course'], verbose=False))
-# # print(FS.Sugeno_inference(['Course'], verbose=False))
+# # Shows the used rules
+# # for i, value in enumerate(test_FS.get_firing_strengths()):
+# #         if value:
+# #             print(f"- {RULES[i]}")
+
+# print(f"Sorted outputs: {sorted_outputs}")
+# full_dict = {}
+# for key in sorted_outputs.keys():
+#     full_dict[full_names[courses.index(key)]]= sorted_outputs[key]
+# print(full_dict)
