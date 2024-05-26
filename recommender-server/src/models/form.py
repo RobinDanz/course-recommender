@@ -2,7 +2,7 @@ from sqlmodel import SQLModel
 
 
 class FormResponse(SQLModel):
-    response: dict
+    result: dict
 
 
 class FormRequest(SQLModel):

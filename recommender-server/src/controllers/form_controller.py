@@ -109,7 +109,7 @@ def fuzzy_set_variables(form: FormRequest, FS: sf.FuzzySystem) -> dict:
     # Changes the names of the courses to their full names
     full_dict = {}
     for key in sorted_outputs.keys():
-        full_dict[full_names[courses.index(key)]]= sorted_outputs[key]
+        full_dict[full_names[courses.index(key)]] = sorted_outputs[key]
 
     return full_dict
 
