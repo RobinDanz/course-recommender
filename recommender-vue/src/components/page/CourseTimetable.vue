@@ -1,6 +1,5 @@
-<style src="@quasar/quasar-ui-qcalendar/dist/QCalendarScheduler.min.css"></style>
 <script setup lang="ts">
-import { onBeforeMount, onMounted, ref } from 'vue'
+import { onBeforeMount, ref } from 'vue'
 import { getCourseList } from '@/services/courseService'
 import {
   type Course,
@@ -9,12 +8,7 @@ import {
   formatStartToEnd,
   formatCourseUniversity
 } from '@/models/course'
-import {
-  QCalendarDay,
-  today,
-  isBetweenDates,
-  type Timestamp
-} from '@quasar/quasar-ui-qcalendar/src/index.js'
+import { QCalendarDay, today } from '@quasar/quasar-ui-qcalendar'
 import '@quasar/quasar-ui-qcalendar/src/QCalendarVariables.sass'
 import '@quasar/quasar-ui-qcalendar/src/QCalendarTransitions.sass'
 import '@quasar/quasar-ui-qcalendar/src/QCalendarDay.sass'
