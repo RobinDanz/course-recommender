@@ -130,6 +130,7 @@ def create_fuzzy() -> sf.FuzzySystem:
     E_3 = sf.CrispSet(a=1.5, b=2.5, term='written')
     E_4 = sf.CrispSet(a=2.5, b=3, term='oral')
     evaluation = sf.LinguisticVariable([E_1, E_2, E_3, E_4], universe_of_discourse=[0, 3])
+    evaluation.plot(outputfile='evaluation_MF.png')
     FS.add_linguistic_variable('Evaluation', evaluation)
 
     # University: variable between 0 and 2
@@ -137,12 +138,14 @@ def create_fuzzy() -> sf.FuzzySystem:
     U_2 = sf.CrispSet(a=0.5, b=1.5, term='fribourg')
     U_3 = sf.CrispSet(a=1.5, b=2, term='neuchatel')
     university = sf.LinguisticVariable([U_1, U_2, U_3], universe_of_discourse=[0, 2])
+    university.plot(outputfile='university_MF.png')
     FS.add_linguistic_variable('University', university)
 
     # Course type: variable between 0 and 1
     C_1 = sf.CrispSet(a=0, b=0.5, term='seminar')
     C_2 = sf.CrispSet(a=0.5, b=1, term='course')
     course_type = sf.LinguisticVariable([C_1, C_2], universe_of_discourse=[0, 1])
+    course_type.plot(outputfile='course_type_MF.png')
     FS.add_linguistic_variable('CourseType', course_type)
 
     # Track: variable between 0 and 6
@@ -154,10 +157,12 @@ def create_fuzzy() -> sf.FuzzySystem:
     T_6 = sf.CrispSet(a=4.5, b=5.5, term='T5')
     T_7 = sf.CrispSet(a=5.5, b=6, term='T6')
     track = sf.LinguisticVariable([T_1, T_2, T_3, T_4, T_5, T_6, T_7], universe_of_discourse=[0, 6])
+    track.plot(outputfile='track_MF.png')
     FS.add_linguistic_variable('Track', track)
 
     # Linguistic variable for the fuzzy variables
     LV = sf.AutoTriangle(5, terms=['none', 'some', 'middle', 'regularly', 'always'], universe_of_discourse=[0, 100])
+    LV.plot(outputfile='fuzzy_MF.png')
     FS.add_linguistic_variable('Lectures', LV) # only lectures,	lectures + some exercices,	lectures + exercices,	lectures + project,	no lectures + project
     FS.add_linguistic_variable('SubjectType', LV)  # theoretical to practical
     FS.add_linguistic_variable('Interactions', LV) # none to always
@@ -176,7 +181,8 @@ def create_fuzzy() -> sf.FuzzySystem:
 
 
 # Test answers
-# test_FS = create_fuzzy()
+test_FS = create_fuzzy()
+# test_FS.produce_figure('plot_MF.png', 2)
 
 # test_FS.set_variable('Evaluation', 2)
 # test_FS.set_variable('University', 2)
@@ -188,6 +194,7 @@ def create_fuzzy() -> sf.FuzzySystem:
 # test_FS.set_variable('Blackboard', 0)
 # test_FS.set_variable('Recordings', 100)
 # test_FS.set_variable('TeacherAccessibilty', 75)
+
 
 # outputs = test_FS.inference(verbose=False)
 # sorted_outputs = dict(sorted(outputs.items(), key=lambda item: item[1], reverse=True))
