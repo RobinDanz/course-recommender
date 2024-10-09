@@ -52,3 +52,12 @@ export const formatCourseUniversity = (course: Course) => {
 export const formatCourseSemester = (course: Course) => {
   return course.semester == 0 ? 'Spring' : 'Autumn'
 }
+
+export const formatCourseTitle = (course: Course) => {
+  return course.title
+    .split(' ')
+    .map((word) => {
+      return word[0]
+    })
+    .join('')
+}

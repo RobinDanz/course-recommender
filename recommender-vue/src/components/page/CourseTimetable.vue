@@ -2,7 +2,13 @@
 <script setup lang="ts">
 import { onBeforeMount, onMounted, ref } from 'vue'
 import { getCourseList } from '@/services/courseService'
-import { type Course, calculateDuration } from '@/models/course'
+import {
+  type Course,
+  calculateDuration,
+  formatCourseTitle,
+  formatStartToEnd,
+  formatCourseUniversity
+} from '@/models/course'
 import {
   QCalendarDay,
   today,
@@ -60,8 +66,9 @@ const trackerPos = ref({
 
 const trackerContent = ref({
   title: '',
-  start: '',
-  end: ''
+  schedule: '',
+  university: '',
+  track: ''
 })
 
 const semesterOptions = ref([
@@ -153,8 +160,9 @@ const mouseMove = (event: MouseEvent, course: Course) => {
   trackerPos.value.top = event.pageY
 
   trackerContent.value.title = course.title
-  trackerContent.value.start = course.start
-  trackerContent.value.end = course.end
+  trackerContent.value.schedule = formatStartToEnd(course)
+  trackerContent.value.university = formatCourseUniversity(course)
+  trackerContent.value.track = 'Track ' + course.track
 }
 </script>
 
@@ -176,27 +184,38 @@ const mouseMove = (event: MouseEvent, course: Course) => {
       <template #day-body="{ scope: { timestamp, timeStartPos, timeDurationHeight } }">
         <template v-for="ev in coursesMap[timestamp.weekday]" :key="ev.id">
           <div
-            class="event"
+            class="event flex"
             :style="eventStyle(ev, timeStartPos, timeDurationHeight)"
             @click="courseClick(ev)"
             @mouseenter="displayTracker = true"
             @mouseleave="displayTracker = false"
             @mousemove="mouseMove($event, ev)"
           >
-            <span class="m-auto"> {{ ev.title }} </span>
+            <p class="pt-2 pl-2 event-text">
+              {{ formatCourseTitle(ev) }}
+            </p>
           </div>
         </template>
       </template>
     </QCalendarDay>
   </div>
   <div
-    v-show="displayTracker"
-    class="tracker p-2"
+    v-if="displayTracker"
+    class="tracker p-2 flex flex-column"
     :style="{ left: 15 + trackerPos.left + 'px', top: 15 + trackerPos.top + 'px' }"
   >
-    {{ trackerContent.title }}
-    {{ trackerContent.start }}
-    {{ trackerContent.end }}
+    <div>
+      {{ trackerContent.title }}
+    </div>
+    <div>
+      {{ trackerContent.schedule }}
+    </div>
+    <div>
+      {{ trackerContent.university }}
+    </div>
+    <div>
+      {{ trackerContent.track }}
+    </div>
   </div>
   <OverlayPanel ref="filteringPanel" class="w-25rem">
     <div class="flex flex-column">
@@ -287,12 +306,17 @@ const mouseMove = (event: MouseEvent, course: Course) => {
 .tracker {
   border-radius: 10px;
   position: absolute;
-  background-color: gray;
-  height: 150px;
-  width: 150px;
+  background-color: rgba(190, 190, 190, 0.9);
+  /* height: 150px; */
+  /* width: 150px; */
   z-index: 1500;
   pointer-events: none;
   box-shadow: 3px 3px 5px rgb(0 0 0 / 50%);
+  overflow: hidden;
+}
+
+.event-text {
+  text-overflow: ellipsis'...';
   overflow: hidden;
 }
 </style>
