@@ -11,6 +11,7 @@ export interface Course extends Record<string, any> {
   semester: number
   description: string
   url: string
+  comments: Array<Comment> | null
 }
 
 export const calculateDuration = (course: Course) => {

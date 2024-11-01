@@ -22,6 +22,8 @@ const course = ref<Course>()
 
 onBeforeMount(async () => {
   course.value = await getCourse(parseInt(props.courseId))
+
+  console.log(course.value)
 })
 </script>
 
