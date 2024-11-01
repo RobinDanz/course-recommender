@@ -1,0 +1,29 @@
+"IF (Evaluation IS continuous) THEN (QMPECS IS recommended)"
+
+"IF (University IS %s) THEN (%s IS recommended)"
+"IF (NOT(University IS %s)) THEN (%s IS notRecommended)"
+
+"IF (%s IS %s) THEN (%s IS recommended)"
+"IF (NOT(%s IS %s)) THEN (%s IS notRecommended)"
+
+"IF (CourseType IS course) THEN (QMPECS IS recommended)"
+"IF (NOT(CourseType IS course)) THEN (QMPECS IS notRecommended)"
+
+"IF (Track IS T0) OR (Track IS T6) THEN (QMPECS IS recommended)"
+
+"IF (Lectures IS regularly) THEN (QMPECS IS recommended)"
+"IF (NOT(Lectures IS regularly)) THEN (QMPECS IS notRecommended)"
+
+"IF (SubjectType IS none) OR (SubjectType IS some) THEN (QMPECS IS recommended)"
+
+"IF (Interactions IS middle) THEN (QMPECS IS recommended)"
+"IF (NOT(Interactions IS middle)) THEN (QMPECS IS notRecommended)"
+
+"IF (Recordings IS none) THEN (FuzzySets2 IS recommended)"
+"IF (NOT(Recordings IS none)) THEN (FuzzySets2 IS notRecommended)"
+
+"IF (TeacherAccessibilty IS some) THEN (FuzzySets2 IS recommended)"
+"IF (NOT(TeacherAccessibilty IS some)) THEN (FuzzySets2 IS notRecommended)"
+
+"IF (Blackboard IS some) THEN (QMPECS IS recommended)"
+"IF (NOT(Blackboard IS some)) THEN (FuzzySets2 IS notRecommended)"
