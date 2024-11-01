@@ -1,5 +1,6 @@
-from sqlmodel import Field, SQLModel
+from sqlmodel import Field, SQLModel, Relationship
 from datetime import time
+from sqlalchemy import Column, TEXT
 
 class Course(SQLModel, table=True):
     """
@@ -15,8 +16,9 @@ class Course(SQLModel, table=True):
     end: time = Field()
     track: int = Field()
     semester: int = Field()
-    description: str = Field()
+    description: str = Field(sa_column=Column(TEXT))
     url: str = Field()
+    comments: list["Comment"] = Relationship(back_populates='course')
 
 
 class CourseCreate(SQLModel):
@@ -46,3 +48,22 @@ class CourseRead(SQLModel):
     semester: int
     description: str
     url: str
+    comments: list["CommentBase"]
+
+from sqlmodel import Field, SQLModel, Relationship
+from datetime import time
+
+class CommentBase(SQLModel):
+    """
+    Representation of a comment in the database
+    """
+    username: str | None = Field()
+    content: str = Field()
+
+    course_id: int | None = Field(default=None, foreign_key='course.id')
+
+
+class Comment(CommentBase, table=True):
+    id: int | None = Field(default=None, primary_key=True)
+
+    course: Course | None = Relationship(back_populates='comments')
