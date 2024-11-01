@@ -1,0 +1,7 @@
+# Server
+
+## Run
+### Set DB:
+`python manage.py migrate`
+
+`python manage.py runserver`
