@@ -1,7 +1,7 @@
 import simpful as sf
 import numpy as np
-from fuzzy.logic.rules import RULES
-
+from rules import RULES
+#fuzzy.logic.
 courses = ['QMPECS', 'Concurrency', 'AppliedOptimization', 'MLDM', 'SocialComputing', 'FuzzySets2']
 full_names = ['Quantitative Methods of Performance Evaluation for Computing Systems', 
               'Concurrency: Multi-core Programming and Data Processing', 
