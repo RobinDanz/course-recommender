@@ -10,9 +10,14 @@ print(sets[0].get_term())
 #FS.set_variable()
 
 print(FS._lvs.values())
+# Take the linguistic variables out of the system
 for key, value in FS._lvs.items():
+    # Take just one lvs 
     if key == 'University':
         print(key, value)
-        x = value.get_values(1)
-        print(x)
-        print(max(x, key = lambda i: x[i]))
+        # obtain the membership values to each term of the lvs for one value
+        lvs = value.get_values(1)
+        print(lvs)
+        # Take only the maximum value and store the term associated with it
+        term = max(lvs, key = lambda i: lvs[i])
+        print(term)
