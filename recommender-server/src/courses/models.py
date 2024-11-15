@@ -1,5 +1,4 @@
 from django.db import models
-from fuzzy.logic import fuzzy_controller
 
 class Course(models.Model):
     title = models.CharField(max_length=255)
@@ -12,12 +11,13 @@ class Course(models.Model):
     semester = models.PositiveSmallIntegerField()
     description = models.TextField()
     url = models.URLField()
+    teacher_form_filled = models.BooleanField(default=False)
+    tracks = models.ManyToManyField(to='courses.Track')
 
     #Fuzzy parameters
     evaluation = models.FloatField(default=0)
     university = models.FloatField(default=0)
     course_type = models.FloatField(default=0)
-    track = models.FloatField(default=0)
     lectures = models.FloatField(default=0)
     subject_type = models.FloatField(default=0)
     interactions = models.FloatField(default=0)
@@ -29,7 +29,7 @@ class Course(models.Model):
         'evaluation',
         'university',
         'course_type',
-        'track',
+        'tracks',
         'lectures',
         'subject_type',
         'interactions',
@@ -38,19 +38,24 @@ class Course(models.Model):
         'teacher_accessibility',
     ]
 
-    def generate_fuzzy_rules(self, variables):
-        FS = fuzzy_controller.create_fuzzy()
+    def generate_fuzzy_rules(self, variables, FS):
+        values = dict(FS._lvs.items())
+        rules = []
         for var in self.fuzzy_variables:
-            RuleKlass = variables[var]()
-            print(type(FS.get_fuzzy_sets('University')[0]))
-            print(self.title)
+            Rule = variables[var]()
             attr = getattr(self, var, None)
+            title = self.pk
+            fuzzy_var_name = var
+            fuzzy_var_value = attr
+            lvs = values[var]
 
-            print(attr)
+            rules.extend(Rule.format(title, fuzzy_var_name, fuzzy_var_value, lvs))
+        return rules
 
-            if attr:
-                params = (f'({var} IS #loadvalfrommodel#)', f'({self.title} IS recommended)')
-                print(RuleKlass.template % params)
 
+class Track(models.Model):
+    code = models.CharField(primary_key=True, unique=True, blank=False, max_length=5)
+    name = models.CharField(unique=True, blank=False, max_length=255)
+    description = models.TextField()
 
 

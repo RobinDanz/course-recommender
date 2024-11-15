@@ -11,3 +11,12 @@ class FormSerializer(serializers.Serializer):
     blackboard = serializers.IntegerField()
     recordings = serializers.IntegerField()
     teacher_accessibility = serializers.IntegerField()
+
+class TeacherFormSerializer(serializers.Serializer):
+    evaluation = serializers.ListField()
+    lectures = serializers.ListField()
+    subject_type = serializers.IntegerField()
+    interactions = serializers.IntegerField()
+    blackboard = serializers.IntegerField()
+    recordings = serializers.IntegerField()
+    teacher_accessibility = serializers.IntegerField()

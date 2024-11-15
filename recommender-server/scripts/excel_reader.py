@@ -12,6 +12,49 @@ def parse_evaluation(str: str):
     }
     return evaluation[str.split(' ')[0]]
 
+def format_day(str: str):
+    day = str.split(',')[0]
+
+    days = ['Monday', 'Thursday', 'Wednesday', 'Tuesday', 'Friday']
+    if day not in days:
+        return 0
+
+    return days.index(day) + 1
+
+def format_start_time(str: str):
+    if str == '-':
+        return None
+    time = str.split(',')[1]
+    start_time = time.split('-')[0].strip() + ':00'
+    return start_time
+
+def format_end_time(str: str):
+    if str == '-':
+        return None
+    time = str.split(',')[1]
+    end_time = time.split('-')[0].strip() + ':00'
+    return end_time
+
+def format_tracks(str: str):
+    tracks = str.split(',')
+    return [t.strip() for t in tracks]
+
+def parse_course_type(str: str):
+    types = ['Course', 'Seminar']
+
+    return types.index(str)
+
+def parse_semester(str: str):
+    semesters = ['SS', 'AS']
+
+    return semesters.index(str)
+
+def parse_university(str: str):
+    uni = str.split(' ')[2]
+    universities = ['Bern', 'Fribourg', 'Neuchâtel']
+
+    return universities.index(uni)
+
 if __name__ == '__main__':
 
     file_name = 'data/courses_list_2425.xlsx'
@@ -22,39 +65,37 @@ if __name__ == '__main__':
     }, inplace=True)
 
     model = 'courses.course'
-
     for i in range(len(df)):
         dct = {
             'model': model,
             'pk': i+1,
             'fields': {
                 'title': df.Title[i],
-                'day': 1,
-                'type': 1,
-                'site': 1,
-                'code': 1,
-                'start': None,
-                'end': None,
-                'track': 1,
-                'semester': 1, 
+                'day': format_day(df.Schedule[i]),
+                'type': parse_course_type(df.Type[i]),
+                'site': parse_university(df.Affiliation[i]),
+                'code': df.Code[i],
+                'start': format_start_time(df.Schedule[i]),
+                'end': format_end_time(df.Schedule[i]),
+                'semester': parse_semester(df.Semester[i]), 
                 'description': df.Description[i],
                 'url': '',
                 'evaluation': parse_evaluation(df['Evaluation Type'][i]),
-                'university': 0,
-                'course_type': 0,
-                'track': 0,
+                'university': parse_university(df.Affiliation[i]),
+                'course_type': parse_course_type(df.Type[i]),
                 'lectures': 0, 
                 'subject_type': 0,
                 'interactions': 0,
                 'blackboard': 0,
                 'recordings': 0,
                 'teacher_accessibility': 0,
+                'tracks': format_tracks(df.Tracks[i])
             }
         }
 
         out.append(dct)
 
-    with open('src/fixtures/courses.json', 'w') as f:
+    with open('src/courses/fixtures/courses.json', 'w') as f:
         json_dump = json.dumps(out)
         f.write(json_dump)
     
