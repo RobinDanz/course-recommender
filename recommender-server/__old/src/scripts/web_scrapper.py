@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 from datetime import time
+import xlsxwriter
 
 URL = 'https://mcs.unibnf.ch/program/courses-timetable/course-list/'
 
@@ -123,7 +124,17 @@ if __name__ == '__main__':
             course_index += 1
         track_index += 1
 
-    import json
-    with open('./out/data.json', 'w') as f:
-        json.dump(courses, f, indent=4)
+    #import json
+    #with open('./out/data.json', 'w') as f:
+    #    json.dump(courses, f, indent=4)
 
+    workbook = xlsxwriter.Workbook('data.xlsx')
+    worksheet = workbook.add_worksheet() 
+    row, col = 0, 0
+    for course in courses:
+        print(course['name'])
+        worksheet.write(row, col, course['name'])
+        worksheet.write(row, col +1, course['url'])
+        row += 1
+
+    workbook.close()
