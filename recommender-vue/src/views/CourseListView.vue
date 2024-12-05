@@ -86,7 +86,7 @@ const resetFilter = () => {
   </div>
   <PageContent>
     <template #content>
-      <div class="w-9 m-auto">
+      <div class="flex flex-row flex-wrap mx-auto">
         <CourseCard
           v-for="course in displayedCourse"
           :course="course"

@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="px-5 overflow-y-auto height">
+  <div class="px-5 overflow-y-auto height mx-auto">
     <slot name="content" class=""></slot>
   </div>
 </template>

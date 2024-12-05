@@ -19,6 +19,7 @@
     "@schedule-x/theme-default": "^1.37.0",
     "@schedule-x/vue": "^1.32.0",
     "axios": "^1.6.8",
+    "chart.js": "^4.4.6",
     "pinia": "^2.1.7",
     "primeflex": "^3.3.1",
     "primeicons": "^7.0.0",

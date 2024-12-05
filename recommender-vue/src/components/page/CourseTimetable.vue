@@ -3,9 +3,9 @@ import { onBeforeMount, ref } from 'vue'
 import { getCourseList } from '@/services/courseService'
 import {
   type Course,
-  calculateDuration,
+  // calculateDuration,
   formatCourseTitle,
-  formatStartToEnd,
+  // formatStartToEnd,
   formatCourseUniversity
 } from '@/models/course'
 import { QCalendarDay, today } from '@quasar/quasar-ui-qcalendar'
@@ -92,7 +92,8 @@ const eventStyle = (course: Course, timeStartPos: Function, timeDurationHeight: 
 
   if (timeStartPos && timeDurationHeight) {
     s.top = timeStartPos(course.start) + 'px'
-    s.height = timeDurationHeight(calculateDuration(course)) + 'px'
+    // s.height = timeDurationHeight(calculateDuration(course)) + 'px'
+    s.height = '100px'
   }
 
   if (coursesMap.value[course.day].length > 1) {
@@ -154,8 +155,8 @@ const mouseMove = (event: MouseEvent, course: Course) => {
   trackerPos.value.top = event.pageY
 
   trackerContent.value.title = course.title
-  trackerContent.value.schedule = formatStartToEnd(course)
-  trackerContent.value.university = formatCourseUniversity(course)
+  // trackerContent.value.schedule = formatStartToEnd(course)
+  // trackerContent.value.university = formatCourseUniversity(course)
   trackerContent.value.track = 'Track ' + course.track
 }
 </script>

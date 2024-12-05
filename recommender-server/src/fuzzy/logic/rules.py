@@ -2,8 +2,15 @@ from courses.models import Course
 
 class Rule:
     def __init__(self):
-        self.template = "IF (%s IS %s) THEN %s IS recommended"
+        self.template = "IF (%s IS %s) THEN %s IS recommended" # "IF (%s IS %s) AND (...) THEN %s IS recommended"
         self.not_template = "IF (NOT(%s IS %s)) THEN %s IS notRecommended"
+
+        # three output variables:
+        # - recommended
+        # - medium (no suggestion)
+        # - not recommended
+
+        # two linguistic variables impacting output: IF () AND () THEN ... IS recommended => two assendance, one descendant => three states
 
     def format(self, title, fuzzy_var, linguistic_var, lvs):
         return_str = self.template % (fuzzy_var, self.get_term(linguistic_var, lvs), title)

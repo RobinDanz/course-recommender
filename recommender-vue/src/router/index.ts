@@ -6,6 +6,7 @@ import CourseListView from '@/views/CourseListView.vue'
 import CourseTimetableView from '@/views/CourseTimetableView.vue'
 import RecommenderView from '@/views/RecommenderView.vue'
 import CourseDetailsView from '@/views/CourseDetailsView.vue'
+import TeacherFormView from '@/views/TeacherFormView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -45,6 +46,11 @@ const router = createRouter({
       name: 'course-details',
       component: CourseDetailsView,
       props: true
+    },
+    {
+      path: '/test',
+      name: 'test',
+      component: TeacherFormView
     }
   ]
 })
