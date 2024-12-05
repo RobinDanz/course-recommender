@@ -160,6 +160,8 @@ def create_fuzzy() -> sf.FuzzySystem:
     # Output
     FS.set_crisp_output_value('notRecommended', 0)
     FS.set_crisp_output_value('recommended', 100)
+    #LV_output = sf.AutoTriangle(3, terms=['notRecommended', 'middle', 'recommended'], universe_of_discourse=[0, 100])
+    #FS.add_linguistic_variable('output', LV_output)
 
     # IF/THEN rules
     rules.generate_rules(FS)
