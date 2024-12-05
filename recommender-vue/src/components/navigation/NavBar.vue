@@ -33,6 +33,11 @@ const items = ref([
         route_name: 'course-timetable'
       }
     ]
+  },
+  {
+    label: 'Test',
+    icon: 'pi pi-lightbulb',
+    route_name: 'test'
   }
 ])
 </script>

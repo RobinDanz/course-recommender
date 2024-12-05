@@ -13,17 +13,29 @@ class Course(models.Model):
     url = models.URLField()
     teacher_form_filled = models.BooleanField(default=False)
     tracks = models.ManyToManyField(to='courses.Track')
+    feedback_count = models.IntegerField(default=0)
 
     #Fuzzy parameters
-    evaluation = models.FloatField(default=0)
-    university = models.FloatField(default=0)
-    course_type = models.FloatField(default=0)
-    lectures = models.FloatField(default=0)
-    subject_type = models.FloatField(default=0)
-    interactions = models.FloatField(default=0)
-    blackboard = models.FloatField(default=0)
-    recordings = models.FloatField(default=0)
-    teacher_accessibility = models.FloatField(default=0)
+    evaluation = models.FloatField(default=0) #how is the course evaluated
+    university = models.FloatField(default=0) #what university
+    course_type = models.FloatField(default=0) #seminar or course 
+    lectures = models.FloatField(default=0) #is the course only lecture or only project or in between
+    subject_type = models.FloatField(default=0) #theoritical or practical
+    interactions = models.FloatField(default=0) #interactions between student and teacher
+    blackboard = models.FloatField(default=0) #how much the blackboard is used
+    recordings = models.FloatField(default=0) #how much is the course recorded
+    teacher_accessibility = models.FloatField(default=0) #how much is the teacher accessible
+
+    #Student feedbacks
+    evaluation_fb = models.FloatField(default=0)
+    university_fb = models.FloatField(default=0)
+    course_type_fb = models.FloatField(default=0)
+    lectures_fb = models.FloatField(default=0)
+    subject_type_fb = models.FloatField(default=0)
+    interactions_fb = models.FloatField(default=0)
+    blackboard_fb = models.FloatField(default=0)
+    recordings_fb = models.FloatField(default=0)
+    teacher_accessibility_fb = models.FloatField(default=0)
 
     fuzzy_variables = [
         'evaluation',
@@ -51,7 +63,6 @@ class Course(models.Model):
 
             rules.extend(Rule.format(title, fuzzy_var_name, fuzzy_var_value, lvs))
         return rules
-
 
 class Track(models.Model):
     code = models.CharField(primary_key=True, unique=True, blank=False, max_length=5)

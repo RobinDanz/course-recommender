@@ -12,15 +12,15 @@ import HomeNavCard from '../cards/HomeNavCard.vue'
 
 const evaluation = ref([])
 const university = ref([])
-const courseType = ref([])
+const course_type = ref([])
 const track = ref([])
 const lectures = ref([])
 
-const subjectType = ref(50)
+const subject_type = ref(50)
 const interactions = ref(50)
 const blackboard = ref(50)
 const recording = ref(50)
-const accessibility = ref(50)
+const teacher_accessibility = ref(50)
 
 const universityOptions = [
   { label: 'Bern', option: 0 },
@@ -61,14 +61,14 @@ const lectureOptions = [
 const schema = yup.object({
   university: yup.array().of(yup.number()).min(1, 'at least one').required('at least one'),
   evaluation: yup.array().of(yup.number()).min(1, 'at least one').required('at least one'),
-  courseType: yup.array().of(yup.number()).min(1, 'at least one').required('at least one'),
+  course_type: yup.array().of(yup.number()).min(1, 'at least one').required('at least one'),
   track: yup.array().of(yup.number()).min(1, 'at least one').required('at least one'),
   lectures: yup.array().of(yup.number()).min(1, 'at least one').required('at least one'),
-  subjectType: yup.number().required(),
+  subject_type: yup.number().required(),
   interactions: yup.number().required(),
   blackboard: yup.number().required(),
   recordings: yup.number().required(),
-  teacherAccessibilty: yup.number().required()
+  teacher_accessibility: yup.number().required()
 })
 
 const { values, errors, handleSubmit } = useForm({
@@ -142,9 +142,9 @@ const refillForm = () => {
         <h2>Type of lecture</h2>
         <div class="flex justify-content-center">
           <MultiSelectInput
-            v-model="courseType"
+            v-model="course_type"
             :options="courseTypeOptions"
-            name="courseType"
+            name="course_type"
           ></MultiSelectInput>
         </div>
       </div>
@@ -168,9 +168,9 @@ const refillForm = () => {
         <h2>Type of subject</h2>
         <div class="flex justify-content-center">
           <SliderInput
-            name="subjectType"
+            name="subject_type"
             :initial-value="50"
-            v-model="subjectType"
+            v-model="subject_type"
             left-label="theoritical"
             right-label="practical"
           ></SliderInput>
@@ -204,9 +204,9 @@ const refillForm = () => {
         <h2>Teacher accessibility</h2>
         <div class="flex justify-content-center">
           <SliderInput
-            name="teacherAccessibilty"
+            name="teacher_accessibility"
             :initial-value="50"
-            v-model="accessibility"
+            v-model="teacher_accessibility"
             left-label="Not accessible"
             right-label="Always accessible"
           ></SliderInput>

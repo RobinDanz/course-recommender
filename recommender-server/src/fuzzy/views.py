@@ -4,12 +4,12 @@ from rest_framework.response import Response
 from rest_framework import status
 from fuzzy.serializers import FormSerializer, TeacherFormSerializer
 from fuzzy.logic import fuzzy_controller
-
-
+from courses.models import Course
 
 class FormView(APIView):
     def get_serializer(self, *args, **kwargs):
         return FormSerializer(*args, **kwargs)
+    
     def post(self, request, *args, **kwargs):
         serializer = FormSerializer(data=request.data)
         print(request.data)
@@ -27,6 +27,14 @@ class TeacherFormView(APIView):
     def post(self, request, id, *args, **kwargs):
         serializer = TeacherFormSerializer(data=request.data)
         if serializer.is_valid():
+            Course.objects.filter(pk=id).update(
+                subject_type=serializer.data['subject_type'],
+                interactions=serializer.data['interactions'],
+                blackboard=serializer.data['blackboard'],
+                recordings=serializer.data['recordings'],
+                teacher_accessibility=serializer.data['teacher_accessibility'],
+                teacher_form_filled=True
+            )
             print(serializer.data)
             return Response(serializer.data, status=status.HTTP_202_ACCEPTED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
