@@ -1,4 +1,5 @@
 import type { Track } from './track'
+import type { Comment } from './comments'
 
 export interface Course extends Record<string, any> {
   id: number
@@ -7,13 +8,13 @@ export interface Course extends Record<string, any> {
   type: number
   site: number
   code: string
-  start: Date
-  end: Date
+  start: string
+  end: string
   semester: number
   description: string
   url: string
   teacher_form_filled: boolean
-  comments: Array<Comment> | null
+  comments: Array<Comment>
 
   //fuzzy variables
   lectures: number
@@ -38,19 +39,16 @@ export interface Course extends Record<string, any> {
   teacher_accessibility_fb: number
 }
 
-// export const calculateDuration = (course: Course) => {
-//   const startVal = course.start.split(':').map((str) => Number.parseInt(str))
+export const calculateDuration = (course: Course) => {
+  const startVal = course.start.split(':').map((str) => Number.parseInt(str))
+  const endVal = course.end.split(':').map((str) => Number.parseInt(str))
+  const start = new Date()
+  const startMili = start.setHours(startVal[0], startVal[1], 0, 0)
+  const end = new Date()
+  const endMili = end.setHours(endVal[0], endVal[1], 0, 0)
 
-//   const endVal = course.end.split(':').map((str) => Number.parseInt(str))
-
-//   const start = new Date()
-//   const startMili = start.setHours(startVal[0], startVal[1], 0, 0)
-
-//   const end = new Date()
-//   const endMili = end.setHours(endVal[0], endVal[1], 0, 0)
-
-//   return (endMili - startMili) / 60000
-// }
+  return (endMili - startMili) / 60000
+}
 
 export const dayToString = (course: Course) => {
   const days = ['On Appointment', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
@@ -58,12 +56,12 @@ export const dayToString = (course: Course) => {
   return days[course.day]
 }
 
-// export const formatStartToEnd = (course: Course) => {
-//   const start = course.start.split(':').splice(0, 2).join(':')
-//   const end = course.end.split(':').splice(0, 2).join(':')
+export const formatStartToEnd = (course: Course) => {
+  const start = course.start.split(':').splice(0, 2).join(':')
+  const end = course.end.split(':').splice(0, 2).join(':')
 
-//   return start + ' - ' + end
-// }
+  return start + ' - ' + end
+}
 
 export const formatCourseType = (course: Course) => {
   return course.type == 0 ? 'Course' : 'Seminar'
@@ -78,11 +76,7 @@ export const formatCourseSemester = (course: Course) => {
   return course.semester == 0 ? 'Spring' : 'Autumn'
 }
 
-export const formatCourseTitle = (course: Course) => {
-  return course.title
-    .split(' ')
-    .map((word) => {
-      return word[0]
-    })
-    .join('')
+export const formatTracks = (course: Course) => {
+  const track_code = course.tracks.map((value) => value.code).join('/')
+  return track_code
 }

@@ -27,9 +27,6 @@ class Course(models.Model):
     teacher_accessibility = models.FloatField(default=0) #how much is the teacher accessible
 
     #Student feedbacks
-    evaluation_fb = models.FloatField(default=0)
-    university_fb = models.FloatField(default=0)
-    course_type_fb = models.FloatField(default=0)
     lectures_fb = models.FloatField(default=0)
     subject_type_fb = models.FloatField(default=0)
     interactions_fb = models.FloatField(default=0)
@@ -37,36 +34,38 @@ class Course(models.Model):
     recordings_fb = models.FloatField(default=0)
     teacher_accessibility_fb = models.FloatField(default=0)
 
-    fuzzy_variables = [
-        'evaluation',
-        'university',
-        'course_type',
-        'tracks',
-        'lectures',
-        'subject_type',
-        'interactions',
-        'blackboard',
-        'recordings',
-        'teacher_accessibility',
-    ]
-
     def generate_fuzzy_rules(self, variables, FS):
         values = dict(FS._lvs.items())
         rules = []
-        for var in self.fuzzy_variables:
-            Rule = variables[var]()
-            attr = getattr(self, var, None)
-            title = self.pk
-            fuzzy_var_name = var
-            fuzzy_var_value = attr
-            lvs = values[var]
+        for name, type in variables.items():
+            Rule = type()
+            value = getattr(self, name, None)
 
-            rules.extend(Rule.format(title, fuzzy_var_name, fuzzy_var_value, lvs))
+            test = Rule.format(self.pk, name, value, values[name])
+
+            rules.extend(test)
         return rules
+
+    def update_student_feeback(self, data):
+        self.feedback_count += 1
+
+        self.lectures_fb += data['lectures']
+        self.subject_type_fb += data['subject_type']
+        self.interactions_fb += data['interactions']
+        self.blackboard_fb += data['blackboard']
+        self.recordings_fb += data['recordings']
+        self.teacher_accessibility_fb += data['teacher_accessibility']
+
+        self.save()
 
 class Track(models.Model):
     code = models.CharField(primary_key=True, unique=True, blank=False, max_length=5)
+    numeric_code = models.IntegerField(default=0)
     name = models.CharField(unique=True, blank=False, max_length=255)
     description = models.TextField()
 
-
+class Comment(models.Model):
+    username = models.CharField(default="anonymous", max_length=255)
+    comment = models.TextField()
+    course = models.ForeignKey(to=Course, related_name='comments', on_delete=models.CASCADE)
+    timestamp = models.DateTimeField(auto_now_add=True)

@@ -3,6 +3,7 @@
         "model": "courses.track",
         "pk": "T0",
         "fields": {
+            "numeric_code": 0,
             "name": "General",
             "description": "A collection of teaching units from a variety of subject areas, which supplement the teaching units, offered in the other 6 tracks."
         }
@@ -11,6 +12,7 @@
         "model": "courses.track",
         "pk": "T1",
         "fields": {
+            "numeric_code": 1,
             "name": "Distributed Software Systems",
             "description": "The track on Distributed Software Systems focuses on the specification, design, implementation, test, maintenance and evolution of modern software systems, which are often deployed and operated in distributed and networked application environments such as client/server architectures, cloud and edge computing, cyber-physical systems, peer-to-peer systems, or high-performance computing clusters."
         }
@@ -19,6 +21,7 @@
         "model": "courses.track",
         "pk": "T2",
         "fields": {
+            "numeric_code": 2,
             "name": "Security",
             "description": "Computer security, network security, intrusion prevention, authentication, operating-system security, cryptography, public-key cryptography, cryptographic protocols, zero-knowledge proofs, block-chains"
         }
@@ -27,6 +30,7 @@
         "model": "courses.track",
         "pk": "T3",
         "fields": {
+            "numeric_code": 3,
             "name": "Visual Computing",
             "description": "Computer vision, pattern recognition, 3D geometry processing, image analysis and processing, human-computer interaction, computer graphics and games"
         }
@@ -35,6 +39,7 @@
         "model": "courses.track",
         "pk": "T4",
         "fields": {
+            "numeric_code": 4,
             "name": "Theory and Logic",
             "description": "Classical and non-classical logics, proof theory, lambda calculus and type systems, computability and complexity, automata, verification and model checking, formal methods, knowledge representation, graph theory, data privacy, cryptography"
         }
@@ -43,6 +48,7 @@
         "model": "courses.track",
         "pk": "T5",
         "fields": {
+            "numeric_code": 5,
             "name": "Information Systems and Decision Support",
             "description": "eBusiness, eGovernment, information management, databases management systems and data warehousing, fuzzy classification, decision support, quantitative models and methods of operations research"
         }
@@ -51,6 +57,7 @@
         "model": "courses.track",
         "pk": "T6",
         "fields": {
+            "numeric_code": 6,
             "name": "Data Science",
             "description": "Big data, data analysis, cloud computing, large-scale distributed systems, machine learning, statistics, artificial intelligence, pattern recognition, social media analytics"
         }

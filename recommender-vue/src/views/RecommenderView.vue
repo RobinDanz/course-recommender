@@ -5,10 +5,13 @@ import PageContent from '@/components/page/PageContent.vue'
 </script>
 
 <template>
-  <PageHeader title="Recommender"></PageHeader>
-  <PageContent>
-    <template #content>
-      <RecommenderForm></RecommenderForm>
-    </template>
-  </PageContent>
+  <div class="px-5 overflow-y-auto height mx-auto height">
+    <RecommenderForm></RecommenderForm>
+  </div>
 </template>
+
+<style scoped>
+.height {
+  max-height: 90vh;
+}
+</style>

@@ -1,16 +1,9 @@
 <script setup lang="ts">
-import {
-  type Course,
-  dayToString,
-  formatCourseUniversity,
-  formatCourseSemester
-} from '@/models/course'
+import { type Course, dayToString, formatCourseUniversity, formatTracks } from '@/models/course'
 
 const props = defineProps<{
   course: Course
 }>()
-
-console.log(props.course.tracks)
 </script>
 
 <template>
@@ -19,24 +12,26 @@ console.log(props.course.tracks)
     :to="{ name: 'course-details', params: { courseId: props.course.id } }"
     custom
   >
-    <div class="course-card bordered m-2 w-12rem" @click="navigate">
+    <div class="course-card bordered m-2 w-15rem" @click="navigate">
       <div class="flex flex-column">
         <div>
           <h4>{{ props.course.title }}</h4>
         </div>
-        <div class="grid">
-          <div class="col-6" v-if="course.start != null">
-            {{ dayToString(props.course) + ': ' + props.course.start }}
+        <div class="my-1">
+          {{ 'Track(s): ' + formatTracks(course) }}
+        </div>
+        <div>
+          <div v-if="course.start != null" class="my-1">
+            <i class="pi pi-calendar-clock"></i>
+            {{ dayToString(props.course) + ', ' + props.course.start }}
           </div>
-          <div class="col-6" v-else>
+          <div v-else class="my-1">
+            <i class="pi pi-calendar-clock"></i>
             {{ dayToString(props.course) }}
           </div>
-          <div class="col-6 flex justify-content-end">
-            <div>
-              {{
-                formatCourseUniversity(course) + ', ' + formatCourseSemester(course) + ' semester'
-              }}
-            </div>
+          <div class="my-1">
+            <i class="pi pi-map-marker"></i>
+            {{ formatCourseUniversity(course) }}
           </div>
         </div>
       </div>

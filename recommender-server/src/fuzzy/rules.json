@@ -1,9 +1,0 @@
-[
-    {
-        "model": "fuzzy.rule",
-        "pk": 1,
-        "fields": {
-            "template": ""
-        }
-    }
-]

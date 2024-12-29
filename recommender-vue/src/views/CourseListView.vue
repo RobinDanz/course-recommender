@@ -58,7 +58,7 @@ const openFilteringPanel = (event: Event) => {
 
 const filter = (course: Course) => {
   return (
-    trackFilter.value.includes(course.track) &&
+    trackFilter.value.some((v) => course.tracks.map((t) => t.numeric_code).includes(v)) &&
     courseTypeFilter.value.includes(course.type) &&
     universityFilter.value.includes(course.site) &&
     semesterFilter.value.includes(course.semester)
@@ -86,7 +86,7 @@ const resetFilter = () => {
   </div>
   <PageContent>
     <template #content>
-      <div class="flex flex-row flex-wrap mx-auto">
+      <div class="flex flex-wrap justify-content-center">
         <CourseCard
           v-for="course in displayedCourse"
           :course="course"

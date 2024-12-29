@@ -13,11 +13,6 @@ const items = ref([
     icon: 'pi pi-lightbulb',
     route_name: 'recommender'
   },
-  // {
-  //   label: 'About',
-  //   icon: 'pi pi-star',
-  //   route_name: 'about'
-  // },
   {
     label: 'Courses',
     icon: 'pi pi-book',
@@ -35,9 +30,9 @@ const items = ref([
     ]
   },
   {
-    label: 'Test',
-    icon: 'pi pi-lightbulb',
-    route_name: 'test'
+    label: 'Teacher',
+    icon: 'pi pi-graduation-cap',
+    route_name: 'teacher'
   }
 ])
 </script>

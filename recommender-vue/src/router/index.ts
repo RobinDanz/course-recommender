@@ -1,7 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
-import AboutView from '@/views/AboutView.vue'
-import LoginView from '@/views/LoginView.vue'
 import CourseListView from '@/views/CourseListView.vue'
 import CourseTimetableView from '@/views/CourseTimetableView.vue'
 import RecommenderView from '@/views/RecommenderView.vue'
@@ -21,16 +19,6 @@ const router = createRouter({
       name: 'recommender',
       component: RecommenderView
     },
-    // {
-    //   path: '/about',
-    //   name: 'about',
-    //   component: AboutView
-    // },
-    // {
-    //   path: '/login',
-    //   name: 'login',
-    //   component: LoginView
-    // },
     {
       path: '/list',
       name: 'course-list',
@@ -48,8 +36,8 @@ const router = createRouter({
       props: true
     },
     {
-      path: '/test',
-      name: 'test',
+      path: '/teacher',
+      name: 'teacher',
       component: TeacherFormView
     }
   ]

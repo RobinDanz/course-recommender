@@ -1,5 +1,6 @@
 import pandas as pd
 import json
+import numpy as np
 
 out = []
 
@@ -22,8 +23,10 @@ def format_day(str: str):
     return days.index(day) + 1
 
 def format_start_time(str: str):
+
     if str == '-':
         return None
+    print(str.split(','))
     time = str.split(',')[1]
     start_time = time.split('-')[0].strip() + ':00'
     return start_time
@@ -32,7 +35,7 @@ def format_end_time(str: str):
     if str == '-':
         return None
     time = str.split(',')[1]
-    end_time = time.split('-')[0].strip() + ':00'
+    end_time = time.split('-')[1].strip() + ':00'
     return end_time
 
 def format_tracks(str: str):
@@ -52,7 +55,7 @@ def parse_semester(str: str):
 def parse_university(str: str):
     uni = str.split(' ')[2]
     universities = ['Bern', 'Fribourg', 'Neuchâtel']
-
+    print(uni)
     return universities.index(uni)
 
 if __name__ == '__main__':
@@ -83,12 +86,12 @@ if __name__ == '__main__':
                 'evaluation': parse_evaluation(df['Evaluation Type'][i]),
                 'university': parse_university(df.Affiliation[i]),
                 'course_type': parse_course_type(df.Type[i]),
-                'lectures': 0, 
-                'subject_type': 0,
-                'interactions': 0,
-                'blackboard': 0,
-                'recordings': 0,
-                'teacher_accessibility': 0,
+                'lectures': np.random.random() * 100, 
+                'subject_type': np.random.random() * 100,
+                'interactions': np.random.random() * 100,
+                'blackboard': np.random.random() * 100,
+                'recordings': np.random.random() * 100,
+                'teacher_accessibility': np.random.random() * 100,
                 'tracks': format_tracks(df.Tracks[i])
             }
         }

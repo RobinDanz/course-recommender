@@ -16,10 +16,25 @@ export async function sendTeacherForm(form: any, courseId: number): Promise<Reco
       '/teacher-forms/' + courseId + '/',
       form
     )
-    console.log(data)
     return data
   } catch (error) {
     console.log(error)
     throw new Error()
+  }
+}
+
+export async function sendStudentFeedback(
+  form: any,
+  courseId: number
+): Promise<Record<string, any>> {
+  try {
+    const { data } = await axiosClient.post<Record<string, any>>(
+      '/student-forms/' + courseId + '/',
+      form
+    )
+    return data
+  } catch (error) {
+    console.log(error)
+    throw error
   }
 }
